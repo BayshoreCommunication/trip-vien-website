@@ -28,7 +28,7 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            primary: "#000000",
+            primary: "#E7B540",
             background: "#FFFFFF",
           },
         },
