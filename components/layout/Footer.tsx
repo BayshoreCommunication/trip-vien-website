@@ -188,11 +188,11 @@ export default function Footer() {
           section 107 of the Copyright Act of 1976, allowance is made for “fair
           use” for purposes such as criticism, comment, news reporting,
           teaching, scholarship, education, and research. All rights reserved to
-          the respective copyright owners. Please 
+          the respective copyright owners. Please{" "}
           <Link href="/contact" className="underline">
             Contact My Email
           </Link>{" "}
-           if there are any issues or if you'd like a video removed.
+          if there are any issues or if you&apos;d like a video removed.
         </div>
       </div>
 
