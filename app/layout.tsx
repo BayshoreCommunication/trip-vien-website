@@ -6,6 +6,7 @@ import { DM_Mono } from 'next/font/google';
 import { Inter, Playfair_Display } from 'next/font/google';// Your global styles file
 import { DM_Sans } from 'next/font/google';
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 // Specify the weights and subsets you need
 const dmMono = DM_Mono({
   weight: ['400', '500'], // or ['400', '400-italic', '500', ...] as needed
@@ -56,7 +57,7 @@ export default function RootLayout({
       <body className="bg-white">
         <Header />
           <main>{children}</main>
-        
+        <Footer />
       </body>
     </html>
   );
