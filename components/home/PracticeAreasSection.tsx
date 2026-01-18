@@ -27,7 +27,7 @@ export default function PracticeAreasSection() {
     <section>
       <div className="max-w-[1640px] mx-auto px-4 py-8 md:py-16">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-left md:text-center mb-12">
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
             Practice Areas
           </span>
