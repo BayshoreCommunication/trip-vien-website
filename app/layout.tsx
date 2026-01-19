@@ -34,7 +34,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Trip Vien",
   description: "Trip Vien Website",
-  metadataBase: new URL("https://mccullochlawpa-website.vercel.app"),
+  metadataBase: new URL("https://trip-vien.vercel.app/"),
   alternates: {
     canonical: "/",
     languages: {
