@@ -75,9 +75,9 @@ export default function PracticeAreasSection() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 flex justify-center">
+        {/* <div className="mt-12 flex justify-center">
           <Button title="Explore Our Practice Areas" href="/practice-areas" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

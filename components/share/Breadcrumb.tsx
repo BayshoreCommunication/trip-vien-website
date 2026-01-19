@@ -9,7 +9,7 @@ interface BreadcrumbItem {
 interface BreadcrumbProps {
   title: string;
   breadcrumbs: BreadcrumbItem[];
-  src: string;
+  src?: string;
 }
 
 export default function Breadcrumb({
@@ -31,7 +31,7 @@ export default function Breadcrumb({
       >
         {/* Background Image */}
         <Image
-          src={src || "/images/home/hero/bg.png"}
+          src={src ? src : "/images/home/hero/bg.png"}
           alt="Justice background"
           fill
           priority
