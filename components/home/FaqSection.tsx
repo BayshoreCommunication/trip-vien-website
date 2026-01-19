@@ -50,7 +50,7 @@ export default function FaqSection() {
         </div>
 
         {/* ACCORDION */}
-        <div className="max-w-[1320px] mx-auto bg-[#FFF7E3] rounded-[20px] overflow-hidden">
+        <div className="max-w-[1320px] mx-auto bg-[#FFF7E3] rounded-[20px] overflow-hidden px-4 py-2">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 

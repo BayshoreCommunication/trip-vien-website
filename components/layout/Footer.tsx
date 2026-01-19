@@ -20,11 +20,11 @@ export default function Footer() {
           className="max-w-[1640px] mx-auto grid gap-10
           grid-cols-1
           md:grid-cols-2
-          lg:grid-cols-5
+          lg:grid-cols-6
         "
         >
           {/* LOGO + ABOUT */}
-          <div className="space-y-5">
+          <div className="space-y-5 col-span-2">
             <Image
               src="/images/footer-logo.png"
               alt="Tripathi Yongsyprasom"
@@ -33,7 +33,7 @@ export default function Footer() {
               className="max-w-[150px] md:max-w-[160px]"
             />
 
-            <p className="text-md md:text-lg leading-relaxed text-gray-300">
+            <p className="text-md md:text-lg leading-relaxed text-gray-300 w-full md:max-w-[90%]">
               Our goal is to deliver strategic, people-focused support for
               immigration, defense, and injury cases. With deep experience in
               business visas, family immigration, and removal defense, we guide

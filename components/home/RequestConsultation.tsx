@@ -5,10 +5,9 @@ export default function RequestConsultation() {
   return (
     <section className="">
       <div className="relative w-screen overflow-hidden">
-
         {/* BACKGROUND IMAGE */}
         <Image
-          src="/images/home/request/img.png" 
+          src="/images/home/request/img.png"
           alt="Request a free consultation"
           fill
           priority
@@ -16,11 +15,10 @@ export default function RequestConsultation() {
         />
 
         {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#181818] via-black/60 to-[#181818" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#181818] via-black/60 to-[#181818]" />
 
         {/* CONTENT */}
         <div className="max-w-[1640px] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[280px] md:min-h-[340px] px-6 md:px-12 py-10">
-
           {/* LEFT CONTENT */}
           <div className="text-white max-w-4xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
