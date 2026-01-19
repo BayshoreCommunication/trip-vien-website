@@ -71,7 +71,7 @@ export default function Header() {
       className={`
         sticky z-50 transition-all duration-300
         ${scrolled ? "top-0" : "top-4"}
-        px-4 lg:px-8 
+        px-4 lg:px-8 py-2
       `}
     >
       {/* WIDTH NEVER CHANGES */}
@@ -79,7 +79,7 @@ export default function Header() {
         <nav
           className={`
             bg-black transition-all duration-300
-            ${scrolled ? "rounded-br-[20px] rounded-bl-[20px]" : "rounded-[20px]"}
+            ${scrolled ? "rounded-[20px]" : "rounded-[20px]"}
             px-4 md:px-6 lg:px-8 py-4
           `}
         >
