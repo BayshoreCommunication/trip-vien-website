@@ -50,7 +50,7 @@ export default function BookAppointment() {
         </div>
 
         {/* FORM CARD */}
-        <div className="bg-[#1c1c1c] rounded-[24px] p-6 md:p-10 lg:p-14">
+        <div className="bg-[#1A1A1A] rounded-[24px] p-6 md:p-10 lg:p-14">
           <form
             ref={formRef}
             onSubmit={sendEmail}
