@@ -2,6 +2,7 @@ import AboutSection from "@/components/home/AboutSection";
 import BookAppointment from "@/components/home/BookAppointment";
 import FaqSection from "@/components/home/FaqSection";
 import Hero from "@/components/home/Hero";
+import LatestBlogs from "@/components/home/LatestBlogs";
 import PracticeAreasSection from "@/components/home/PracticeAreasSection";
 import PracticeBanner from "@/components/home/PracticeBanner";
 import RequestConsultation from "@/components/home/RequestConsultation";
@@ -20,6 +21,7 @@ export default function Home() {
       <BookAppointment />
       <FaqSection />
       <RequestConsultation />
+      <LatestBlogs />
     </>
   );
 }
