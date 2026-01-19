@@ -1,4 +1,5 @@
 import AboutSection from "@/components/home/AboutSection";
+import BookAppointment from "@/components/home/BookAppointment";
 import Hero from "@/components/home/Hero";
 import PracticeAreasSection from "@/components/home/PracticeAreasSection";
 import PracticeBanner from "@/components/home/PracticeBanner";
@@ -14,6 +15,7 @@ export default function Home() {
       <PracticeAreasSection />
       <TestimonialSlider />
       <WhyChooseUs />
+      <BookAppointment />
     </>
   );
 }

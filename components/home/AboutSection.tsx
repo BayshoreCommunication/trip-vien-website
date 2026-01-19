@@ -3,7 +3,7 @@ import Button from "@/components/shared/Button";
 
 export default function AboutSection() {
   return (
-    <section className="px-4 py-8 md:pt-16">
+    <section className="px-4 md:px-6 lg:px-8 py-8  md:pt-16">
       <div
         className="
           max-w-[1640px] mx-auto
