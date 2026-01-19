@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -43,12 +43,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [mobileLangOpen, setMobileLangOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const closeAll = () => {
     setOpen(false);
     setLangOpen(false);
     setMobileLangOpen(false);
   };
+
+  /* Scroll detection */
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -59,10 +67,24 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-4 z-50 px-4 lg:px-8 py-2">
+    <header
+      className={`
+        sticky z-50 transition-all duration-300
+        ${scrolled ? "top-0" : "top-4"}
+        px-4 lg:px-8 
+      `}
+    >
+      {/* WIDTH NEVER CHANGES */}
       <div className="max-w-[1640px] mx-auto">
-        <nav className="bg-black rounded-[20px] px-4 md:px-6 lg:px-8 py-4">
+        <nav
+          className={`
+            bg-black transition-all duration-300
+            ${scrolled ? "rounded-none" : "rounded-[20px]"}
+            px-4 md:px-6 lg:px-8 py-4
+          `}
+        >
           <div className="flex items-center justify-between h-16 md:h-20">
+
             {/* LOGO */}
             <Link href="/" onClick={closeAll}>
               <Image
@@ -94,6 +116,7 @@ export default function Header() {
 
             {/* DESKTOP RIGHT */}
             <div className="hidden md:flex items-center gap-4">
+
               {/* LANGUAGE DROPDOWN */}
               <div className="relative">
                 <button
@@ -101,28 +124,19 @@ export default function Header() {
                   className="flex items-center gap-2 text-white hover:text-primary"
                 >
                   <USFlag className="w-5 h-3 rounded-sm" />
-                  En
+                  EN
                   <span className="text-sm">▾</span>
                 </button>
 
                 {langOpen && (
                   <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg overflow-hidden">
-                    <button
-                      onClick={closeAll}
-                      className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100"
-                    >
+                    <button onClick={closeAll} className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100">
                       <USFlag className="w-5 h-3" /> English
                     </button>
-                    <button
-                      onClick={closeAll}
-                      className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100"
-                    >
+                    <button onClick={closeAll} className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100">
                       <ESFlag className="w-5 h-3" /> Español
                     </button>
-                    <button
-                      onClick={closeAll}
-                      className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100"
-                    >
+                    <button onClick={closeAll} className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100">
                       <FRFlag className="w-5 h-3" /> Français
                     </button>
                   </div>
@@ -146,6 +160,7 @@ export default function Header() {
           {open && (
             <div className="md:hidden mt-4 bg-black rounded-xl">
               <ul className="flex flex-col text-gray-200">
+
                 {navLinks.map((link) => (
                   <li key={link.href} className="border-b border-gray-700">
                     <Link
@@ -165,29 +180,20 @@ export default function Header() {
                     className="flex items-center justify-between w-full"
                   >
                     <span className="flex items-center gap-2">
-                      <USFlag className="w-5 h-3" /> En
+                      <USFlag className="w-5 h-3" /> EN
                     </span>
                     <span>▾</span>
                   </button>
 
                   {mobileLangOpen && (
                     <div className="mt-3 space-y-2">
-                      <button
-                        onClick={closeAll}
-                        className="flex items-center gap-2"
-                      >
+                      <button onClick={closeAll} className="flex items-center gap-2">
                         <USFlag className="w-5 h-3" /> English
                       </button>
-                      <button
-                        onClick={closeAll}
-                        className="flex items-center gap-2"
-                      >
+                      <button onClick={closeAll} className="flex items-center gap-2">
                         <ESFlag className="w-5 h-3" /> Español
                       </button>
-                      <button
-                        onClick={closeAll}
-                        className="flex items-center gap-2"
-                      >
+                      <button onClick={closeAll} className="flex items-center gap-2">
                         <FRFlag className="w-5 h-3" /> Français
                       </button>
                     </div>

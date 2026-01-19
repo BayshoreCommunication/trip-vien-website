@@ -25,7 +25,7 @@ const practiceAreas = [
 export default function PracticeAreasSection() {
   return (
     <section>
-      <div className="max-w-[1640px] mx-auto px-4 py-8 md:py-16">
+      <div className="max-w-[1640px] mx-auto px-4 md:px-0 py-8 md:py-16">
         {/* Header */}
         <div className="text-left md:text-center mb-12">
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
