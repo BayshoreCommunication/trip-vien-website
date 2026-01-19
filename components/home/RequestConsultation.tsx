@@ -4,7 +4,7 @@ import Button from "@/components/shared/Button";
 export default function RequestConsultation() {
   return (
     <section className="">
-      <div className="relative w-screen overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         {/* BACKGROUND IMAGE */}
         <Image
           src="/images/home/request/img.png"
