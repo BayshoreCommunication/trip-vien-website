@@ -1,11 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { practiceAreas } from "@/lib/practiceAreas";
+import Button from "../shared/Button";
 
 export default function PracticeAreasSection() {
   return (
     <section className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
       <div className="max-w-[1640px] mx-auto">
+        <div className="flex flex-col items-start md:items-center text-left md:text-center mb-8">
+          <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
+            Practice Areas
+          </span>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-4">
+            Explore Our Practice Areas
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {practiceAreas.map((area) => (
             <Link
@@ -26,12 +37,13 @@ export default function PracticeAreasSection() {
                 <h3 className="text-2xl md:text-4xl font-serif">
                   {area.title}
                 </h3>
-                <p className="text-sm text-gray-200">
-                  {area.description}
-                </p>
+                <p className="text-sm text-gray-200">{area.description}</p>
               </div>
             </Link>
           ))}
+        </div>
+        <div className="mt-8 flex justify-start md:justify-center items-center">
+          <Button title="Explore Our Practice Areas" href="/practice-areas" />
         </div>
       </div>
     </section>

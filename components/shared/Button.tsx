@@ -12,7 +12,7 @@ export default function Button({ title, href }: ButtonProps) {
       href={href}
       className="
         relative inline-flex items-center gap-2
-        px-5 py-3 rounded-md
+        px-5 py-3
         font-medium text-black
         bg-primary
         overflow-hidden
