@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const animating = useRef(false);
+  const touchStartY = useRef<number | null>(null);
 
   const [activeBlock, setActiveBlock] = useState<0 | 1>(0);
   const [sectionActive, setSectionActive] = useState(false);
@@ -22,50 +23,36 @@ export default function AboutSection() {
           setSectionActive(true);
         } else {
           setSectionActive(false);
-          setActiveBlock(0); // reset when leaving
+          setActiveBlock(0); // reset on leave
         }
       },
-      { threshold: 0.65 },
+      { threshold: 0.65 }
     );
 
     observer.observe(section);
     return () => observer.disconnect();
   }, []);
 
-  /* ---------------- SCROLL CONTROL ---------------- */
+  /* ---------------- MOUSE WHEEL (DESKTOP) ---------------- */
   useEffect(() => {
     const onWheel = (e: WheelEvent) => {
-      if (!sectionActive) return;
+      if (!sectionActive || animating.current) return;
 
-      // animation running → lock
-      if (animating.current) {
+      // Scroll down → block 1 → block 2
+      if (e.deltaY > 0 && activeBlock === 0) {
         e.preventDefault();
+        animating.current = true;
+        setActiveBlock(1);
+        setTimeout(() => (animating.current = false), 900);
         return;
       }
 
-      // scroll down
-      if (e.deltaY > 0) {
-        if (activeBlock === 0) {
-          e.preventDefault();
-          animating.current = true;
-          setActiveBlock(1);
-          setTimeout(() => (animating.current = false), 900);
-          return;
-        }
-        // block 2 finished → allow body scroll
-        return;
-      }
-
-      // scroll up
-      if (e.deltaY < 0) {
-        if (activeBlock === 1) {
-          e.preventDefault();
-          animating.current = true;
-          setActiveBlock(0);
-          setTimeout(() => (animating.current = false), 900);
-          return;
-        }
-        // block 1 finished → allow body scroll
+      // Scroll up → block 2 → block 1
+      if (e.deltaY < 0 && activeBlock === 1) {
+        e.preventDefault();
+        animating.current = true;
+        setActiveBlock(0);
+        setTimeout(() => (animating.current = false), 900);
         return;
       }
     };
@@ -74,49 +61,80 @@ export default function AboutSection() {
     return () => window.removeEventListener("wheel", onWheel);
   }, [sectionActive, activeBlock]);
 
+  /* ---------------- TOUCH (MOBILE) ---------------- */
+  useEffect(() => {
+    const onTouchStart = (e: TouchEvent) => {
+      touchStartY.current = e.touches[0].clientY;
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (
+        !sectionActive ||
+        animating.current ||
+        touchStartY.current === null
+      )
+        return;
+
+      const currentY = e.touches[0].clientY;
+      const diff = touchStartY.current - currentY;
+
+      // Swipe up → block 1 → block 2
+      if (diff > 40 && activeBlock === 0) {
+        animating.current = true;
+        setActiveBlock(1);
+        setTimeout(() => (animating.current = false), 900);
+        touchStartY.current = null;
+      }
+
+      // Swipe down → block 2 → block 1
+      if (diff < -40 && activeBlock === 1) {
+        animating.current = true;
+        setActiveBlock(0);
+        setTimeout(() => (animating.current = false), 900);
+        touchStartY.current = null;
+      }
+    };
+
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchmove", onTouchMove, { passive: true });
+
+    return () => {
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchmove", onTouchMove);
+    };
+  }, [sectionActive, activeBlock]);
+
   return (
     <section ref={sectionRef} className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
       <div className="max-w-[1640px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* LEFT IMAGE */}
-        <div className="hidden lg:block sticky top-24">
-          <div className="relative rounded-[20px] overflow-hidden">
-            <Image
-              src="/images/home/about/img.png"
-              alt="About"
-              width={1000}
-              height={800}
-              priority
-              className="object-cover object-top scale-[1.02] transition-transform duration-[1200ms]"
-            />
-          </div>
-        </div>
 
-        {/* MOBILE IMAGE */}
-        <div className="lg:hidden relative rounded-[20px] overflow-hidden">
+        {/* IMAGE (TOP ON MOBILE, LEFT ON DESKTOP) */}
+        <div className="relative rounded-[20px] overflow-hidden lg:sticky lg:top-24">
           <Image
             src="/images/home/about/img.png"
             alt="About"
             width={1000}
             height={800}
-            className="object-cover object-top"
+            priority
+            className="object-cover object-top scale-[1.02]"
           />
         </div>
 
-        {/* RIGHT CONTENT */}
+        {/* CONTENT */}
         <div className="relative h-[570px] overflow-hidden">
+
           {/* -------- BLOCK 1 -------- */}
           <div
             className={`
-    absolute inset-0
-    transition-all duration-[900ms]
-    ease-[cubic-bezier(0.65,0,0.35,1)]
-    will-change-transform will-change-opacity
-    ${
-      activeBlock === 0
-        ? "opacity-100 translate-y-0 blur-0 pointer-events-auto"
-        : "opacity-0 -translate-y-20 blur-sm pointer-events-none"
-    }
-  `}
+              absolute inset-0
+              transition-all duration-[900ms]
+              ease-[cubic-bezier(0.65,0,0.35,1)]
+              ${
+                activeBlock === 0
+                  ? "opacity-100 translate-y-0 blur-0 pointer-events-auto"
+                  : "opacity-0 -translate-y-20 blur-sm pointer-events-none"
+              }
+            `}
           >
             <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1">
               About Us
@@ -155,16 +173,15 @@ export default function AboutSection() {
           {/* -------- BLOCK 2 -------- */}
           <div
             className={`
-    absolute inset-0
-    transition-all duration-[900ms]
-    ease-[cubic-bezier(0.65,0,0.35,1)]
-    will-change-transform will-change-opacity
-    ${
-      activeBlock === 1
-        ? "opacity-100 translate-y-0 blur-0 pointer-events-auto"
-        : "opacity-0 translate-y-20 blur-sm pointer-events-none"
-    }
-  `}
+              absolute inset-0
+              transition-all duration-[900ms]
+              ease-[cubic-bezier(0.65,0,0.35,1)]
+              ${
+                activeBlock === 1
+                  ? "opacity-100 translate-y-0 blur-0 pointer-events-auto"
+                  : "opacity-0 translate-y-20 blur-sm pointer-events-none"
+              }
+            `}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">
               Your advocate in <br />
@@ -189,6 +206,7 @@ export default function AboutSection() {
               <Button title="Get Started Today" href="/contact" />
             </div>
           </div>
+
         </div>
       </div>
     </section>

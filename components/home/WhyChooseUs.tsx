@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
     return () => observer.disconnect();
   }, []);
 
-  /* ---------------- SCROLL CONTROL ---------------- */
+  /* ---------------- SCROLL CONTROL (DESKTOP) ---------------- */
   useEffect(() => {
     const onWheel = (e: WheelEvent) => {
       if (!sectionActive) return;
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
         return;
       }
 
-      // ↓ Block 1 → Block 2
+      // ↓ block 1 → block 2
       if (e.deltaY > 0 && activeBlock === 0) {
         e.preventDefault();
         animating.current = true;
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
         return;
       }
 
-      // ↑ Block 2 → Block 1
+      // ↑ block 2 → block 1
       if (e.deltaY < 0 && activeBlock === 1) {
         e.preventDefault();
         animating.current = true;
@@ -72,16 +72,16 @@ export default function WhyChooseUs() {
     >
       <div className="max-w-[1640px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* IMAGE — TOP ON MOBILE, RIGHT ON DESKTOP */}
-        <div className="order-1 lg:order-2 sticky lg:top-24">
-          <div className="relative rounded-[20px] overflow-hidden">
+        {/* IMAGE — TOP ON MOBILE, RIGHT + STICKY ON DESKTOP */}
+        <div className="order-1 lg:order-2 lg:sticky lg:top-24">
+          <div className="relative w-full rounded-[20px] overflow-hidden">
             <Image
               src="/images/home/choose/img.png"
               alt="Why Choose Us"
-              width={1000}
-              height={800}
+              width={1200}
+              height={900}
               priority
-              className="object-cover object-center scale-[1.02]"
+              className="w-full h-auto object-cover object-center scale-[1.02]"
             />
           </div>
         </div>
@@ -116,42 +116,17 @@ export default function WhyChooseUs() {
             </p>
 
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <Image src="/images/home/choose/img1.png" alt="" width={40} height={40} />
-                <div>
-                  <h4 className="text-md md:text-xl font-bold">
-                    Expert Legal Advice
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Experienced attorneys providing clear guidance and strong
-                    representation.
-                  </p>
-                </div>
-              </div>
+              <Feature icon="/images/home/choose/img1.png" title="Expert Legal Advice">
+                Experienced attorneys providing clear guidance and strong representation.
+              </Feature>
 
-              <div className="flex gap-4">
-                <Image src="/images/home/choose/img2.png" alt="" width={40} height={40} />
-                <div>
-                  <h4 className="text-md md:text-xl font-bold">
-                    Efficient Case Handling
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Careful, efficient handling for faster resolutions.
-                  </p>
-                </div>
-              </div>
+              <Feature icon="/images/home/choose/img2.png" title="Efficient Case Handling">
+                Careful, efficient handling for faster resolutions.
+              </Feature>
 
-              <div className="flex gap-4">
-                <Image src="/images/home/choose/img3.png" alt="" width={40} height={40} />
-                <div>
-                  <h4 className="text-md md:text-xl font-bold">
-                    Cost-Effective
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Flexible fee structures with real value.
-                  </p>
-                </div>
-              </div>
+              <Feature icon="/images/home/choose/img3.png" title="Cost-Effective">
+                Flexible fee structures with real value.
+              </Feature>
             </div>
 
             <div className="mt-10">
@@ -173,50 +148,43 @@ export default function WhyChooseUs() {
             `}
           >
             <div className="space-y-8 text-gray-700">
+              <Feature icon="/images/home/choose/img4.png" title="Personalized Attention">
+                Dedicated focus on your case with a deep understanding of your unique needs.
+              </Feature>
 
-              <div className="flex gap-4">
-                <Image src="/images/home/choose/img4.png" alt="" width={40} height={40} />
-                <div>
-                  <h4 className="text-md md:text-xl font-bold">
-                    Personalized Attention
-                  </h4>
-                  <p className="text-sm">
-                    Dedicated focus on your case with a deep understanding of
-                    your unique needs.
-                  </p>
-                </div>
-              </div>
+              <Feature icon="/images/home/choose/img5.png" title="Confidentiality and Trust">
+                Sensitive information handled with the highest level of confidentiality.
+              </Feature>
 
-              <div className="flex gap-4">
-                <Image src="/images/home/choose/img5.png" alt="" width={40} height={40} />
-                <div>
-                  <h4 className="text-md md:text-xl font-bold">
-                    Confidentiality and Trust
-                  </h4>
-                  <p className="text-sm">
-                    Sensitive information handled with the highest level of
-                    confidentiality.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Image src="/images/home/choose/img6.png" alt="" width={40} height={40} />
-                <div>
-                  <h4 className="text-md md:text-xl font-bold">
-                    Proactive Legal Planning
-                  </h4>
-                  <p className="text-sm">
-                    Strategic planning to prevent future legal challenges.
-                  </p>
-                </div>
-              </div>
-
+              <Feature icon="/images/home/choose/img6.png" title="Proactive Legal Planning">
+                Strategic planning to prevent future legal challenges.
+              </Feature>
             </div>
           </div>
 
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------------- FEATURE ITEM ---------------- */
+function Feature({
+  icon,
+  title,
+  children,
+}: {
+  icon: string;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex gap-4">
+      <Image src={icon} alt="" width={40} height={40} />
+      <div>
+        <h4 className="text-md md:text-xl font-bold">{title}</h4>
+        <p className="text-gray-600 text-sm">{children}</p>
+      </div>
+    </div>
   );
 }
