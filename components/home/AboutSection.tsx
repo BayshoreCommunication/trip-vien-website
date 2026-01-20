@@ -25,7 +25,7 @@ export default function AboutSection() {
           setActiveBlock(0); // reset when leaving
         }
       },
-      { threshold: 0.65 }
+      { threshold: 0.65 },
     );
 
     observer.observe(section);
@@ -75,49 +75,48 @@ export default function AboutSection() {
   }, [sectionActive, activeBlock]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="px-4 md:px-6 lg:px-8 py-8 md:py-16"
-    >
+    <section ref={sectionRef} className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
       <div className="max-w-[1640px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* LEFT IMAGE */}
         <div className="hidden lg:block sticky top-24">
-          <div className="relative h-[520px] rounded-[20px] overflow-hidden">
+          <div className="relative rounded-[20px] overflow-hidden">
             <Image
               src="/images/home/about/img.png"
               alt="About"
-              fill
+              width={1000}
+              height={800}
               priority
-              className="object-cover scale-[1.02] transition-transform duration-[1200ms]"
+              className="object-cover object-top scale-[1.02] transition-transform duration-[1200ms]"
             />
           </div>
         </div>
 
         {/* MOBILE IMAGE */}
-        <div className="lg:hidden relative h-[320px] rounded-[20px] overflow-hidden">
+        <div className="lg:hidden relative rounded-[20px] overflow-hidden">
           <Image
             src="/images/home/about/img.png"
             alt="About"
-            fill
-            className="object-cover"
+            width={1000}
+            height={800}
+            className="object-cover object-top"
           />
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="relative h-[520px] overflow-hidden">
+        <div className="relative h-[570px] overflow-hidden">
           {/* -------- BLOCK 1 -------- */}
           <div
             className={`
-              absolute inset-0
-              transition-all duration-[900ms]
-              ease-[cubic-bezier(0.65,0,0.35,1)]
-              will-change-transform will-change-opacity
-              ${
-                activeBlock === 0
-                  ? "opacity-100 translate-y-0 blur-0"
-                  : "opacity-0 -translate-y-20 blur-sm"
-              }
-            `}
+    absolute inset-0
+    transition-all duration-[900ms]
+    ease-[cubic-bezier(0.65,0,0.35,1)]
+    will-change-transform will-change-opacity
+    ${
+      activeBlock === 0
+        ? "opacity-100 translate-y-0 blur-0 pointer-events-auto"
+        : "opacity-0 -translate-y-20 blur-sm pointer-events-none"
+    }
+  `}
           >
             <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1">
               About Us
@@ -131,8 +130,8 @@ export default function AboutSection() {
             <div className="space-y-4 text-gray-700">
               <p>
                 At Trip Vien Law we set out to create a unique law firm where
-                outstanding immigration representation and a deep commitment
-                to humanity go hand in hand.
+                outstanding immigration representation and a deep commitment to
+                humanity go hand in hand.
               </p>
 
               <p>
@@ -156,18 +155,18 @@ export default function AboutSection() {
           {/* -------- BLOCK 2 -------- */}
           <div
             className={`
-              absolute inset-0
-              transition-all duration-[900ms]
-              ease-[cubic-bezier(0.65,0,0.35,1)]
-              will-change-transform will-change-opacity
-              ${
-                activeBlock === 1
-                  ? "opacity-100 translate-y-0 blur-0"
-                  : "opacity-0 translate-y-20 blur-sm"
-              }
-            `}
+    absolute inset-0
+    transition-all duration-[900ms]
+    ease-[cubic-bezier(0.65,0,0.35,1)]
+    will-change-transform will-change-opacity
+    ${
+      activeBlock === 1
+        ? "opacity-100 translate-y-0 blur-0 pointer-events-auto"
+        : "opacity-0 translate-y-20 blur-sm pointer-events-none"
+    }
+  `}
           >
-            <h2 className="text-4xl xl:text-5xl font-serif leading-tight mb-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">
               Your advocate in <br />
               injury and criminal cases
             </h2>

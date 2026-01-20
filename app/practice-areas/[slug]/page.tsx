@@ -27,7 +27,7 @@ export default function PracticeAreaPage({ params }: PageProps) {
       <div className="max-w-[1640px] mx-auto">
 
         {/* HEADER */}
-        <div className="text-center mb-14">
+        <div className="text-left md:text-center mb-14">
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm">
             Practice Area
           </span>
