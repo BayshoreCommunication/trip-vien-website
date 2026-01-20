@@ -1,6 +1,7 @@
 import { PRACTICE_DATA } from "@/lib/practice-data";
 import Link from "next/link";
-
+import Image from "next/image";
+import Button from "@/components/shared/Button";
 
 type PageProps = {
   params: {
@@ -23,16 +24,15 @@ export default function PracticeAreaPage({ params }: PageProps) {
   }
 
   return (
-    <section className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
+    <section className="px-4 md:px-6 lg:px-8 py-12 md:py-20">
       <div className="max-w-[1640px] mx-auto">
-
         {/* HEADER */}
-        <div className="text-left md:text-center mb-14">
-          <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm">
+        <div className="text-center mb-16">
+          <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
             Practice Area
           </span>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             {area.title}
           </h1>
         </div>
@@ -42,26 +42,43 @@ export default function PracticeAreaPage({ params }: PageProps) {
           {area.services.map((service) => (
             <div
               key={service.slug}
-              className="bg-white rounded-xl border p-6 shadow-sm hover:shadow-md transition"
+              className="
+                bg-white rounded-xl
+                border border-gray-100
+                p-8
+                shadow-sm
+                hover:shadow-md
+                transition
+              "
             >
-              <h3 className="text-lg font-semibold mb-3">
-                {service.title}
-              </h3>
+              <div className="flex items-center gap-3">
+                {/* ICON */}
+                <div className="mb-5">
+                  <Image
+                    src={service.image} // replace if needed
+                    alt={service.title}
+                    width={40}
+                    height={40}
+                  />
+                </div>
 
-              <p className="text-sm text-gray-600 mb-6">
+                {/* TITLE */}
+                <h3 className="text-xl md:text-2xl font-semibold mb-3">{service.title}</h3>
+              </div>
+
+              {/* DIVIDER */}
+              <div className="w-full h-[2px] bg-primary mb-4" />
+
+              {/* DESCRIPTION */}
+              <p className="text-sm text-gray-600 leading-relaxed mb-6">
                 {service.description}
               </p>
 
-              <Link
-                href={`/practice-areas/${params.slug}/${service.slug}`}
-                className="inline-flex items-center gap-2 text-sm font-medium text-primary"
-              >
-                Explore ↗
-              </Link>
+              {/* CTA */}
+              <Button title="Explore" href={`/practice-areas/${params.slug}/${service.slug}`} />
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

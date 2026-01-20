@@ -137,22 +137,22 @@ export default function Footer() {
               {[
                 {
                   name: "Facebook",
-                  href: "#",
+                  href: "https://www.facebook.com/TripVienLawPA/",
                   icon: "/images/fb.png",
                 },
                 {
                   name: "Twitter",
-                  href: "#",
+                  href: "https://x.com/TripVienLawPA",
                   icon: "/images/tw.png",
                 },
                 {
                   name: "LinkedIn",
-                  href: "#",
+                  href: "https://www.linkedin.com/company/tripvienlawpa/",
                   icon: "/images/ld.png",
                 },
                 {
                   name: "Instagram",
-                  href: "#",
+                  href: "https://www.instagram.com/tripvienlawpa/",
                   icon: "/images/in.png",
                 },
               ].map((social) => (
