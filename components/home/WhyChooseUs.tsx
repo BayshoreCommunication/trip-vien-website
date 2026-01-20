@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
         setSectionActive(entry.isIntersecting);
         if (!entry.isIntersecting) setActiveBlock(0);
       },
-      { threshold: 0.65 }
+      { threshold: 0.65 },
     );
 
     observer.observe(section);
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
           setActiveBlock(0);
         }
       },
-      { threshold: [0.45, 0.55] }
+      { threshold: [0.45, 0.55] },
     );
 
     observer.observe(el);
@@ -94,12 +94,8 @@ export default function WhyChooseUs() {
   }, [isMobile]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="px-4 md:px-6 lg:px-8 py-8 md:py-16"
-    >
+    <section ref={sectionRef} className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
       <div className="max-w-[1640px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
         {/* IMAGE — TOP ON MOBILE, RIGHT ON DESKTOP */}
         <div className="order-1 lg:order-2 sticky lg:top-24">
           <div className="relative rounded-[20px] overflow-hidden w-[600px]">
@@ -116,7 +112,6 @@ export default function WhyChooseUs() {
 
         {/* CONTENT */}
         <div className="order-2 lg:order-1 relative h-[620px] overflow-hidden">
-
           {/* -------- BLOCK 1 -------- */}
           <div
             className={`
@@ -146,14 +141,35 @@ export default function WhyChooseUs() {
 
             <div className="space-y-6">
               {[
-                { img: "img1", title: "Expert Legal Advice", text: "Experienced attorneys providing clear guidance and strong representation." },
-                { img: "img2", title: "Efficient Case Handling", text: "Careful, efficient handling for faster resolutions." },
-                { img: "img3", title: "Cost-Effective", text: "Flexible fee structures with real value." }
+                {
+                  img: "img1",
+                  title: "Expert Legal Advice",
+                  text: "Experienced attorneys providing clear guidance and strong representation.",
+                },
+                {
+                  img: "img2",
+                  title: "Efficient Case Handling",
+                  text: "Careful, efficient handling for faster resolutions.",
+                },
+                {
+                  img: "img3",
+                  title: "Cost-Effective",
+                  text: "Flexible fee structures with real value.",
+                },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
-                  <Image src={`/images/home/choose/${item.img}.png`} alt="" width={40} height={40} />
+                  <div className="shrink-0">
+                    <Image
+                      src={`/images/home/choose/${item.img}.png`}
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
+                  </div>
                   <div>
-                    <h4 className="text-md md:text-xl font-bold">{item.title}</h4>
+                    <h4 className="text-md md:text-xl font-bold">
+                      {item.title}
+                    </h4>
                     <p className="text-gray-600 text-sm">{item.text}</p>
                   </div>
                 </div>
@@ -181,21 +197,41 @@ export default function WhyChooseUs() {
           >
             <div className="space-y-8 text-gray-700">
               {[
-                { img: "img4", title: "Personalized Attention", text: "Dedicated focus on your case with a deep understanding of your needs." },
-                { img: "img5", title: "Confidentiality & Trust", text: "Sensitive information handled with the highest confidentiality." },
-                { img: "img6", title: "Proactive Legal Planning", text: "Strategic planning to prevent future legal challenges." }
+                {
+                  img: "img4",
+                  title: "Personalized Attention",
+                  text: "Dedicated focus on your case with a deep understanding of your needs.",
+                },
+                {
+                  img: "img5",
+                  title: "Confidentiality & Trust",
+                  text: "Sensitive information handled with the highest confidentiality.",
+                },
+                {
+                  img: "img6",
+                  title: "Proactive Legal Planning",
+                  text: "Strategic planning to prevent future legal challenges.",
+                },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
-                  <Image src={`/images/home/choose/${item.img}.png`} alt="" width={40} height={40} />
+                  <div className="shrink-0">
+                    <Image
+                      src={`/images/home/choose/${item.img}.png`}
+                      alt=""
+                      width={40}
+                      height={40}
+                    />
+                  </div>
                   <div>
-                    <h4 className="text-md md:text-xl font-bold">{item.title}</h4>
+                    <h4 className="text-md md:text-xl font-bold">
+                      {item.title}
+                    </h4>
                     <p className="text-sm">{item.text}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
