@@ -10,30 +10,36 @@ export default function WhyChooseUs() {
 
   const [activeBlock, setActiveBlock] = useState<0 | 1>(0);
   const [sectionActive, setSectionActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  /* ---------------- SECTION VISIBILITY ---------------- */
+  /* ---------------- DEVICE CHECK ---------------- */
   useEffect(() => {
+    setIsMobile(window.innerWidth < 1024);
+  }, []);
+
+  /* ---------------- SECTION VISIBILITY (DESKTOP) ---------------- */
+  useEffect(() => {
+    if (isMobile) return;
+
     const section = sectionRef.current;
     if (!section) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setSectionActive(true);
-        } else {
-          setSectionActive(false);
-          setActiveBlock(0);
-        }
+        setSectionActive(entry.isIntersecting);
+        if (!entry.isIntersecting) setActiveBlock(0);
       },
       { threshold: 0.65 }
     );
 
     observer.observe(section);
     return () => observer.disconnect();
-  }, []);
+  }, [isMobile]);
 
-  /* ---------------- SCROLL CONTROL (DESKTOP) ---------------- */
+  /* ---------------- DESKTOP WHEEL CONTROL ---------------- */
   useEffect(() => {
+    if (isMobile) return;
+
     const onWheel = (e: WheelEvent) => {
       if (!sectionActive) return;
 
@@ -42,7 +48,7 @@ export default function WhyChooseUs() {
         return;
       }
 
-      // ↓ block 1 → block 2
+      // ↓ Block 1 → Block 2
       if (e.deltaY > 0 && activeBlock === 0) {
         e.preventDefault();
         animating.current = true;
@@ -51,7 +57,7 @@ export default function WhyChooseUs() {
         return;
       }
 
-      // ↑ block 2 → block 1
+      // ↑ Block 2 → Block 1
       if (e.deltaY < 0 && activeBlock === 1) {
         e.preventDefault();
         animating.current = true;
@@ -63,7 +69,29 @@ export default function WhyChooseUs() {
 
     window.addEventListener("wheel", onWheel, { passive: false });
     return () => window.removeEventListener("wheel", onWheel);
-  }, [sectionActive, activeBlock]);
+  }, [sectionActive, activeBlock, isMobile]);
+
+  /* ---------------- MOBILE AWWWARDS BEHAVIOR ---------------- */
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.intersectionRatio > 0.55) {
+          setActiveBlock(1);
+        } else {
+          setActiveBlock(0);
+        }
+      },
+      { threshold: [0.45, 0.55] }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [isMobile]);
 
   return (
     <section
@@ -72,21 +100,21 @@ export default function WhyChooseUs() {
     >
       <div className="max-w-[1640px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* IMAGE — TOP ON MOBILE, RIGHT + STICKY ON DESKTOP */}
-        <div className="order-1 lg:order-2 lg:sticky lg:top-24">
-          <div className="relative w-full rounded-[20px] overflow-hidden">
+        {/* IMAGE — TOP ON MOBILE, RIGHT ON DESKTOP */}
+        <div className="order-1 lg:order-2 sticky lg:top-24">
+          <div className="relative rounded-[20px] overflow-hidden w-[600px]">
             <Image
               src="/images/home/choose/img.png"
               alt="Why Choose Us"
-              width={1200}
-              height={900}
+              width={1000}
+              height={800}
               priority
-              className="w-full h-auto object-cover object-center scale-[1.02]"
+              className="object-cover object-center scale-[1.02]"
             />
           </div>
         </div>
 
-        {/* CONTENT — BELOW IMAGE ON MOBILE, LEFT ON DESKTOP */}
+        {/* CONTENT */}
         <div className="order-2 lg:order-1 relative h-[620px] overflow-hidden">
 
           {/* -------- BLOCK 1 -------- */}
@@ -95,6 +123,7 @@ export default function WhyChooseUs() {
               absolute inset-0
               transition-all duration-[900ms]
               ease-[cubic-bezier(0.65,0,0.35,1)]
+              will-change-transform will-change-opacity
               ${
                 activeBlock === 0
                   ? "opacity-100 translate-y-0"
@@ -116,17 +145,19 @@ export default function WhyChooseUs() {
             </p>
 
             <div className="space-y-6">
-              <Feature icon="/images/home/choose/img1.png" title="Expert Legal Advice">
-                Experienced attorneys providing clear guidance and strong representation.
-              </Feature>
-
-              <Feature icon="/images/home/choose/img2.png" title="Efficient Case Handling">
-                Careful, efficient handling for faster resolutions.
-              </Feature>
-
-              <Feature icon="/images/home/choose/img3.png" title="Cost-Effective">
-                Flexible fee structures with real value.
-              </Feature>
+              {[
+                { img: "img1", title: "Expert Legal Advice", text: "Experienced attorneys providing clear guidance and strong representation." },
+                { img: "img2", title: "Efficient Case Handling", text: "Careful, efficient handling for faster resolutions." },
+                { img: "img3", title: "Cost-Effective", text: "Flexible fee structures with real value." }
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <Image src={`/images/home/choose/${item.img}.png`} alt="" width={40} height={40} />
+                  <div>
+                    <h4 className="text-md md:text-xl font-bold">{item.title}</h4>
+                    <p className="text-gray-600 text-sm">{item.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="mt-10">
@@ -140,6 +171,7 @@ export default function WhyChooseUs() {
               absolute inset-0
               transition-all duration-[900ms]
               ease-[cubic-bezier(0.65,0,0.35,1)]
+              will-change-transform will-change-opacity
               ${
                 activeBlock === 1
                   ? "opacity-100 translate-y-0"
@@ -148,43 +180,24 @@ export default function WhyChooseUs() {
             `}
           >
             <div className="space-y-8 text-gray-700">
-              <Feature icon="/images/home/choose/img4.png" title="Personalized Attention">
-                Dedicated focus on your case with a deep understanding of your unique needs.
-              </Feature>
-
-              <Feature icon="/images/home/choose/img5.png" title="Confidentiality and Trust">
-                Sensitive information handled with the highest level of confidentiality.
-              </Feature>
-
-              <Feature icon="/images/home/choose/img6.png" title="Proactive Legal Planning">
-                Strategic planning to prevent future legal challenges.
-              </Feature>
+              {[
+                { img: "img4", title: "Personalized Attention", text: "Dedicated focus on your case with a deep understanding of your needs." },
+                { img: "img5", title: "Confidentiality & Trust", text: "Sensitive information handled with the highest confidentiality." },
+                { img: "img6", title: "Proactive Legal Planning", text: "Strategic planning to prevent future legal challenges." }
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <Image src={`/images/home/choose/${item.img}.png`} alt="" width={40} height={40} />
+                  <div>
+                    <h4 className="text-md md:text-xl font-bold">{item.title}</h4>
+                    <p className="text-sm">{item.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
         </div>
       </div>
     </section>
-  );
-}
-
-/* ---------------- FEATURE ITEM ---------------- */
-function Feature({
-  icon,
-  title,
-  children,
-}: {
-  icon: string;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="flex gap-4">
-      <Image src={icon} alt="" width={40} height={40} />
-      <div>
-        <h4 className="text-md md:text-xl font-bold">{title}</h4>
-        <p className="text-gray-600 text-sm">{children}</p>
-      </div>
-    </div>
   );
 }
