@@ -113,14 +113,14 @@ export default function Footer() {
               Connect
             </h4>
             <ul className="space-y-3 text-sm md:text-lg text-gray-300">
-              <li>
+              {/* <li>
                 <Link href="mailto:trip@tripvienlaw.com">
                   trip@tripvienlaw.com
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="mailto:vien@tripvienlaw.com">
-                  vien@tripvienlaw.com
+                   info@tripvienlaw.com
                 </Link>
               </li>
               <li>
