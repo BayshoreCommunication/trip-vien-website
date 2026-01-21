@@ -1,6 +1,6 @@
-import PracticeAreasSection from "@/components/home/PracticeAreasSection";
-import RequestConsultation from "@/components/home/RequestConsultation";
-import Breadcrumb from "@/components/share/Breadcrumb";
+import PracticeAreasSection from "components/home/PracticeAreasSection";
+import RequestConsultation from "components/home/RequestConsultation";
+import Breadcrumb from "components/share/Breadcrumb";
 import React from "react";
 
 const page = () => {

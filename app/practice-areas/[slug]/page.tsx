@@ -1,8 +1,8 @@
-import { PRACTICE_DATA } from "@/lib/practice-data";
+import { PRACTICE_DATA } from "lib/practice-data";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "@/components/shared/Button";
-import Breadcrumb from "@/components/share/Breadcrumb";
+import Button from "components/shared/Button";
+import Breadcrumb from "components/share/Breadcrumb";
 
 type PageProps = {
   params: {

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { team } from "@/lib/data";
+import { team } from "lib/data";
 
 const AboutSection = () => {
   return (

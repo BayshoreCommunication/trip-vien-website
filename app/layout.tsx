@@ -1,62 +1,59 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
-import { Providers } from "./providers";
-import { DM_Mono } from 'next/font/google';
-import { Inter, Playfair_Display } from 'next/font/google';// Your global styles file
-import { DM_Sans } from 'next/font/google';
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-// Specify the weights and subsets you need
+
+import Header from "components/layout/Header";
+import Footer from "components/layout/Footer";
+import ClientLayout from "./client-layout";
+
+import { DM_Mono, DM_Sans, Playfair_Display } from "next/font/google";
+
+/* ---------------- FONTS ---------------- */
+
 const dmMono = DM_Mono({
-  weight: ['400', '500'], // or ['400', '400-italic', '500', ...] as needed
-  subsets: ['latin'],
-  display: 'swap', // 'swap' ensures the fallback font is used until DM Mono loads
-  variable: '--font-dm-mono', // Define a CSS variable if you plan to use it with Tailwind CSS
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
 });
 
-// DM Sans configuration
 const dmSans = DM_Sans({
-  weight: ['400', '500', '700'], // choose what you need
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-dm-sans', // for Tailwind or CSS usage
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
 });
-
 
 const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'], // Specify the weights you need
-  display: 'swap', // Use swap for better performance
-  variable: '--font-playfair', // Define a CSS variable name
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-playfair",
 });
+
+/* ---------------- METADATA ---------------- */
 
 export const metadata: Metadata = {
   title: "Trip Vien",
   description: "Trip Vien Website",
-  metadataBase: new URL("https://trip-vien.vercel.app/"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-    },
-  },
-
-  openGraph: {
-    images: "/opengraph-image.png",
-  },
 };
+
+/* ---------------- ROOT LAYOUT ---------------- */
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={`${dmMono.variable} ${playfair.variable} ${dmSans.variable}`}>
-      <body className="bg-white">
+    <html
+      lang="en"
+      className={`${dmMono.variable} ${dmSans.variable} ${playfair.variable}`}
+    >
+      <body className="bg-white antialiased">
         <Header />
+
+        {/* ✅ CLIENT WRAPPER */}
+        <ClientLayout>
           <main>{children}</main>
+        </ClientLayout>
+
         <Footer />
       </body>
     </html>

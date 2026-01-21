@@ -1,5 +1,5 @@
-import AboutSection from "@/components/about/AboutSection";
-import Breadcrumb from "@/components/share/Breadcrumb";
+import AboutSection from "components/about/AboutSection";
+import Breadcrumb from "components/share/Breadcrumb";
 import React from "react";
 
 const page = () => {

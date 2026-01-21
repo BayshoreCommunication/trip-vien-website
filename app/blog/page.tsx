@@ -1,17 +1,11 @@
-import BlogsSection from "@/components/blogs/BlogsSection";
-import Breadcrumb from "@/components/share/Breadcrumb";
-import React from "react";
+import { getAllPostData } from "lib/GetPostData";
 
-const page = () => {
-  return (
-    <div>
-      <Breadcrumb
-        title="Legal Insights Grounded in Strategy and Experience"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blogs" }]}
-      />
-      <BlogsSection />
-    </div>
-  );
-};
+import BlogsSection from 'components/blogs/BlogsSection';
 
-export default page;
+export default async function BlogPage() {
+  const blogPostData = await getAllPostData();
+
+  // console.log("BLOGS FROM API:", blogs); // ✅ check terminal
+
+  return <BlogsSection blogPost={blogPostData} />;
+}

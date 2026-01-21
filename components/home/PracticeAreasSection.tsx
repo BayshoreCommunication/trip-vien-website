@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { practiceAreas } from "@/lib/practiceAreas";
+import { practiceAreas } from "lib/practiceAreas";
 import Button from "../shared/Button";
 
 export default function PracticeAreasSection() {

@@ -1,6 +1,6 @@
-import ContactSection from "@/components/contact/ContactSection";
-import FaqSection from "@/components/home/FaqSection";
-import Breadcrumb from "@/components/share/Breadcrumb";
+import ContactSection from "components/contact/ContactSection";
+import FaqSection from "components/home/FaqSection";
+import Breadcrumb from "components/share/Breadcrumb";
 import React from "react";
 
 const page = () => {
