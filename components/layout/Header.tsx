@@ -101,7 +101,7 @@ export default function Header() {
                 alt="Logo"
                 width={1000}
                 height={800}
-                className="w-[140px] md:w-[200px] h-auto"
+                className="w-[140px] md:w-[170px] h-auto"
               />
             </Link>
 
