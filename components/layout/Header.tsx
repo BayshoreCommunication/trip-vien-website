@@ -122,7 +122,7 @@ export default function Header() {
                   className="flex items-center gap-2 text-white hover:text-primary"
                 >
                   <USFlag className="w-5 h-3 rounded-sm" />
-                  EN
+                  En
                   <span className="text-sm">▾</span>
                 </button>
 
@@ -186,7 +186,7 @@ export default function Header() {
                     className="flex items-center justify-between w-full"
                   >
                     <span className="flex items-center gap-2">
-                      <USFlag className="w-5 h-3" /> EN
+                      <USFlag className="w-5 h-3" /> En
                     </span>
                     <span>▾</span>
                   </button>
