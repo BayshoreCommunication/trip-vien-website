@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -45,6 +45,8 @@ export default function Header() {
   const [mobileLangOpen, setMobileLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const langRef = useRef<HTMLDivElement | null>(null);
+
   const closeAll = () => {
     setOpen(false);
     setLangOpen(false);
@@ -58,6 +60,22 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* Close language dropdown on outside click */
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        langRef.current &&
+        !langRef.current.contains(event.target as Node)
+      ) {
+        setLangOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
@@ -68,30 +86,22 @@ export default function Header() {
 
   return (
     <header
-      className={`
-        sticky z-50 transition-all duration-300
-        ${scrolled ? "top-0" : "top-4"}
-        px-4 lg:px-8 py-2
-      `}
+      className={`sticky z-50 transition-all duration-300 ${
+        scrolled ? "top-0" : "top-4"
+      } px-4 lg:px-8 py-2`}
     >
-      {/* WIDTH NEVER CHANGES */}
       <div className="max-w-[1640px] mx-auto">
-        <nav
-          className={`
-            bg-black transition-all duration-300
-            ${scrolled ? "rounded-[20px]" : "rounded-[20px]"}
-            px-4 md:px-6 lg:px-8 py-4
-          `}
-        >
+        <nav className="bg-black rounded-[20px] px-4 md:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between h-16 md:h-20">
+
             {/* LOGO */}
             <Link href="/" onClick={closeAll}>
               <Image
                 src="/images/nav-logo.png"
                 alt="Logo"
-                width={150}
-                height={60}
-                priority
+                width={1000}
+                height={800}
+                className="w-[140px] md:w-[200px] h-auto"
               />
             </Link>
 
@@ -115,33 +125,42 @@ export default function Header() {
 
             {/* DESKTOP RIGHT */}
             <div className="hidden md:flex items-center gap-4">
+
               {/* LANGUAGE DROPDOWN */}
-              <div className="relative">
+              <div className="relative" ref={langRef}>
                 <button
-                  onClick={() => setLangOpen(!langOpen)}
+                  onClick={() => setLangOpen((v) => !v)}
                   className="flex items-center gap-2 text-white hover:text-primary"
                 >
                   <USFlag className="w-5 h-3 rounded-sm" />
-                  En
-                  <span className="text-sm">▾</span>
+                  En <span className="text-sm">▾</span>
                 </button>
 
                 {langOpen && (
                   <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg overflow-hidden">
                     <button
-                      onClick={closeAll}
+                      onClick={() => {
+                        setLangOpen(false);
+                        closeAll();
+                      }}
                       className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100"
                     >
                       <USFlag className="w-5 h-3" /> English
                     </button>
                     <button
-                      onClick={closeAll}
+                      onClick={() => {
+                        setLangOpen(false);
+                        closeAll();
+                      }}
                       className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100"
                     >
                       <ESFlag className="w-5 h-3" /> Español
                     </button>
                     <button
-                      onClick={closeAll}
+                      onClick={() => {
+                        setLangOpen(false);
+                        closeAll();
+                      }}
                       className="flex items-center gap-3 px-4 py-2 w-full hover:bg-gray-100"
                     >
                       <FRFlag className="w-5 h-3" /> Français
@@ -163,7 +182,7 @@ export default function Header() {
             </button>
           </div>
 
-          {/* ---------------- MOBILE MENU ---------------- */}
+          {/* MOBILE MENU */}
           {open && (
             <div className="md:hidden mt-4 bg-black rounded-xl">
               <ul className="flex flex-col text-gray-200">
@@ -182,7 +201,9 @@ export default function Header() {
                 {/* MOBILE LANGUAGE */}
                 <li className="border-b border-gray-700 px-5 py-3">
                   <button
-                    onClick={() => setMobileLangOpen(!mobileLangOpen)}
+                    onClick={() =>
+                      setMobileLangOpen((v) => !v)
+                    }
                     className="flex items-center justify-between w-full"
                   >
                     <span className="flex items-center gap-2">
@@ -193,22 +214,13 @@ export default function Header() {
 
                   {mobileLangOpen && (
                     <div className="mt-3 space-y-2">
-                      <button
-                        onClick={closeAll}
-                        className="flex items-center gap-2"
-                      >
+                      <button onClick={closeAll} className="flex items-center gap-2">
                         <USFlag className="w-5 h-3" /> English
                       </button>
-                      <button
-                        onClick={closeAll}
-                        className="flex items-center gap-2"
-                      >
+                      <button onClick={closeAll} className="flex items-center gap-2">
                         <ESFlag className="w-5 h-3" /> Español
                       </button>
-                      <button
-                        onClick={closeAll}
-                        className="flex items-center gap-2"
-                      >
+                      <button onClick={closeAll} className="flex items-center gap-2">
                         <FRFlag className="w-5 h-3" /> Français
                       </button>
                     </div>
