@@ -18,7 +18,7 @@ export default function Breadcrumb({
   src,
 }: BreadcrumbProps) {
   return (
-    <section className="px-4 md:px-6 lg:px-8 py-8 md:py-10">
+    <section className="px-4 md:px-6 lg:px-8 pt-8">
       <div
         className="
           relative
@@ -60,7 +60,7 @@ export default function Breadcrumb({
                       {item.label}
                     </Link>
                   ) : (
-                    <span className="text-yellow-400">{item.label}</span>
+                    <span className="text-primary">{item.label}</span>
                   )}
 
                   {index < breadcrumbs.length - 1 && (

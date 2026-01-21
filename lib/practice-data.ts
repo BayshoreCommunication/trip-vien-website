@@ -3,6 +3,7 @@ export type Service = {
   slug: string;
   description: string;
   image: string;
+  details_img: string;
   content: string;
 };
 
@@ -21,6 +22,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We help victims of car accidents recover compensation for injuries, damages, and losses caused by negligent drivers.",
         image: "/images/services/img1.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "Assault is the intentional threat one person makes toward another, creating a real fear of harm even when no physical contact occurs...",
       },
@@ -30,6 +32,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We represent victims of serious trucking and motorcycle crashes, helping them pursue compensation for injuries, damages, and long-term losses.",
         image: "/images/services/img2.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "Truck and motorcycle accidents often cause catastrophic injuries...",
       },
@@ -39,6 +42,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We assist individuals injured due to unsafe property conditions in seeking fair compensation and justice.",
         image: "/images/services/img3.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "Property owners have a duty to keep their premises safe...",
       },
@@ -48,6 +52,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We represent patients harmed by medical errors, negligence, or improper treatment. Our focus is on holding providers accountable and securing fair compensation.",
         image: "/images/services/img4.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "Doctors and hospitals must meet professional standards of care...",
       },
@@ -57,6 +62,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We advocate for residents harmed by neglect, abuse, or inadequate care in nursing facilities. Our team works to protect their rights and seek justice for affected families.",
         image: "/images/services/img5.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "Doctors and hospitals must meet professional standards of care...",
       },

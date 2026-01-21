@@ -35,7 +35,7 @@ export default function PracticeAreaPage({ params }: PageProps) {
         ]}
       />
       ;
-      <section className="px-4 md:px-6 lg:px-8 py-12 md:py-20">
+      <section className="px-4 md:px-6 lg:px-8 py-8">
         <div className="max-w-[1640px] mx-auto">
           {/* HEADER */}
           <div className="text-center mb-16">
