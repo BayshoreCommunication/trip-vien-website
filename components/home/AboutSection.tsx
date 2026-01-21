@@ -105,11 +105,11 @@ export default function AboutSection() {
   }, [sectionActive, activeBlock]);
 
   return (
-    <section ref={sectionRef} className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
+    <section ref={sectionRef} className="px-4 md:px-6 lg:px-8 py-8">
       <div className="max-w-[1640px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* IMAGE (TOP ON MOBILE, LEFT ON DESKTOP) */}
-        <div className="relative rounded-[20px] overflow-hidden lg:sticky lg:top-24">
+        <div className="relative rounded-[20px] overflow-hidden lg:sticky ">
           <Image
             src="/images/home/about/img.png"
             alt="About"
