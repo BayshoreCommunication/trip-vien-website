@@ -56,7 +56,7 @@ export default function AboutSection() {
             <div
               ref={rightScrollRef}
               className="
-                h-[520px]
+                h-[720px]
                 overflow-y-auto
                 pr-4
                 space-y-32

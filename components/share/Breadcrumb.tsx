@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTypewriter } from "@/hooks/useTypewriter";
 
 interface BreadcrumbItem {
   label: string;
@@ -17,6 +20,12 @@ export default function Breadcrumb({
   breadcrumbs,
   src,
 }: BreadcrumbProps) {
+  // ✅ hook INSIDE component
+  const { displayedText, isDone } = useTypewriter(title, {
+    speed: 60,
+    startDelay: 300,
+  });
+
   return (
     <section className="px-4 md:px-6 lg:px-8 pt-8">
       <div
@@ -26,12 +35,12 @@ export default function Breadcrumb({
           rounded-[20px]
           overflow-hidden
           flex items-center justify-center
-          min-h-[420px] md:min-h-[420px] 
+          min-h-[420px]
         "
       >
         {/* Background Image */}
         <Image
-          src={src ? src : "/images/home/hero/bg.png"}
+          src={src ?? "/images/home/hero/bg.png"}
           alt="Justice background"
           fill
           priority
@@ -44,7 +53,8 @@ export default function Breadcrumb({
         {/* Content */}
         <div className="relative z-10 text-center px-6 md:px-12">
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6">
-            {title}
+            {displayedText}
+            {!isDone && <span className="animate-pulse">|</span>}
           </h1>
 
           {/* Breadcrumb */}
