@@ -1,38 +1,107 @@
 "use client";
 
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
+import { send } from "emailjs-com";
+
+type FormState = {
+  user_name: string;
+  user_email: string;
+  phone: string;
+  subject: string;
+  nationality: string;
+  dob: string;
+  origin_country: string;
+  arrival_date: string;
+  message: string;
+};
+
+type FormErrors = {
+  user_name?: string;
+  user_email?: string;
+  phone?: string;
+  message?: string;
+};
 
 export default function BookAppointment() {
-  const formRef = useRef<HTMLFormElement | null>(null);
+  const [form, setForm] = useState<FormState>({
+    user_name: "",
+    user_email: "",
+    phone: "",
+    subject: "",
+    nationality: "",
+    dob: "",
+    origin_country: "",
+    arrival_date: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
-  const sendEmail = (e: React.FormEvent) => {
+  /* ---------------- VALIDATION ---------------- */
+  const validate = () => {
+    const errs: FormErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!form.user_name) errs.user_name = "Name is required!";
+    if (!form.user_email) errs.user_email = "Email is required!";
+    else if (!emailRegex.test(form.user_email))
+      errs.user_email = "Invalid email format!";
+    if (!form.phone) errs.phone = "Phone number is required!";
+    if (!form.message) errs.message = "Case details are required!";
+
+    return errs;
+  };
+
+  /* ---------------- SUBMIT ---------------- */
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formRef.current) return;
-
     setLoading(true);
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        formRef.current,
-        "YOUR_PUBLIC_KEY",
-      )
-      .then(
-        () => {
-          setSuccess(true);
-          setLoading(false);
-          formRef.current?.reset();
-        },
-        (error) => {
-          console.error(error);
-          setLoading(false);
-        },
-      );
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length !== 0) {
+      setLoading(false);
+      return;
+    }
+
+    send(
+      "service_etf0i4l",
+      "template_nbw8fo7",
+      form,
+      "wTZ0rPZvEyuoCP8vU"
+    )
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          text: "Your request has been sent successfully.",
+          confirmButtonColor: "#131b2a",
+        });
+
+        setForm({
+          user_name: "",
+          user_email: "",
+          phone: "",
+          subject: "",
+          nationality: "",
+          dob: "",
+          origin_country: "",
+          arrival_date: "",
+          message: "",
+        });
+
+        setErrors({});
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          text: "Something went wrong! Please try again.",
+        });
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -52,113 +121,158 @@ export default function BookAppointment() {
         {/* FORM CARD */}
         <div className="bg-[#1A1A1A] rounded-[24px] p-6 md:p-10 lg:p-14">
           <form
-            ref={formRef}
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
-            {/* INPUTS */}
+            {/* Name */}
+            <div>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="input"
+                value={form.user_name}
+                onChange={(e) =>
+                  setForm({ ...form, user_name: e.target.value })
+                }
+              />
+              {errors.user_name && (
+                <span className="text-red-500 text-sm">
+                  {errors.user_name}
+                </span>
+              )}
+            </div>
+
+            {/* Email */}
+            <div>
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="input"
+                value={form.user_email}
+                onChange={(e) =>
+                  setForm({ ...form, user_email: e.target.value })
+                }
+              />
+              {errors.user_email && (
+                <span className="text-red-500 text-sm">
+                  {errors.user_email}
+                </span>
+              )}
+            </div>
+
+            {/* Phone */}
+            <div>
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="input"
+                value={form.phone}
+                onChange={(e) =>
+                  setForm({ ...form, phone: e.target.value })
+                }
+              />
+              {errors.phone && (
+                <span className="text-red-500 text-sm">
+                  {errors.phone}
+                </span>
+              )}
+            </div>
+
+            {/* Subject */}
             <input
               type="text"
-              name="user_name"
-              placeholder="Your Name"
-              required
-              className="input"
-            />
-
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Email Address"
-              required
-              className="input"
-            />
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              className="input"
-            />
-
-            <input
-              type="text"
-              name="subject"
               placeholder="Subject"
               className="input"
+              value={form.subject}
+              onChange={(e) =>
+                setForm({ ...form, subject: e.target.value })
+              }
             />
 
+            {/* Nationality */}
             <input
               type="text"
-              name="nationality"
               placeholder="What is your nationality?"
               className="input"
+              value={form.nationality}
+              onChange={(e) =>
+                setForm({ ...form, nationality: e.target.value })
+              }
             />
 
+            {/* DOB */}
             <input
               type="text"
-              name="dob"
               placeholder="When are you born?"
               className="input"
+              value={form.dob}
               onFocus={(e) => (e.target.type = "date")}
               onBlur={(e) => {
                 if (!e.target.value) e.target.type = "text";
               }}
+              onChange={(e) =>
+                setForm({ ...form, dob: e.target.value })
+              }
             />
 
+            {/* Origin Country */}
             <input
               type="text"
-              name="origin_country"
               placeholder="What country did you come from?"
               className="input"
+              value={form.origin_country}
+              onChange={(e) =>
+                setForm({ ...form, origin_country: e.target.value })
+              }
             />
 
+            {/* Arrival Date */}
             <input
               type="text"
-              name="arrival_date"
               placeholder="When did you come here?"
               className="input"
+              value={form.arrival_date}
               onFocus={(e) => (e.target.type = "date")}
               onBlur={(e) => {
                 if (!e.target.value) e.target.type = "text";
               }}
+              onChange={(e) =>
+                setForm({ ...form, arrival_date: e.target.value })
+              }
             />
 
-            {/* TEXTAREA */}
-            <textarea
-              name="message"
-              placeholder="Type your case details here"
-              rows={6}
-              className="input md:col-span-2 resize-none"
-            />
+            {/* Message */}
+            <div className="md:col-span-2">
+              <textarea
+                rows={6}
+                placeholder="Type your case details here"
+                className="input resize-none"
+                value={form.message}
+                onChange={(e) =>
+                  setForm({ ...form, message: e.target.value })
+                }
+              />
+              {errors.message && (
+                <span className="text-red-500 text-sm">
+                  {errors.message}
+                </span>
+              )}
+            </div>
 
-            {/* BUTTON */}
+            {/* Submit */}
             <div className="md:col-span-2 flex justify-center mt-6">
               <button
                 type="submit"
                 disabled={loading}
                 className="
-      relative inline-flex items-center gap-2
-      px-8 py-3 rounded-md
-      font-medium text-black
-      bg-white
-      overflow-hidden
-      transition-colors duration-300
-      group
-      disabled:opacity-60 disabled:cursor-not-allowed
-    "
+                  relative inline-flex items-center gap-2
+                  px-8 py-3 rounded-md
+                  font-medium text-black
+                  bg-white
+                  overflow-hidden
+                  disabled:opacity-60
+                "
               >
-                {/* Sliding background */}
-                <span
-                  className="
-        absolute inset-0
-        bg-primary
-        transform -translate-x-full
-        transition-transform duration-300 ease-out
-        group-hover:translate-x-0
-      "
-                />
-
-                {/* Content */}
                 <span className="relative z-10">
                   {loading ? "Sending..." : "Send Request"}
                 </span>
@@ -172,13 +286,6 @@ export default function BookAppointment() {
                 />
               </button>
             </div>
-
-            {/* SUCCESS MESSAGE */}
-            {success && (
-              <p className="md:col-span-2 text-center text-green-400 mt-4">
-                Your request has been sent successfully.
-              </p>
-            )}
           </form>
         </div>
       </div>
