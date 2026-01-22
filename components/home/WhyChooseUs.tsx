@@ -146,7 +146,7 @@ export default function WhyChooseUs() {
                 text: "Strategic planning to prevent issues.",
               },
             ].map((item) => (
-              <div key={item.title} className="flex gap-4">
+              <div key={item.title} className="flex  gap-4">
                 <Image
                   src={`/images/home/choose/${item.img}.png`}
                   alt=""
