@@ -22,24 +22,31 @@ type BlogCard = {
   href: string;
 };
 
+/* ---------------- SLUGIFY ---------------- */
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/:/g, "")            // remove colon
+    .replace(/[^a-z0-9]+/g, "-")  // replace special chars
+    .replace(/(^-|-$)+/g, "");    // trim dashes
+}
+
 export default async function LatestBlogs() {
   const blogPost = await getAllPostData();
 
   const blogs: BlogCard[] =
-    blogPost.data
-      ?.slice(0, 3)
-      .map((blog: ApiBlog): BlogCard => ({
-        title: blog.title,
-        date: new Date(blog.createdAt).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        }),
-        image:
-          blog.featuredImage?.image?.url ||
-          "/images/home/blog/img1.png",
-        href: `/blog/${blog.slug}`,
-      })) || [];
+    blogPost.data?.slice(0, 3).map((blog: ApiBlog) => ({
+      title: blog.title,
+      date: new Date(blog.createdAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+      image:
+        blog.featuredImage?.image?.url ||
+        "/images/home/blog/img1.png",
+      href: `/blog/${slugify(blog.slug)}`,
+    })) || [];
 
   if (!blogs.length) return null;
 
@@ -63,7 +70,7 @@ export default async function LatestBlogs() {
             <Link
               key={blog.href}
               href={blog.href}
-              className="group block cursor-pointer hover:-translate-y-1 transition"
+              className="group block hover:-translate-y-1 transition"
             >
               <article>
                 <div className="relative w-full rounded-[16px] overflow-hidden mb-5">

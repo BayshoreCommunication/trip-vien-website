@@ -118,7 +118,7 @@ export default function FaqSection() {
   const visibleFaqs = faqData.slice(0, visibleCount);
 
   return (
-    <section className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
+    <section className="px-4 md:px-6 lg:px-8 py-8">
       <div className="max-w-[1640px] mx-auto">
 
         {/* HEADER */}
@@ -127,7 +127,7 @@ export default function FaqSection() {
             Frequently Asked Questions
           </span>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
             Need answers? We&apos;ve got you covered.
           </h2>
 
