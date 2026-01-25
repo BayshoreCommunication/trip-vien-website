@@ -110,7 +110,6 @@ const faqData = [
   },
 ];
 
-
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [visibleCount, setVisibleCount] = useState(5); // ✅ show 5 initially
@@ -120,7 +119,6 @@ export default function FaqSection() {
   return (
     <section className="px-4 md:px-6 lg:px-8 py-8">
       <div className="max-w-[1640px] mx-auto">
-
         {/* HEADER */}
         <div className="text-left md:text-center mb-12">
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
@@ -174,7 +172,7 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* SEE MORE BUTTON */}
+        {/* SEE MORE BUTTON
         {visibleCount < faqData.length && (
           <div className="mt-8 flex justify-center">
             <button
@@ -184,11 +182,44 @@ export default function FaqSection() {
               See More
             </button>
           </div>
-        )}
+        )} */}
 
         {/* CTA BUTTONS */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button title="Find More Answer" href="/faq" />
+          <button
+            onClick={() => setVisibleCount((prev) => prev + 5)}
+            className="
+    relative inline-flex items-center gap-2
+    px-5 py-3
+    font-medium text-black
+    bg-primary
+    overflow-hidden
+    transition-colors duration-300
+    group
+  "
+          >
+            {/* Sliding background */}
+            <span
+              className="
+      absolute inset-0
+      bg-yellow-400
+      transform -translate-x-full
+      transition-transform duration-300 ease-out
+      group-hover:translate-x-0
+    "
+            />
+
+            {/* Content */}
+            <span className="relative z-10">Find More Answer</span>
+
+            <Image
+              src="/images/btn-arrow.png"
+              alt="arrow right"
+              width={24}
+              height={24}
+              className="relative z-10"
+            />
+          </button>
 
           <a
             href="/contact"
@@ -221,7 +252,6 @@ export default function FaqSection() {
             />
           </a>
         </div>
-
       </div>
     </section>
   );

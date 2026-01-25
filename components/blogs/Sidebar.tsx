@@ -3,9 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Button from "components/shared/Button";
 import Swal from "sweetalert2";
 import { send } from "emailjs-com";
+
+/* ---------------- TYPES ---------------- */
+
+type Blog = {
+  title: string;
+  slug: string;
+};
 
 type AppointmentFormState = {
   name: string;
@@ -21,14 +27,22 @@ type AppointmentFormErrors = {
   message?: string;
 };
 
-export default function Sidebar({ currentSlug }: { currentSlug: string }) {
+/* ---------------- COMPONENT ---------------- */
+
+export default function Sidebar({
+  currentSlug,
+  blogs = [],
+}: {
+  currentSlug: string;
+  blogs?: Blog[];
+}) {
   const router = useRouter();
   const [query, setQuery] = useState("");
 
   /* ---------------- SEARCH ---------------- */
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!query) return;
+    if (!query.trim()) return;
     router.push(`/blog?search=${query}`);
   };
 
@@ -46,12 +60,13 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
   /* ---------------- VALIDATION ---------------- */
   const validate = () => {
     const errs: AppointmentFormErrors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
     if (!form.name) errs.name = "Name is required!";
     if (!form.phone) errs.phone = "Phone number is required!";
     if (!form.email) errs.email = "Email is required!";
-    else if (!regex.test(form.email)) errs.email = "Invalid email format!";
+    else if (!emailRegex.test(form.email))
+      errs.email = "Invalid email format!";
     if (!form.message) errs.message = "Message is required!";
 
     return errs;
@@ -70,7 +85,12 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
       return;
     }
 
-    send("service_etf0i4l", "template_8l7sxxf", form, "wTZ0rPZvEyuoCP8vU")
+    send(
+      "service_etf0i4l",
+      "template_8l7sxxf",
+      form,
+      "wTZ0rPZvEyuoCP8vU"
+    )
       .then(() => {
         Swal.fire({
           icon: "success",
@@ -96,6 +116,8 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
       .finally(() => setLoading(false));
   };
 
+  /* ---------------- UI ---------------- */
+
   return (
     <aside className="space-y-10">
       {/* SEARCH */}
@@ -109,29 +131,44 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
         />
       </form>
 
-      {/* OTHER BLOGS */}
-      <div>
-        <h3 className="font-serif text-lg mb-4 border-b pb-2">Others Blogs</h3>
+      {/* OTHER BLOGS (REAL DATA) */}
+      <div className="bg-[#F3F3F3] p-4">
+        <h3 className="text-lg md:text-xl mb-4 border-b-2 border-primary inline-block pb-2">
+          Others Blogs
+        </h3>
 
-        <ul className="space-y-3 text-sm">
-          {MOCK_OTHER_BLOGS.filter((b) => b.slug !== currentSlug).map(
-            (blog) => (
-              <li key={blog.slug}>
-                <Link
-                  href={`/blog/${blog.slug}`}
-                  className="hover:text-primary"
-                >
-                  {blog.title}
-                </Link>
-              </li>
-            ),
-          )}
-        </ul>
+        {blogs.length > 0 ? (
+          <ul className="space-y-3 text-sm md:text-base">
+            {blogs
+              .filter(
+                (b) =>
+                  b?.slug &&
+                  b.slug !== currentSlug
+              )
+              .slice(0, 6)
+              .map((blog) => (
+                <li key={blog.slug}>
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="hover:text-primary"
+                  >
+                    {blog.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        ) : (
+          <p className="text-sm text-gray-400">
+            No other blogs available.
+          </p>
+        )}
       </div>
 
       {/* BOOK APPOINTMENT */}
       <div className="bg-primary p-6 rounded-lg text-white">
-        <h3 className="font-serif text-lg mb-4">Book An Appointment</h3>
+        <h3 className="font-serif text-lg mb-4">
+          Book An Appointment
+        </h3>
 
         <form className="space-y-3" onSubmit={handleSubmit}>
           {/* Name */}
@@ -140,10 +177,14 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
               className="w-full px-3 py-2 rounded text-black"
               placeholder="Your Name"
               value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, name: e.target.value })
+              }
             />
             {errors.name && (
-              <span className="text-red-200 text-xs">{errors.name}</span>
+              <span className="text-red-200 text-xs">
+                {errors.name}
+              </span>
             )}
           </div>
 
@@ -153,10 +194,14 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
               className="w-full px-3 py-2 rounded text-black"
               placeholder="Phone Number"
               value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, phone: e.target.value })
+              }
             />
             {errors.phone && (
-              <span className="text-red-200 text-xs">{errors.phone}</span>
+              <span className="text-red-200 text-xs">
+                {errors.phone}
+              </span>
             )}
           </div>
 
@@ -166,10 +211,14 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
               className="w-full px-3 py-2 rounded text-black"
               placeholder="Email Address"
               value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, email: e.target.value })
+              }
             />
             {errors.email && (
-              <span className="text-red-200 text-xs">{errors.email}</span>
+              <span className="text-red-200 text-xs">
+                {errors.email}
+              </span>
             )}
           </div>
 
@@ -179,42 +228,31 @@ export default function Sidebar({ currentSlug }: { currentSlug: string }) {
               className="w-full px-3 py-2 rounded text-black"
               placeholder="Type your message"
               value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, message: e.target.value })
+              }
             />
             {errors.message && (
-              <span className="text-red-200 text-xs">{errors.message}</span>
+              <span className="text-red-200 text-xs">
+                {errors.message}
+              </span>
             )}
           </div>
 
-          <Link
-            href=""
-            onClick={(e) => {
-              e.preventDefault();
-              handleSubmit(e as any);
-            }}
-            className={`block text-center rounded-md ${
-              loading ? "pointer-events-none opacity-60" : ""
+          {/* SUBMIT */}
+          <button
+            type="submit"
+            disabled={loading}
+            className={`w-full rounded-md bg-white text-black py-2 font-medium transition ${
+              loading
+                ? "opacity-60 cursor-not-allowed"
+                : ""
             }`}
           >
-            Send Request
-          </Link>
+            {loading ? "Sending..." : "Send Request"}
+          </button>
         </form>
       </div>
     </aside>
   );
 }
-
-const MOCK_OTHER_BLOGS = [
-  {
-    title: "Principle Of Precedent To Establish Consistency",
-    slug: "precedent-consistency",
-  },
-  {
-    title: "Common Law Systems Concept Decisions Courts",
-    slug: "common-law-systems",
-  },
-  {
-    title: "Precedents Are Decisions Made By Courts",
-    slug: "precedents-decisions",
-  },
-];
