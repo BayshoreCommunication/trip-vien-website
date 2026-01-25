@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Button from "components/shared/Button";
 import Image from "next/image";
+import Reveal from "../motion/Reveal";
 
 const faqData = [
   // {
@@ -124,15 +125,18 @@ export default function FaqSection() {
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
             Frequently Asked Questions
           </span>
+          <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
+              Need answers? We&apos;ve got you covered.
+            </h2>
+          </Reveal>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
-            Need answers? We&apos;ve got you covered.
-          </h2>
-
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We&apos;re always here to guide you—send us your questions and
-            we&apos;ll help you right away.
-          </p>
+          <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We&apos;re always here to guide you—send us your questions and
+              we&apos;ll help you right away.
+            </p>
+          </Reveal>
         </div>
 
         {/* ACCORDION */}

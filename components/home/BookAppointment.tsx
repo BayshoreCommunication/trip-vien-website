@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Swal from "sweetalert2";
 import { send } from "emailjs-com";
+import Reveal from "components/motion/Reveal";
 
 type FormState = {
   user_name: string;
@@ -68,12 +69,7 @@ export default function BookAppointment() {
       return;
     }
 
-    send(
-      "service_etf0i4l",
-      "template_nbw8fo7",
-      form,
-      "wTZ0rPZvEyuoCP8vU"
-    )
+    send("service_etf0i4l", "template_nbw8fo7", form, "wTZ0rPZvEyuoCP8vU")
       .then(() => {
         Swal.fire({
           icon: "success",
@@ -112,10 +108,11 @@ export default function BookAppointment() {
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-lg">
             Book An Appointment
           </span>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-            We&apos;re ready when you are. Book Now.
-          </h2>
+          <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              We&apos;re ready when you are. Book Now.
+            </h2>
+          </Reveal>
         </div>
 
         {/* FORM CARD */}
@@ -136,9 +133,7 @@ export default function BookAppointment() {
                 }
               />
               {errors.user_name && (
-                <span className="text-red-500 text-sm">
-                  {errors.user_name}
-                </span>
+                <span className="text-red-500 text-sm">{errors.user_name}</span>
               )}
             </div>
 
@@ -167,14 +162,10 @@ export default function BookAppointment() {
                 placeholder="Phone Number"
                 className="input"
                 value={form.phone}
-                onChange={(e) =>
-                  setForm({ ...form, phone: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
               />
               {errors.phone && (
-                <span className="text-red-500 text-sm">
-                  {errors.phone}
-                </span>
+                <span className="text-red-500 text-sm">{errors.phone}</span>
               )}
             </div>
 
@@ -184,9 +175,7 @@ export default function BookAppointment() {
               placeholder="Subject"
               className="input"
               value={form.subject}
-              onChange={(e) =>
-                setForm({ ...form, subject: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, subject: e.target.value })}
             />
 
             {/* Nationality */}
@@ -210,9 +199,7 @@ export default function BookAppointment() {
               onBlur={(e) => {
                 if (!e.target.value) e.target.type = "text";
               }}
-              onChange={(e) =>
-                setForm({ ...form, dob: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, dob: e.target.value })}
             />
 
             {/* Origin Country */}
@@ -248,14 +235,10 @@ export default function BookAppointment() {
                 placeholder="Type your case details here"
                 className="input resize-none"
                 value={form.message}
-                onChange={(e) =>
-                  setForm({ ...form, message: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
               />
               {errors.message && (
-                <span className="text-red-500 text-sm">
-                  {errors.message}
-                </span>
+                <span className="text-red-500 text-sm">{errors.message}</span>
               )}
             </div>
 

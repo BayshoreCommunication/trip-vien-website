@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import Reveal from "../motion/Reveal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -36,44 +37,49 @@ export default function TestimonialSlider() {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
-              {/* CENTERED WRAPPER */}
               <div className="flex justify-center">
-                {/* CONTENT BLOCK (LEFT ALIGNED) */}
                 <div className="max-w-3xl text-left">
+                  
                   {/* Avatar */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={48}
-                      height={48}
-                      className="rounded-2xl"
-                    />
-                  </div>
+                  <Reveal x={-100} opacityFrom={0} duration={3}>
+                    <div className="flex items-center gap-4 mb-6">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={48}
+                        height={48}
+                        className="rounded-2xl"
+                      />
+                    </div>
+                  </Reveal>
 
                   {/* Testimonial Text */}
-                  <p className="text-white text-xl md:text-2xl lg:text-3xl leading-relaxed font-serif">
-                    {item.text}
-                  </p>
+                  <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+                    <p className="text-white text-xl md:text-2xl lg:text-3xl leading-relaxed font-serif">
+                      {item.text}
+                    </p>
+                  </Reveal>
 
-                  {/* Name + Left Border */}
-                  <div className="mt-6 flex items-start gap-4">
-                    {/* Vertical Gray Line */}
-                    <span className="w-px h-12 bg-gray-500 mt-1" />
+                  {/* Name + Rating */}
+                  <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+                    <div className="mt-6 flex items-start gap-4">
+                      <span className="w-px h-12 bg-gray-500 mt-1" />
 
-                    <div>
-                      <p className="text-white font-semibold">
-                        {item.name}
-                      </p>
-                      <div className="flex gap-1 mt-1">
-                        {Array.from({ length: item.rating }).map((_, i) => (
-                          <span key={i} className="text-primary text-sm">
-                            ★
-                          </span>
-                        ))}
+                      <div>
+                        <p className="text-white font-semibold">
+                          {item.name}
+                        </p>
+                        <div className="flex gap-1 mt-1">
+                          {Array.from({ length: item.rating }).map((_, i) => (
+                            <span key={i} className="text-primary text-sm">
+                              ★
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Reveal>
+
                 </div>
               </div>
             </SwiperSlide>

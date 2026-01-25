@@ -4,6 +4,7 @@ import Breadcrumb from "components/share/Breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Reveal from "../motion/Reveal";
 
 type ApiBlog = {
   title: string;
@@ -73,16 +74,19 @@ export default function BlogsSection({
       />
 
       <div className="max-w-[1640px] mx-auto">
-        <div className="max-w-3xl mx-auto text-center my-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
-            Explore Our Latest Blogs
-          </h2>
-          <p className="text-gray-600">
-            Stay informed with practical insights, legal updates, and guidance
-            crafted to help you navigate your immigration journey with
-            confidence.
-          </p>
-        </div>
+        {/* HEADER */}
+        <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+          <div className="max-w-3xl mx-auto text-center my-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
+              Explore Our Latest Blogs
+            </h2>
+            <p className="text-gray-600">
+              Stay informed with practical insights, legal updates, and guidance
+              crafted to help you navigate your immigration journey with
+              confidence.
+            </p>
+          </div>
+        </Reveal>
 
         {/* BLOG GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -93,35 +97,42 @@ export default function BlogsSection({
               className="group block cursor-pointer"
             >
               <article className="bg-white rounded-xl overflow-hidden h-full">
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    width={1000}
-                    height={800}
-                    className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                
+                {/* IMAGE */}
+                <Reveal x={-100} opacityFrom={0} duration={3}>
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      width={1000}
+                      height={800}
+                      className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </Reveal>
 
-                <div className="py-6">
-                  <p className="text-sm text-gray-400 mb-3">
-                    {blog.date}
-                  </p>
+                {/* TEXT */}
+                <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+                  <div className="py-6">
+                    <p className="text-sm text-gray-400 mb-3">
+                      {blog.date}
+                    </p>
 
-                  <h3 className="text-xl font-serif mb-6">
-                    {blog.title}
-                  </h3>
+                    <h3 className="text-xl font-serif mb-6">
+                      {blog.title}
+                    </h3>
 
-                  <span className="text-primary font-medium">
-                    View Details →
-                  </span>
-                </div>
+                    <span className="text-primary font-medium">
+                      View Details →
+                    </span>
+                  </div>
+                </Reveal>
               </article>
             </Link>
           ))}
         </div>
 
-        {/* PAGINATION */}
+        {/* PAGINATION (unchanged) */}
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mt-16">
             <button

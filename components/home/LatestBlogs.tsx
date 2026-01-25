@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPostData } from "lib/GetPostData";
+import Reveal from "../motion/Reveal";
 
 /* ---------------- API TYPE ---------------- */
 type ApiBlog = {
@@ -26,9 +27,9 @@ type BlogCard = {
 function slugify(text: string) {
   return text
     .toLowerCase()
-    .replace(/:/g, "")            // remove colon
-    .replace(/[^a-z0-9]+/g, "-")  // replace special chars
-    .replace(/(^-|-$)+/g, "");    // trim dashes
+    .replace(/:/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 }
 
 export default async function LatestBlogs() {
@@ -55,14 +56,16 @@ export default async function LatestBlogs() {
       <div className="max-w-[1640px] mx-auto">
 
         {/* HEADER */}
-        <div className="text-left md:text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
-            Explore Our Latest Blogs
-          </h2>
-          <p className="text-gray-600">
-            Stay informed with practical insights and legal updates.
-          </p>
-        </div>
+        <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+          <div className="text-left md:text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
+              Explore Our Latest Blogs
+            </h2>
+            <p className="text-gray-600">
+              Stay informed with practical insights and legal updates.
+            </p>
+          </div>
+        </Reveal>
 
         {/* BLOG GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -73,33 +76,41 @@ export default async function LatestBlogs() {
               className="group block hover:-translate-y-1 transition"
             >
               <article>
-                <div className="relative w-full rounded-[16px] overflow-hidden mb-5">
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    width={1000}
-                    height={800}
-                    className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                <Reveal x={-100} opacityFrom={0} duration={3}>
+                  <div className="relative w-full rounded-[16px] overflow-hidden mb-5">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      width={1000}
+                      height={800}
+                      className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </Reveal>
 
-                <p className="text-sm text-gray-400 mb-2">
-                  {blog.date}
-                </p>
+                <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+                  <p className="text-sm text-gray-400 mb-2">
+                    {blog.date}
+                  </p>
+                </Reveal>
 
-                <h3 className="text-lg md:text-xl font-serif leading-snug mb-4">
-                  {blog.title}
-                </h3>
+                <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+                  <h3 className="text-lg md:text-xl font-serif leading-snug mb-4">
+                    {blog.title}
+                  </h3>
+                </Reveal>
 
-                <span className="inline-flex items-center gap-2 text-primary font-medium">
-                  View Details
-                  <Image
-                    src="/images/btn-arrow.png"
-                    alt="arrow"
-                    width={24}
-                    height={24}
-                  />
-                </span>
+                <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+                  <span className="inline-flex items-center gap-2 text-primary font-medium">
+                    View Details
+                    <Image
+                      src="/images/btn-arrow.png"
+                      alt="arrow"
+                      width={24}
+                      height={24}
+                    />
+                  </span>
+                </Reveal>
               </article>
             </Link>
           ))}
