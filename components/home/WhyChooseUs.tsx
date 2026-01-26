@@ -159,8 +159,7 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* 🔑 INVISIBLE — MATCHES CONTENT SCROLL HEIGHT */}
-          <div className="hidden lg:block h-[620px]" />
+          
         </div>
       </div>
     </section>
