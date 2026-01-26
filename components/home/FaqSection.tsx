@@ -94,6 +94,31 @@ const faqData = [
     answer:
       "You don't have to hire an attorney to handle your DUI case, but it is highly recommended that you do.  DUI proceedings can be overwhelming and confusing.  An experienced Florida DUI attorney will have the knowledge needed to plead your case best, ensuring you have the greatest chase of getting the least conviction and penalties possible.",
   },
+  {
+    question: "What types of U.S. immigration cases does your firm handle?",
+    answer:
+      "We handle a wide range of immigration matters, including business and investor visas, employment-based immigration, family-based green cards, waivers of inadmissibility, and citizenship and naturalization cases.",
+  },
+  {
+    question: "Do you assist with business and investor-based immigration?",
+    answer:
+      "Yes. We represent entrepreneurs, investors, and business owners seeking E-2 treaty investor visas, EB-2, EB-3, EB-4, EB-5 visas, and immigration strategies tied to commercial real estate investments.",
+  },
+  {
+    question: "Can you help with family-based immigration cases?",
+    answer:
+      "Yes. We assist clients with sponsoring spouses, parents, and children, adjustment of status, consular processing, and complex family-based matters, including hardship and inadmissibility waivers.",
+  },
+  {
+    question: "What if my visa or green card application was denied?",
+    answer:
+      "A denial does not always mean the end of your case. We review the reason for denial, identify available remedies, and develop a strategy to refile, appeal, or pursue alternative immigration options.",
+  },
+  {
+    question: "Do you represent clients outside the United States?",
+    answer:
+      "Yes. We represent clients both inside and outside the U.S. and regularly handle consular processing and cross-border immigration matters.",
+  },
 ];
 
 export default function FaqSection() {
