@@ -170,7 +170,7 @@ export default function Header() {
               </div>
 
               {/* CTA */}
-              <Button title="Request A Quote" href="/quote" />
+              <Button title="Request A Quote" href="/contact" />
             </div>
 
             {/* MOBILE TOGGLE */}
