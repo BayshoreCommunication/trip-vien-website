@@ -64,14 +64,14 @@ export default function PracticeAreaPage({ params }: PageProps) {
               >
                 <div className="flex items-center gap-3">
                   {/* ICON */}
-                  <div className="mb-5">
+                  {/* <div className="mb-5">
                     <Image
                       src={service.image} // replace if needed
                       alt={service.title}
                       width={40}
                       height={40}
                     />
-                  </div>
+                  </div> */}
 
                   {/* TITLE */}
                   <h3 className="text-xl md:text-2xl font-semibold mb-3">
@@ -88,10 +88,8 @@ export default function PracticeAreaPage({ params }: PageProps) {
                 </p>
 
                 {/* CTA */}
-                <Button
-                  title="Explore"
-                  href={`/practice-areas/${params.slug}/${service.slug}`}
-                />
+                <Button title="Explore" href="" />
+                {/* href={`/practice-areas/${params.slug}/${service.slug}`} */}
               </div>
             ))}
           </div>
