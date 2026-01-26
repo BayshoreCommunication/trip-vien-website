@@ -63,11 +63,11 @@ export const team: TeamMember[] = [
     id: 2,
     name: "Viengphone Vongsyrprasom, Esq.",
     title: "U.S. Immigration Attorney",
-    subtitle: ".",
+    subtitle: "",
     image: "/images/about/viengphone.jpeg",
 
     bio: [
-      "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of life’s most challenging legal situations.",
+      "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
       "She focuses her practice on U.S. Immigration and Nationality Law, DUI Defense, and Personal Injury Litigation, offering clients the skill, empathy, and dedication they deserve.",
       "Her immigration practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
       "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
