@@ -9,49 +9,90 @@ const faqData = [
   // PERSONAL INJURY (PI) — LAWYER
   // =========================
   {
-    question: "When should I hire a personal injury lawyer?",
+    question: "What should I do after a car accident?",
     answer:
-      "You should contact a personal injury lawyer as soon as possible after an accident. An attorney can protect your rights, preserve evidence, and handle insurance companies on your behalf.",
+      "Ensure your safety by moving to a secure location. Make sure everyone involved is okay.  Call 911 to contact emergency medical services.  Do not leave the scene of the accident.  Wait for the police and help them file a police report. A police report is crucial for insurance claims and legal proceedings.",
   },
   {
-    question: "How can a personal injury lawyer help maximize my compensation?",
+    question: "What information should I exchange with the other driver? ",
     answer:
-      "A personal injury lawyer evaluates the full value of your claim, including medical expenses, lost wages, future care, and pain and suffering, and negotiates aggressively with insurance companies.",
+      "Next, exchange information with the other party/ies; names, addresses, phone numbers, and insurance information.  It is helpful to write down the other vehicle's make, model, color, and license plate number.  Get contact information from any witnesses to the accident.  Take pictures of all vehicles involved, especially of the property damages.",
+  },
+  {
+    question: " What is Florida's No Fault law?",
+    answer:
+      " A motorist involved in an accident must first file a claim with their own insurance company, no matter if you are at fault or not.    If the damages is more than what your insurance company offers to pay, you can then file a personal injury case against the at fault driver.",
+  },
+  {
+    question: "When am I required to file a police report?",
+    answer:
+      "A police report must be filed immediately when there are: injury, death, property damage over $500, in a hit-and-run, and when drunk driving is involved.",
   },
   {
     question:
-      "Do I still need a lawyer if the insurance company offers a settlement?",
+      "What if the at-fault party does not have liability insurance coverage when the accident happened?",
     answer:
-      "Yes. Initial settlement offers are often lower than what a case is worth. A lawyer can review the offer and determine whether it fairly compensates you for your injuries.",
+      "This creates a complex and challenging situation for all parties involved.  Victims may face difficulties obtaining compensation for their losses, and the at-fault driver may encounter legal and financial consequences.  All drivers should explore their own insurance coverage options, including UM/UIM coverage, to protect themselves in case they are involved in an accident with an uninsured or underinsured driver.",
   },
   {
-    question: "What if my personal injury case goes to court?",
+    question:
+      " It's been a few days after I was in a car accident and I am just now starting to feel pain.  What should I do?",
+    answer: "Go to the ER, urgent care, or your doctor as soon as possible. ",
+  },
+  {
+    question: "What is Florida PIP law?",
     answer:
-      "If a fair settlement cannot be reached, a personal injury lawyer can file a lawsuit and represent you in court to pursue the compensation you deserve.",
+      " PIP covers medical expenses that result from an accident and also provides benefits for lost wages, death benefits, and disability.  80% of your actual expenses for medical treatment, hospitalization, transport, and medical tests are covered up to $10,000, as long as treatment is within 14 days of the accident.  If treatment is not considered an Emergency Medical Condition (EMC), the limitation on coverage is only $2,500.  An EMC is defined as any injury, which, if left untreated, would reasonably be expected to cause serious jeopardy to the person's health, serious impairment of any bodily function, or serious dysfunction of a body part or organ.",
+  },
+  {
+    question:
+      "Can I receive damages for pain and suffering after a Florida car crash?",
+    answer:
+      " Pain and suffering is the legal term for an additional amount of damages that are paid on top of medical and disability costs, and it's up to a jury to decide how much should be awarded in each case. ",
+  },
+  {
+    question: "When should I hire a lawyer for a car accident?",
+    answer:
+      " A good personal injury lawyer can explain your legal rights and also give you practical, strategic advice about your case.  A lawyer will deal with the insurance company for you and will handle all the administrative and procedural work that is required in a car accident case.  Most of the time, victims who have legal representation are usually more fairly compensated than unrepresented victims.It is a good idea to consult a lawyer promptly after a car accident.  The other driver's insurance company will not waste time getting to work to reduce their financial exposure.  Our attorneys at Tripathy Vongsyprasom Law, offer a free initial case evaluation so you can find out more about your rights and your options.",
   },
 
   // =========================
   // DUI — LAWYER
   // =========================
   {
-    question: "Why should I hire a DUI lawyer?",
+    question: "Is DUI a crime?",
     answer:
-      "DUI charges carry serious consequences, including jail time, fines, and license suspension. A DUI lawyer understands the law, identifies defenses, and works to reduce or dismiss charges.",
+      "Yes, because DUI typically involve a defendant operating a motor vehicle while intoxication, DUI is a crime that goes on a defendant's criminal record.",
   },
   {
-    question: "Can a DUI lawyer help me keep my driver’s license?",
+    question: " What is BAC?",
     answer:
-      "Yes. A DUI lawyer can request a formal review hearing, challenge the suspension, and pursue options such as a hardship license when available.",
+      "Blood alcohol content (BAC) refers to the percentage of alcohol in a person's blood stream.  A BAC of .10% means that an individual's blood supply contains one part of alcohol for every 1000 parts blood.  In Florida, a personal is legally intoxicated if they have a BAC of .08% or higher.",
   },
   {
-    question: "Can a DUI charge be reduced or dismissed?",
+    question: " Should I blow into the breathalyzer?",
     answer:
-      "In some cases, DUI charges may be reduced or dismissed due to issues with evidence, traffic stops, breath or blood tests, or procedural errors. A lawyer evaluates these factors carefully.",
+      " Whether or not to blow into the breathalyzer after a DUI arrest in Florida is a personal decision, and it's important to consider the potential consequences carefully.  If you do not submit to the test, then there will be less evidence and the less evidence the prosecution has is usually a good thing for the accused.  However, there are downsides to not blowing into a breathalyzer such as an automatic driver's license suspension for the next 12 months and the decision to not blow can be used as evidence against you.",
   },
   {
-    question: "What happens if I do not hire a DUI lawyer?",
+    question: "This is my first DUI in Florida, what will happen to me?",
     answer:
-      "Without legal representation, you risk facing the full penalties of a DUI conviction. A lawyer helps protect your rights and navigate the complex criminal justice process.",
+      "A first-time conviction for DUI in Florida can cost up to $1,000, up to 6 months in jail, loss of driver's license for up to 6 months, and 50 hours of community service.",
+  },
+  {
+    question: "Can you go to jail for DUI in Florida?",
+    answer:
+      "A first-time misdemeanor for a driving under the influence (DUI) conviction in Florida is punishable by up to 9 months in jail.  Typically, a first conviction will not result in more than 6 months of imprisonment.  However, if the BAC is above .15%, the imprisonment could be for as many as 9 months.  Multiple convictions can result in periods of imprisonment greater than 9 months as well as permanent license suspension.",
+  },
+  {
+    question: " How long does a DUI conviction stay on your record in Florida?",
+    answer:
+      "A DUI conviction in Florida will stay on a defendant's criminal history forever and cannot be expunged or sealed.  In addition, the DUI conviction will also stay on a Florida driver's license and record for 75 years.",
+  },
+  {
+    question: "Do I have to hire a DUI lawyer?",
+    answer:
+      "You don't have to hire an attorney to handle your DUI case, but it is highly recommended that you do.  DUI proceedings can be overwhelming and confusing.  An experienced Florida DUI attorney will have the knowledge needed to plead your case best, ensuring you have the greatest chase of getting the least conviction and penalties possible.",
   },
 ];
 
