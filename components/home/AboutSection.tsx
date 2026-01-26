@@ -80,7 +80,7 @@ export default function AboutSection() {
                   </h2>
 
                   <p className="text-gray-700 mb-4">
-                    At Trip Vien Law we set out to create a unique law firm
+                    At Tripathi Vongsyprasom Law, P.A. we set out to create a unique law firm
                     where outstanding representation and humanity go hand in
                     hand.
                   </p>
@@ -97,7 +97,7 @@ export default function AboutSection() {
               <Reveal y={100} opacityFrom={0} duration={3}>
                 <div className="pb-8 md:pb-10 lg:pb-20">
                   <h2 className="text-3xl md:text-4xl xl:text-6xl mb-6">
-                    Your advocate in <br /> injury & criminal cases
+                    Your advocate in  personal injury, immigration, & defense
                   </h2>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700">
