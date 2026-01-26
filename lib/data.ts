@@ -64,7 +64,7 @@ export const team: TeamMember[] = [
     name: "Viengphone Vongsyrprasom, Esq.",
     title: "U.S. Immigration Attorney",
     subtitle: ".",
-    image: "/images/about/viengphone.jpeg",
+    image: "/images/about/viengphone.png",
 
     bio: [
       "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of life’s most challenging legal situations.",
