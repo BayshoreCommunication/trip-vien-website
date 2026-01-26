@@ -27,7 +27,7 @@ export default function PracticeAreaPage({ params }: PageProps) {
   return (
     <div>
       <Breadcrumb
-        src=""
+        src="/images/home/hero/bg.png"
         title="Our Practice Areas"
         breadcrumbs={[
           { label: "Home", href: "/" },

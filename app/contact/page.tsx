@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       <Breadcrumb
-        src=""
+        src="/images/home/hero/bg.png"
         title="Connect With Our Legal Team"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact Us" }]}
       />
