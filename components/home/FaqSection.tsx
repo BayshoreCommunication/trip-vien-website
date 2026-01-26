@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Button from "components/shared/Button";
 import Image from "next/image";
-import Reveal from "../motion/Reveal";
 
 const faqData = [
   // {
@@ -118,25 +117,22 @@ export default function FaqSection() {
   const visibleFaqs = faqData.slice(0, visibleCount);
 
   return (
-    <section className="px-4 md:px-6 lg:px-8 py-8">
+    <section className="px-4 md:px-6 lg:px-8 py-8 md:py-16">
       <div className="max-w-[1640px] mx-auto">
         {/* HEADER */}
         <div className="text-left md:text-center mb-12">
           <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-sm md:text-lg">
             Frequently Asked Questions
           </span>
-          <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
-              Need answers? We&apos;ve got you covered.
-            </h2>
-          </Reveal>
 
-          <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We&apos;re always here to guide you—send us your questions and
-              we&apos;ll help you right away.
-            </p>
-          </Reveal>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif mb-4">
+            Need answers? We&apos;ve got you covered.
+          </h2>
+
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We&apos;re always here to guide you—send us your questions and
+            we&apos;ll help you right away.
+          </p>
         </div>
 
         {/* ACCORDION */}
@@ -176,54 +172,28 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* SEE MORE BUTTON
+        {/* SEE MORE BUTTON */}
         {visibleCount < faqData.length && (
           <div className="mt-8 flex justify-center">
             <button
               onClick={() => setVisibleCount((prev) => prev + 5)}
-              className="px-6 py-3 rounded-md border border-gray-400 font-medium hover:bg-gray-100 transition"
+              className="
+      inline-flex items-center justify-center
+      px-8 py-3 bg-primary
+      text-sm font-medium text-black
+      transition-all duration-300 ease-out
+      hover:bg-yellow-500 hover:text-white hover:border-black
+      focus:outline-none
+    "
             >
               See More
             </button>
           </div>
-        )} */}
+        )}
 
         {/* CTA BUTTONS */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={() => setVisibleCount((prev) => prev + 5)}
-            className="
-    relative inline-flex items-center gap-2
-    px-5 py-3
-    font-medium text-black
-    bg-primary
-    overflow-hidden
-    transition-colors duration-300
-    group
-  "
-          >
-            {/* Sliding background */}
-            <span
-              className="
-      absolute inset-0
-      bg-yellow-400
-      transform -translate-x-full
-      transition-transform duration-300 ease-out
-      group-hover:translate-x-0
-    "
-            />
-
-            {/* Content */}
-            <span className="relative z-10">Find More Answer</span>
-
-            <Image
-              src="/images/btn-arrow.png"
-              alt="arrow right"
-              width={24}
-              height={24}
-              className="relative z-10"
-            />
-          </button>
+        {/* <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button title="Find More Answer" href="/faq" />
 
           <a
             href="/contact"
@@ -255,7 +225,7 @@ export default function FaqSection() {
               className="relative z-10"
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
