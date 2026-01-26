@@ -28,7 +28,7 @@ export const team: TeamMember[] = [
     bio: [
       "At Tripathi Vongsyprasom  Law P.A we set out to create a unique law firm where outstanding immigration representation and a deep commitment to humanity go hand in hand.",
       "Attorney Hardam Tripathi is a former legal professional in the federal government. He believes in providing honest, compassionate, and results-driven representation.",
-      "Law is home to some of the most experienced lawyers in immigration law. The firm’s growth has been fueled by excellence, integrity, and a hard-earned reputation for quality.",
+      "Tripathi Vongsyprasom Law, P.A. is home to some of the most experienced lawyers in immigration law. The firm’s growth has been fueled by excellence, integrity, and a hard-earned reputation for quality.",
       "Attorney Tripathi specializes in U.S. Immigration and Nationality Law, with a focus on Business & Investor-Based Immigration, including Treaty-Based Investor Visas (E-2), Citizenship by Investment (Golden Visas), Employment-Based visas (EB-2, EB-3, EB-4, EB-5), and commercial real estate investments.",
       "He also zealously advocates for family-based immigration matters, including waivers of inadmissibility, adjustment of status, citizenship/naturalization, and visa & green card services.",
     ],
@@ -62,7 +62,7 @@ export const team: TeamMember[] = [
   {
     id: 2,
     name: "Viengphone Vongsyrprasom, Esq.",
-    title: "U.S. Immigration Attorney",
+    title: "U.S. Immigration, DUI Defense, and Personal Injury Attorney",
     subtitle: "",
     image: "/images/about/viengphone.jpeg",
 
@@ -128,7 +128,7 @@ export const team: TeamMember[] = [
     image: "/images/about/sakawat-hossain.png",
 
     bio: [
-      "Sakawat Hossain is currently in charge of Trip Vien Law, P.A., overseeing the entire lifecycle of legal cases and ensuring their progress. Sakawat Hossain is currently in charge of Trip Vien Law, P.A., overseeing the entire lifecycle of legal cases and ensuring they progress smoothly from initiation to resolution. ",
+      "Sakawat Hossain is currently in charge of Tripathi Vongsyprasom Law, P.A., overseeing the entire lifecycle of legal cases and ensuring their progress. Sakawat Hossain is currently in charge of Tripathi Vongsyprasom Law, P.A., overseeing the entire lifecycle of legal cases and ensuring they progress smoothly from initiation to resolution. ",
       "This includes managing deadlines, tracking case developments, and coordinating with all parties involved. You serve as a primary point of contact for the client, maintaining regular communication to update them on.",
     ],
   },
@@ -143,7 +143,7 @@ export const team: TeamMember[] = [
     bio: [
       "S. M. Faisal Abrar, is a practitioner lawyer in Bangladesh Obtained his LLB from AMERICAN INTERNATIONAL UNIVERSITY BANGLADESH & LLM from NORTH SOUTH UNIVERSITY. He specialized in Human Rights Law as his published documentary about Rohingya Refugees was exhibited at University of Barcelona, in Spain.",
 
-      "Currently Abrar serves as a Senior Paralegal at Trip Vien Law, P.A. He has adequate knowledge on family based immigration matters involving processing of Green Cards, Citizenship, and Visa matters with respect to the U.S. Department of Homeland Security’s Citizenship and Immigration Services and the U.S. Department of State’s Bureau of Consular Affairs, respectively.",
+      "Currently Abrar serves as a Senior Paralegal at Tripathi Vongsyprasom Law, P.A. He has adequate knowledge on family based immigration matters involving processing of Green Cards, Citizenship, and Visa matters with respect to the U.S. Department of Homeland Security’s Citizenship and Immigration Services and the U.S. Department of State’s Bureau of Consular Affairs, respectively.",
     ],
 
     education: [
