@@ -124,7 +124,7 @@ export default function WhyChooseUs() {
               </div>
 
               {/* ===== BLOCK 2 (UNCHANGED) ===== */}
-              <div className="space-y-8 text-gray-700 h-[100px] md:h-[620px]">
+              <div className="space-y-8 text-gray-700 h-[100px] md:h-[620px] mb-16 md:mb-0">
                 {[
                   {
                     img: "img4",
