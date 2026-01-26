@@ -5,68 +5,41 @@ import Button from "components/shared/Button";
 import { useRef } from "react";
 
 export default function WhyChooseUs() {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const touchStartY = useRef(0);
+  const rightScrollRef = useRef<HTMLDivElement>(null);
 
-  /* 🖱️ IMAGE WHEEL → CONTENT SCROLL */
+  /* EXACT ABOUT SECTION LOGIC */
   const handleImageWheel = (e: React.WheelEvent) => {
-    if (!contentRef.current) return;
+    if (window.innerWidth < 1024) return;
+    if (!rightScrollRef.current) return;
 
-    const el = contentRef.current;
+    const el = rightScrollRef.current;
 
     const atTop = el.scrollTop === 0;
-    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+    const atBottom =
+      el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
 
+    // content start/end → allow page scroll
     if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
       return;
     }
 
     e.preventDefault();
-
-    el.scrollBy({
-      top: e.deltaY,
-      behavior: "smooth",
-    });
-  };
-
-  /* 📱 IMAGE SWIPE → CONTENT SCROLL */
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartY.current = e.touches[0].clientY;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!contentRef.current) return;
-
-    const currentY = e.touches[0].clientY;
-    const deltaY = touchStartY.current - currentY;
-    const el = contentRef.current;
-
-    const atTop = el.scrollTop === 0;
-    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
-
-    if ((deltaY < 0 && atTop) || (deltaY > 0 && atBottom)) {
-      return;
-    }
-
-    e.preventDefault();
-
-    el.scrollBy({ top: deltaY });
-    touchStartY.current = currentY;
+    el.scrollBy({ top: e.deltaY, behavior: "smooth" });
   };
 
   return (
-    <section className="relative h-[220vh] px-4 md:px-6 lg:px-8 py-16">
-      <div className="max-w-[1640px] mx-auto h-full">
-        {/* STICKY WRAPPER — SAME AS ABOUT SECTION */}
-        <div className="sticky top-48">
+    <section className="relative lg:h-[220vh] px-4 md:px-6 lg:px-8 py-16">
+      <div className="max-w-[1640px] mx-auto lg:h-full">
+
+        {/* 🔒 SAME STICKY STRUCTURE AS ABOUT SECTION */}
+        <div className="lg:sticky lg:top-48">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* IMAGE — FIXED UNTIL CONTENT ENDS */}
+
+            {/* IMAGE — FIXED */}
             <div
               onWheel={handleImageWheel}
               onWheelCapture={handleImageWheel}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              className="order-1 lg:order-2 touch-pan-y"
+              className="order-1 lg:order-2"
             >
               <div className="relative rounded-[20px] overflow-hidden w-full max-w-[600px] mx-auto lg:mx-0">
                 <Image
@@ -75,28 +48,28 @@ export default function WhyChooseUs() {
                   width={1000}
                   height={800}
                   priority
-                  className="object-cover w-full h-auto"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
 
-            {/* CONTENT — SCROLL TARGET */}
+            {/* CONTENT — SAME CONTENT, JUST SCROLL TARGET */}
             <div
-              ref={contentRef}
+              ref={rightScrollRef}
               className="
                 order-2
                 lg:order-1
-                h-[620px]
-                overflow-y-auto
+                h-auto
+                overflow-visible
+                lg:h-[620px]
+                lg:overflow-y-auto
                 pr-0
                 lg:pr-6
                 space-y-24
-                scroll-smooth
                 no-scrollbar
-                touch-none
               "
             >
-              {/* BLOCK 1 */}
+              {/* ===== BLOCK 1 (UNCHANGED) ===== */}
               <div className="md:pb-[400px]">
                 <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1">
                   Why Choose Us
@@ -150,7 +123,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
 
-              {/* BLOCK 2 */}
+              {/* ===== BLOCK 2 (UNCHANGED) ===== */}
               <div className="space-y-8 text-gray-700 h-[100px] md:h-[620px]">
                 {[
                   {
@@ -185,6 +158,9 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </div>
+
+          {/* 🔑 INVISIBLE — MATCHES CONTENT SCROLL HEIGHT */}
+          <div className="hidden lg:block h-[620px]" />
         </div>
       </div>
     </section>
