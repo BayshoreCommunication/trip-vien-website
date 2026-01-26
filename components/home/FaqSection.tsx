@@ -5,108 +5,53 @@ import Button from "components/shared/Button";
 import Image from "next/image";
 
 const faqData = [
-  // {
-  //   question: "What types of cases do you handle?",
-  //   answer:
-  //     "We handle immigration, criminal defense, personal injury, and related legal matters with experienced representation.",
-  // },
-  // {
-  //   question: "How long have you been practicing law?",
-  //   answer:
-  //     "We have been practicing law for over [X] years, handling a wide range of cases with experience and dedication.",
-  // },
-  // {
-  //   question: "How much experience do you have in cases like mine?",
-  //   answer:
-  //     "Our attorneys have extensive experience handling cases similar to yours and provide personalized legal strategies.",
-  // },
-  // {
-  //   question: "Do you offer free consultations?",
-  //   answer:
-  //     "Yes, we offer free initial consultations to evaluate your case and discuss your legal options.",
-  // },
+  // =========================
+  // PERSONAL INJURY (PI) — LAWYER
+  // =========================
   {
-    question: "What should I do after a car accident?",
+    question: "When should I hire a personal injury lawyer?",
     answer:
-      "Ensure your safety by moving to a secure location. Make sure everyone involved is okay. Call 911 to contact emergency medical services. Do not leave the scene of the accident. Wait for the police and help them file a police report. A police report is crucial for insurance claims and legal proceedings.",
+      "You should contact a personal injury lawyer as soon as possible after an accident. An attorney can protect your rights, preserve evidence, and handle insurance companies on your behalf.",
   },
   {
-    question: "What information should I exchange with the other driver?",
+    question: "How can a personal injury lawyer help maximize my compensation?",
     answer:
-      "Exchange names, addresses, phone numbers, and insurance information. Write down the other vehicle’s make, model, color, and license plate number. Get contact information from witnesses and take pictures of all vehicles and property damage.",
-  },
-  {
-    question: "What is Florida's No Fault law?",
-    answer:
-      "A motorist involved in an accident must first file a claim with their own insurance company regardless of fault. If damages exceed what insurance pays, a personal injury claim may be filed against the at-fault driver.",
-  },
-  {
-    question: "When am I required to file a police report?",
-    answer:
-      "A police report must be filed immediately when there is injury, death, property damage over $500, a hit-and-run, or drunk driving.",
+      "A personal injury lawyer evaluates the full value of your claim, including medical expenses, lost wages, future care, and pain and suffering, and negotiates aggressively with insurance companies.",
   },
   {
     question:
-      "What if the at-fault party does not have liability insurance coverage?",
+      "Do I still need a lawyer if the insurance company offers a settlement?",
     answer:
-      "This creates a complex situation. Victims may face difficulty obtaining compensation. Drivers should explore UM/UIM insurance coverage to protect themselves if involved in an accident with an uninsured or underinsured driver.",
+      "Yes. Initial settlement offers are often lower than what a case is worth. A lawyer can review the offer and determine whether it fairly compensates you for your injuries.",
   },
   {
-    question:
-      "It’s been a few days after a car accident and I’m just now feeling pain. What should I do?",
+    question: "What if my personal injury case goes to court?",
     answer:
-      "Go to the emergency room, urgent care, or see your doctor as soon as possible.",
+      "If a fair settlement cannot be reached, a personal injury lawyer can file a lawsuit and represent you in court to pursue the compensation you deserve.",
+  },
+
+  // =========================
+  // DUI — LAWYER
+  // =========================
+  {
+    question: "Why should I hire a DUI lawyer?",
+    answer:
+      "DUI charges carry serious consequences, including jail time, fines, and license suspension. A DUI lawyer understands the law, identifies defenses, and works to reduce or dismiss charges.",
   },
   {
-    question: "What is Florida PIP law?",
+    question: "Can a DUI lawyer help me keep my driver’s license?",
     answer:
-      "PIP covers medical expenses, lost wages, death benefits, and disability. It pays 80% of medical expenses up to $10,000 if treatment occurs within 14 days. If the injury is not an Emergency Medical Condition, coverage is limited to $2,500.",
+      "Yes. A DUI lawyer can request a formal review hearing, challenge the suspension, and pursue options such as a hardship license when available.",
   },
   {
-    question:
-      "Can I receive damages for pain and suffering after a Florida car crash?",
+    question: "Can a DUI charge be reduced or dismissed?",
     answer:
-      "Pain and suffering damages may be awarded in addition to medical expenses and are determined by a jury based on the circumstances of the case.",
+      "In some cases, DUI charges may be reduced or dismissed due to issues with evidence, traffic stops, breath or blood tests, or procedural errors. A lawyer evaluates these factors carefully.",
   },
   {
-    question: "When should I hire a lawyer for a car accident?",
+    question: "What happens if I do not hire a DUI lawyer?",
     answer:
-      "You should consult a lawyer as soon as possible. An attorney can handle insurance companies, protect your rights, and pursue fair compensation. Tripathy Vongsyprasom Law offers a free initial case evaluation.",
-  },
-  {
-    question: "Is DUI a crime?",
-    answer:
-      "Yes. DUI involves operating a motor vehicle while intoxicated and is a criminal offense that appears on a defendant’s record.",
-  },
-  {
-    question: "What is BAC?",
-    answer:
-      "Blood Alcohol Content (BAC) measures the amount of alcohol in the bloodstream. In Florida, a person is legally intoxicated at .08% BAC or higher.",
-  },
-  {
-    question: "Should I blow into the breathalyzer?",
-    answer:
-      "Refusing a breathalyzer reduces evidence but results in an automatic 12-month license suspension and may be used against you in court.",
-  },
-  {
-    question: "This is my first DUI in Florida. What will happen?",
-    answer:
-      "A first DUI conviction may result in fines up to $1,000, up to 6 months in jail, license suspension, and community service.",
-  },
-  {
-    question: "Can you go to jail for DUI in Florida?",
-    answer:
-      "Yes. A first DUI conviction may result in up to 6 months in jail, or up to 9 months if BAC exceeds .15%. Multiple convictions may result in longer imprisonment.",
-  },
-  {
-    question: "How long does a DUI conviction stay on your record?",
-    answer:
-      "A DUI conviction stays permanently on a criminal record and remains on a Florida driving record for 75 years.",
-  },
-  {
-    question: "Do I have to hire a DUI lawyer?",
-    answer:
-      "You are not required to hire a lawyer, but it is highly recommended. DUI cases are complex, and an experienced attorney can help minimize penalties and consequences.",
+      "Without legal representation, you risk facing the full penalties of a DUI conviction. A lawyer helps protect your rights and navigate the complex criminal justice process.",
   },
 ];
 

@@ -26,18 +26,18 @@ export const team: TeamMember[] = [
     dark: true,
 
     bio: [
-      "At Trip Vien Law we set out to create a unique law firm where outstanding immigration representation and a deep commitment to humanity go hand in hand.",
+      "At Tripathi Vongsyprasom  Law P.A we set out to create a unique law firm where outstanding immigration representation and a deep commitment to humanity go hand in hand.",
       "Attorney Hardam Tripathi is a former legal professional in the federal government. He believes in providing honest, compassionate, and results-driven representation.",
-      "Trip Vien Law is home to some of the most experienced lawyers in immigration law. The firm’s growth has been fueled by excellence, integrity, and a hard-earned reputation for quality.",
+      "Law is home to some of the most experienced lawyers in immigration law. The firm’s growth has been fueled by excellence, integrity, and a hard-earned reputation for quality.",
       "Attorney Tripathi specializes in U.S. Immigration and Nationality Law, with a focus on Business & Investor-Based Immigration, including Treaty-Based Investor Visas (E-2), Citizenship by Investment (Golden Visas), Employment-Based visas (EB-2, EB-3, EB-4, EB-5), and commercial real estate investments.",
-      "He also zealously advocates for family-based immigration matters, including waivers of inadmissibility, adjustment of status, citizenship/naturalization, and visa & green card services."
+      "He also zealously advocates for family-based immigration matters, including waivers of inadmissibility, adjustment of status, citizenship/naturalization, and visa & green card services.",
     ],
 
     extendedBio: [
       "Prior to launching his own firm, Tripathi served as a management consultant with a Big Four firm, advising clients on strategic risk intelligence and risk management in government and public services.",
       "He has worked with multiple firms in Florida, assisting clients with regulatory and policy guidance related to federal and state government programs.",
       "Tripathi devotes significant time to encouraging best practices in immigration law and regularly meets with members of Congress to advocate for funding related to public health initiatives and immigrant communities.",
-      "He actively lobbies Congress for immigration veterans and displaced individuals affected by geopolitical conflicts, helping clients navigate complex global and federal immigration laws with confidence."
+      "He actively lobbies Congress for immigration veterans and displaced individuals affected by geopolitical conflicts, helping clients navigate complex global and federal immigration laws with confidence.",
     ],
 
     education: [
@@ -46,10 +46,7 @@ export const team: TeamMember[] = [
       "University of South Florida, B.S. in Business Management & Marketing, 2012",
     ],
 
-    barAdmissions: [
-      "State Bar of Wisconsin",
-      "District of Columbia Bar",
-    ],
+    barAdmissions: ["State Bar of Wisconsin", "District of Columbia Bar"],
 
     courtAdmissions: [
       "United States Court of Appeals for the Seventh Circuit",
@@ -70,22 +67,22 @@ export const team: TeamMember[] = [
     image: "/images/about/viengphone.png",
 
     bio: [
-      "Attorney Vongsyrprasom is a compassionate and strategic advocate devoted to helping clients navigate some of life’s most challenging legal situations.",
+      "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of life’s most challenging legal situations.",
       "She focuses her practice on U.S. Immigration and Nationality Law, DUI Defense, and Personal Injury Litigation, offering clients the skill, empathy, and dedication they deserve.",
       "Her immigration practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
       "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
-      "Her deep understanding of the U.S. immigration system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
+      "Her deep understanding of the U.S. immigration system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States.",
     ],
 
     extendedBio: [
-      "As a DUI and criminal defense attorney, Ms. Vongsyrprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or immigration status.",
-      "In her personal injury practice, Ms. Vongsyrprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
-      "Before co-founding Tripathi Vongsyrprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
+      "As a DUI defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or immigration status.",
+      "In her personal injury practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
+      "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense.",
     ],
 
     philosophy: [
-      "Attorney Vongsyrprasom believes in providing honest, compassionate, and results-driven representation.",
-      "She understands that behind every case is a person or family with dreams, fears, and goals."
+      "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
+      "She understands that behind every case is a person or family with dreams, fears, and goals.",
     ],
 
     education: [
@@ -113,13 +110,13 @@ export const team: TeamMember[] = [
 
       "During his tenure, Arjo has successfully consulted on and written business plans for over 50 projects, focusing primarily on investment-based immigration pathways such as the E-2 and EB-5 visa programs. His proficiency in navigating complex financial landscapes, including managing intricate money trails and documentation, has been instrumental in securing successful visa applications for his clients.",
 
-      "Arjo Neel's professional portfolio includes collaborations with a diverse range of clients, including franchises, startups, and new business formations. His adeptness at tailoring business plans to meet immigration criteria and ensure viability underscores his commitment to facilitating his clients' immigration goals effectively."
+      "Arjo Neel's professional portfolio includes collaborations with a diverse range of clients, including franchises, startups, and new business formations. His adeptness at tailoring business plans to meet immigration criteria and ensure viability underscores his commitment to facilitating his clients' immigration goals effectively.",
     ],
 
     extendedBio: [
-      "In addition to his role as a business plan writer and consultant, Arjo has cultivated strong partnerships with immigration attorneys, enabling him to stay abreast of legal developments and intricacies affecting immigration policies. This collaboration ensures that his clients receive comprehensive and up-to-date advice, mitigating risks associated with legal complexities.", 
-      
-      "Arjo Neel's brief yet impactful career in business immigration consulting reflects his dedication to excellence, client-centric approach, and deep-rooted commitment to facilitating successful immigration journeys through sound business strategies. His contributions have solidified his reputation as a trusted advisor and pivotal figure within the industry, paving the way for continued success and innovation in the field of business immigration consulting."
+      "In addition to his role as a business plan writer and consultant, Arjo has cultivated strong partnerships with immigration attorneys, enabling him to stay abreast of legal developments and intricacies affecting immigration policies. This collaboration ensures that his clients receive comprehensive and up-to-date advice, mitigating risks associated with legal complexities.",
+
+      "Arjo Neel's brief yet impactful career in business immigration consulting reflects his dedication to excellence, client-centric approach, and deep-rooted commitment to facilitating successful immigration journeys through sound business strategies. His contributions have solidified his reputation as a trusted advisor and pivotal figure within the industry, paving the way for continued success and innovation in the field of business immigration consulting.",
     ],
   },
 
@@ -132,7 +129,7 @@ export const team: TeamMember[] = [
 
     bio: [
       "Sakawat Hossain is currently in charge of Trip Vien Law, P.A., overseeing the entire lifecycle of legal cases and ensuring their progress. Sakawat Hossain is currently in charge of Trip Vien Law, P.A., overseeing the entire lifecycle of legal cases and ensuring they progress smoothly from initiation to resolution. ",
-      "This includes managing deadlines, tracking case developments, and coordinating with all parties involved. You serve as a primary point of contact for the client, maintaining regular communication to update them on."
+      "This includes managing deadlines, tracking case developments, and coordinating with all parties involved. You serve as a primary point of contact for the client, maintaining regular communication to update them on.",
     ],
   },
 
@@ -145,8 +142,8 @@ export const team: TeamMember[] = [
     dark: true,
     bio: [
       "S. M. Faisal Abrar, is a practitioner lawyer in Bangladesh Obtained his LLB from AMERICAN INTERNATIONAL UNIVERSITY BANGLADESH & LLM from NORTH SOUTH UNIVERSITY. He specialized in Human Rights Law as his published documentary about Rohingya Refugees was exhibited at University of Barcelona, in Spain.",
-      
-      "Currently Abrar serves as a Senior Paralegal at Trip Vien Law, P.A. He has adequate knowledge on family based immigration matters involving processing of Green Cards, Citizenship, and Visa matters with respect to the U.S. Department of Homeland Security’s Citizenship and Immigration Services and the U.S. Department of State’s Bureau of Consular Affairs, respectively."
+
+      "Currently Abrar serves as a Senior Paralegal at Trip Vien Law, P.A. He has adequate knowledge on family based immigration matters involving processing of Green Cards, Citizenship, and Visa matters with respect to the U.S. Department of Homeland Security’s Citizenship and Immigration Services and the U.S. Department of State’s Bureau of Consular Affairs, respectively.",
     ],
 
     education: [

@@ -7,9 +7,9 @@ export default function Footer() {
       {/*  TOP DISCLAIMER BAR */}
       <div className="bg-[#D80808] text-white text-md md:text-lg text-center px-4 py-4 leading-relaxed ">
         <p className="w-full max-w-6xl text-center mx-auto">
-          Disclaimer: Not a licensed attorney in the state of Florida. Licensed
-          attorney in the District of Columbia and the state of <br /> Wisconsin
-          only. Practices Immigration Law in all 50 states, territories, and
+          Disclaimer: Licensed
+          attorneys in the District of Columbia and the states of <br /> Wisconsin
+          and Florida. Practices Immigration Law in all 50 states, territories, and
           Embassies/Consulates abroad via Federal Jurisdiction.
         </p>
       </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <Link href="#">U.S. Immigration</Link>
               </li>
               <li>
-                <Link href="#">DUI / Criminal Defense</Link>
+                <Link href="#">DUI / Defense</Link>
               </li>
               <li>
                 <Link href="#">Personal Injury</Link>
