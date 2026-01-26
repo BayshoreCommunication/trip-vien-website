@@ -105,7 +105,7 @@ export default function BookAppointment() {
       <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-8">
         {/* HEADER */}
         <div className="text-left md:text-center mb-10">
-          <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-lg">
+          <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1 text-lg mt-8 md:mt-0">
             Book An Appointment
           </span>
           <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
