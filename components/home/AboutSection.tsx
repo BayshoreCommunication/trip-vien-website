@@ -8,8 +8,11 @@ import Reveal from "../motion/Reveal";
 export default function AboutSection() {
   const rightScrollRef = useRef<HTMLDivElement>(null);
 
-  /* 🔑 Redirect wheel ONLY when hovering IMAGE */
+  /* 🔑 Wheel scroll only applies on DESKTOP */
   const handleImageWheel = (e: React.WheelEvent) => {
+    // ❌ Do nothing on mobile
+    if (window.innerWidth < 1024) return;
+
     if (!rightScrollRef.current) return;
 
     const el = rightScrollRef.current;
@@ -30,12 +33,11 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative h-[220vh] px-4 md:px-6 lg:px-8 py-8">
+    <section className="relative px-4 md:px-6 lg:px-8 py-8 lg:h-[220vh]">
       <div className="max-w-[1640px] mx-auto h-full">
-        <div className="sticky top-48 flex items-start">
+        <div className="lg:sticky lg:top-48 flex items-start">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full">
-            
-            {/* LEFT IMAGE */}
+            {/* IMAGE */}
             <Reveal x={-100} opacityFrom={0} duration={3}>
               <div
                 className="relative rounded-[20px] overflow-hidden"
@@ -53,19 +55,21 @@ export default function AboutSection() {
               </div>
             </Reveal>
 
-            {/* RIGHT CONTENT */}
+            {/* CONTENT */}
             <div
               ref={rightScrollRef}
               className="
-                h-[450px]
-                overflow-y-auto
-                pr-4
-                space-y-40
+              space-y-10
+              md:space-y-20   
+                lg:space-y-40
+                pr-0 lg:pr-4
+                h-auto overflow-visible
+                lg:h-[450px] lg:overflow-y-auto
                 no-scrollbar
               "
             >
               {/* BLOCK 1 */}
-              <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
+              <Reveal y={100} opacityFrom={0} duration={3}>
                 <div>
                   <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1">
                     About Us
@@ -76,8 +80,9 @@ export default function AboutSection() {
                   </h2>
 
                   <p className="text-gray-700 mb-4">
-                    At Trip Vien Law we set out to create a unique law firm where
-                    outstanding representation and humanity go hand in hand.
+                    At Trip Vien Law we set out to create a unique law firm
+                    where outstanding representation and humanity go hand in
+                    hand.
                   </p>
 
                   <p className="text-gray-700 mb-6">
@@ -89,8 +94,8 @@ export default function AboutSection() {
               </Reveal>
 
               {/* BLOCK 2 */}
-              <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
-                <div className="pb-[100px]">
+              <Reveal y={100} opacityFrom={0} duration={3}>
+                <div className="pb-8 md:pb-10 lg:pb-20">
                   <h2 className="text-3xl md:text-4xl xl:text-6xl mb-6">
                     Your advocate in <br /> injury & criminal cases
                   </h2>
