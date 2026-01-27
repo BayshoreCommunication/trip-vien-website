@@ -32,7 +32,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We represent victims of serious trucking and motorcycle crashes, helping them pursue compensation for injuries, damages, and long-term losses.",
         image: "/images/services/img2.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/Trucking-&-Motorcycle-Accidents.png",
         content:
           "Truck and motorcycle accidents often cause catastrophic injuries...",
       },
@@ -42,7 +42,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We assist individuals injured due to unsafe property conditions in seeking fair compensation and justice.",
         image: "/images/services/img3.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/Slip-and-Fall.png",
         content: "Property owners have a duty to keep their premises safe...",
       },
       {
@@ -51,7 +51,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We represent patients harmed by medical errors, negligence, or improper treatment. Our focus is on holding providers accountable and securing fair compensation.",
         image: "/images/services/img4.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/Medical-Malpractice.png",
         content:
           "Doctors and hospitals must meet professional standards of care...",
       },
@@ -61,7 +61,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "We advocate for residents harmed by neglect, abuse, or inadequate care in nursing facilities. Our team works to protect their rights and seek justice for affected families.",
         image: "/images/services/img5.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/Nursing-Home-Negligence.png",
         content:
           "Doctors and hospitals must meet professional standards of care...",
       },
@@ -76,7 +76,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Legal guidance through the U.S. citizenship and naturalization process.",
         image: "/images/services/img1.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/citizenship-naturalization-services.png",
         content:
           "We assist lawful permanent residents with eligibility review, application preparation, interview readiness, and final approval for U.S. citizenship.",
       },
@@ -86,7 +86,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Marriage-based green card representation for spouses of U.S. citizens and residents.",
         image: "/images/services/img2.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/green-card-through-marriage.png",
         content:
           "Our firm handles marriage-based petitions, adjustment of status, consular processing, and interview preparation.",
       },
@@ -96,7 +96,8 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Family-sponsored green card petitions under preference categories.",
         image: "/images/services/img3.png",
-        details_img: "/images/services/car-accident.png",
+        details_img:
+          "/images/services/green-card-through-family-preference-categories.png",
         content:
           "We assist eligible family members with priority date tracking, filings, and visa availability issues.",
       },
@@ -292,7 +293,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Defense where criminal law and immigration law intersect.",
         image: "/images/services/img19.png",
-        details_img: "/images/services/legal-documents.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "We analyze criminal charges and convictions to minimize immigration consequences and protect legal status.",
       },
@@ -301,7 +302,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "master-calendar-hearings",
         description: "Representation at initial immigration court hearings.",
         image: "/images/services/img15.png",
-        details_img: "/images/services/courtroom.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "We represent clients at master calendar hearings, handling pleadings, filings, and procedural matters before the immigration court.",
       },
@@ -310,7 +311,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "individual-hearings",
         description: "Full representation during immigration court trials.",
         image: "/images/services/img16.png",
-        details_img: "/images/services/courtroom.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "Our attorneys present evidence, examine witnesses, and advocate before immigration judges during individual hearings.",
       },
@@ -326,7 +327,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Strategic motion filing in immigration and criminal cases.",
         image: "/images/services/img17.png",
-        details_img: "/images/services/legal-documents.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "We prepare and file motions to reopen, reconsider, terminate proceedings, and address legal or procedural issues.",
       },
@@ -335,7 +336,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "bond-redetermination-hearings",
         description: "Advocacy for bond reduction or release from detention.",
         image: "/images/services/img18.png",
-        details_img: "/images/services/courtroom.png",
+        details_img: "/images/services/car-accident.png",
         content:
           "We represent detained individuals seeking bond redetermination while immigration cases are pending.",
       },

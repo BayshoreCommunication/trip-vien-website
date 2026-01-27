@@ -29,7 +29,7 @@ export default function ServiceDetailPage({ params }: PageProps) {
   return (
     <div>
       <Breadcrumb
-        src=""
+        src="/images/home/hero/bg.png"
         title="Practice Overview"
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -46,39 +46,22 @@ export default function ServiceDetailPage({ params }: PageProps) {
             </h1>
 
             {/* IMAGE */}
-            <div className="relative w-full h-[420px] rounded-xl overflow-hidden mb-4">
+            <div className="relative w-full  rounded-xl overflow-hidden mb-4">
               <Image
                 src={service.details_img}
                 alt={service.title}
-                fill
-                className="object-cover"
+                width={1000}
+                height={800}
+                className="object-cover w-full h-auto"
               />
             </div>
 
             {/* DATE */}
-            <p className="text-sm text-gray-500 mb-8">July 25, 2023</p>
+            {/* <p className="text-sm text-gray-500 mb-8">July 25, 2023</p> */}
 
             {/* CONTENT */}
-            <div className="space-y-6 text-gray-700 leading-relaxed mb-10">
-              <p>
-                Assault is the intentional threat one person makes toward
-                another, creating a real fear of harm even when no physical
-                contact occurs.
-              </p>
-
-              <p>
-                The penalties depend on the specific charge and can have a
-                lasting impact on your future. Allegations of assault, battery,
-                stalking, or violating an injunction should never be taken
-                lightly.
-              </p>
-
-              <p>
-                In today’s environment, especially when charges involve law
-                enforcement or sensitive situations, it is important to work
-                with someone who can view your case clearly and handle it with
-                the skill it deserves.
-              </p>
+            <div className="space-y-6 text-gray-700 leading-relaxed my-8">
+              {service.content}
             </div>
 
             {/* CTA */}
@@ -102,14 +85,14 @@ export default function ServiceDetailPage({ params }: PageProps) {
                 >
                   <div className="flex items-center gap-3">
                     {/* ICON */}
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <Image
                         src={s.image}
                         alt={s.title}
                         width={28}
                         height={28}
                       />
-                    </div>
+                    </div> */}
 
                     {/* TITLE */}
                     <h4 className="font-semibold mb-3 text-lg md:text-2xl">

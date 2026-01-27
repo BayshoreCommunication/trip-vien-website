@@ -88,8 +88,10 @@ export default function PracticeAreaPage({ params }: PageProps) {
                 </p>
 
                 {/* CTA */}
-                <Button title="Explore" href="" />
-                {/* href={`/practice-areas/${params.slug}/${service.slug}`} */}
+                <Button
+                  title="Explore"
+                  href={`/practice-areas/${params.slug}/${service.slug}`}
+                />
               </div>
             ))}
           </div>
