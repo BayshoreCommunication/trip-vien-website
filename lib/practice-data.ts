@@ -67,7 +67,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
       },
     ],
   },
-  "immigration": {
+  immigration: {
     title: "Immigration Services",
     services: [
       {
@@ -145,7 +145,8 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Intra-company transfer visas for executives and managers.",
         image: "/images/services/img8.png",
-        details_img: "/images/services/l-1-multinational-executive-practice.png",
+        details_img:
+          "/images/services/l-1-multinational-executive-practice.png",
         content:
           "Our firm supports multinational companies with L-1A and L-1B petitions.",
       },
@@ -303,7 +304,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "master-calendar-hearings",
         description: "Representation at initial immigration court hearings.",
         image: "/images/services/img15.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/Master-Calendar-Hearings.png",
         content:
           "We represent clients at master calendar hearings, handling pleadings, filings, and procedural matters before the immigration court.",
       },
@@ -312,7 +313,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "individual-hearings",
         description: "Full representation during immigration court trials.",
         image: "/images/services/img16.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/Individual-Hearings.png",
         content:
           "Our attorneys present evidence, examine witnesses, and advocate before immigration judges during individual hearings.",
       },
@@ -320,49 +321,48 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
   },
 
   "criminal-defense": {
-  title: "DUI & Defense Services",
-  services: [
-    {
-      title: "Motion Practice",
-      slug: "motion-practice",
-      description:
-        "We provide strategic motion practice in both immigration and criminal cases to protect clients’ rights. Our motions are carefully prepared to challenge legal errors, procedural defects, and improper government actions.",
-      image: "/images/services/img17.png",
-      details_img: "/images/services/Motion-Practice.png",
-      content:
-        "Our firm prepares and files a wide range of legal motions in immigration and criminal proceedings. This includes motions to reopen, motions to reconsider, and motions to terminate proceedings. We carefully analyze case records to identify legal or procedural errors. Each motion is supported by strong legal arguments and evidence. Our goal is to correct injustices, reopen closed cases, or obtain favorable rulings. Strategic motion practice can significantly impact the outcome of a case.",
-    },
-    {
-      title: "Bond Redetermination Hearings",
-      slug: "bond-redetermination-hearings",
-      description:
-        "We advocate for detained individuals seeking bond reduction or release from immigration detention. Our representation focuses on demonstrating eligibility, community ties, and lack of flight or safety risk.",
-      image: "/images/services/img18.png",
-      details_img: "/images/services/bond-redetermination-hearings.png",
-      content:
-        "We represent detained clients in bond redetermination hearings before immigration judges. Our attorneys prepare strong arguments to show that continued detention is unnecessary. We present evidence of family ties, employment history, and community support. We also address any government concerns regarding flight risk or public safety. Our goal is to secure release on bond or a reduced bond amount. Effective bond advocacy allows clients to fight their cases from outside detention.",
-    },
-    {
-      title: "DUI Defense",
-      slug: "dui-defense",
-      description:
-        "We provide aggressive defense for individuals charged with DUI offenses. Our approach focuses on protecting driving privileges, minimizing penalties, and safeguarding our clients’ futures.",
-      image: "/images/services/img13.png",
-      details_img: "/images/services/dui-defense.png",
-      content:
-        "Our DUI defense strategies are tailored to the specific facts of each case. We carefully review traffic stops, arrest procedures, and chemical test results. Our attorneys challenge unlawful stops, faulty testing methods, and constitutional violations. We negotiate with prosecutors to reduce or dismiss charges whenever possible. Our goal is to protect your license, freedom, and criminal record. Strong DUI defense can significantly reduce long-term consequences.",
-    },
-    {
-      title: "Traffic Tickets",
-      slug: "traffic-tickets",
-      description:
-        "We defend clients against traffic violations to reduce fines, points, and license consequences. Our representation helps protect driving records and avoid unnecessary penalties.",
-      image: "/images/services/img14.png",
-      details_img: "/images/services/Traffic-Tickets.png",
-      content:
-        "We assist clients in contesting traffic tickets and moving violations. Our firm reviews citations for legal and procedural defects. We represent clients in traffic court and negotiate with prosecutors when appropriate. Our goal is to reduce fines, prevent points on driving records, and avoid license suspension. Effective defense can also help keep insurance rates low. We work efficiently to resolve traffic matters with minimal disruption.",
-    },
-  ],
-},
-
+    title: "DUI & Defense Services",
+    services: [
+      {
+        title: "Motion Practice",
+        slug: "motion-practice",
+        description:
+          "We provide strategic motion practice in both immigration and criminal cases to protect clients’ rights. Our motions are carefully prepared to challenge legal errors, procedural defects, and improper government actions.",
+        image: "/images/services/img17.png",
+        details_img: "/images/services/Motion-Practice.png",
+        content:
+          "Our firm prepares and files a wide range of legal motions in immigration and criminal proceedings. This includes motions to reopen, motions to reconsider, and motions to terminate proceedings. We carefully analyze case records to identify legal or procedural errors. Each motion is supported by strong legal arguments and evidence. Our goal is to correct injustices, reopen closed cases, or obtain favorable rulings. Strategic motion practice can significantly impact the outcome of a case.",
+      },
+      {
+        title: "Bond Redetermination Hearings",
+        slug: "bond-redetermination-hearings",
+        description:
+          "We advocate for detained individuals seeking bond reduction or release from immigration detention. Our representation focuses on demonstrating eligibility, community ties, and lack of flight or safety risk.",
+        image: "/images/services/img18.png",
+        details_img: "/images/services/bond-redetermination-hearings.png",
+        content:
+          "We represent detained clients in bond redetermination hearings before immigration judges. Our attorneys prepare strong arguments to show that continued detention is unnecessary. We present evidence of family ties, employment history, and community support. We also address any government concerns regarding flight risk or public safety. Our goal is to secure release on bond or a reduced bond amount. Effective bond advocacy allows clients to fight their cases from outside detention.",
+      },
+      {
+        title: "DUI Defense",
+        slug: "dui-defense",
+        description:
+          "We provide aggressive defense for individuals charged with DUI offenses. Our approach focuses on protecting driving privileges, minimizing penalties, and safeguarding our clients’ futures.",
+        image: "/images/services/img13.png",
+        details_img: "/images/services/dui-defense.png",
+        content:
+          "Our DUI defense strategies are tailored to the specific facts of each case. We carefully review traffic stops, arrest procedures, and chemical test results. Our attorneys challenge unlawful stops, faulty testing methods, and constitutional violations. We negotiate with prosecutors to reduce or dismiss charges whenever possible. Our goal is to protect your license, freedom, and criminal record. Strong DUI defense can significantly reduce long-term consequences.",
+      },
+      {
+        title: "Traffic Tickets",
+        slug: "traffic-tickets",
+        description:
+          "We defend clients against traffic violations to reduce fines, points, and license consequences. Our representation helps protect driving records and avoid unnecessary penalties.",
+        image: "/images/services/img14.png",
+        details_img: "/images/services/Traffic-Tickets.png",
+        content:
+          "We assist clients in contesting traffic tickets and moving violations. Our firm reviews citations for legal and procedural defects. We represent clients in traffic court and negotiate with prosecutors when appropriate. Our goal is to reduce fines, prevent points on driving records, and avoid license suspension. Effective defense can also help keep insurance rates low. We work efficiently to resolve traffic matters with minimal disruption.",
+      },
+    ],
+  },
 };
