@@ -14,7 +14,7 @@ export const practiceAreas = [
       "Guiding individuals and families through immigration processes worldwide.",
   },
   {
-    title: "Criminal Defense",
+    title: "DUI Defense",
     slug: "criminal-defense",
     image: "/images/home/practice/img3.png",
     description:
