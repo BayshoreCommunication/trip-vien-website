@@ -118,10 +118,10 @@ export default function ServiceDetailPage({ params }: PageProps) {
                   </div>
 
                   {/* GOLD DIVIDER */}
-                  <div className="w-full h-[2px] bg-primary mb-4" />
+                  <div className="w-full h-[2px] bg-[#E7B540] mb-4" />
 
                   {/* DESCRIPTION */}
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                     {s.description}
                   </p>
 
