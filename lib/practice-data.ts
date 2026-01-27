@@ -107,7 +107,8 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Green card services for immediate relatives of U.S. citizens.",
         image: "/images/services/img4.png",
-        details_img: "/images/services/car-accident.png",
+        details_img:
+          "/images/services/green-card-through-immediate-relatives.png",
         content:
           "Includes spouses, parents, and unmarried children under 21 of U.S. citizens.",
       },
@@ -116,7 +117,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "employment-based-visas",
         description: "Employment-based immigrant visa representation.",
         image: "/images/services/img5.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/eb-1-eb-2-eb-3.png",
         content:
           "We assist professionals, skilled workers, and employers with EB-1, EB-2, and EB-3 petitions.",
       },
@@ -125,7 +126,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "department-of-labor-processing",
         description: "PERM labor certification and DOL compliance services.",
         image: "/images/services/img6.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/department-of-labor-processing.png",
         content:
           "We guide employers through recruitment, wage determinations, and labor certification filings.",
       },
@@ -134,7 +135,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "e2-investor-visa",
         description: "Investor visa services for treaty country nationals.",
         image: "/images/services/img7.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/e-2-treaty-investor-visa-processing.png",
         content:
           "We assist investors with E-2 visa applications, renewals, and compliance requirements.",
       },
@@ -144,7 +145,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Intra-company transfer visas for executives and managers.",
         image: "/images/services/img8.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/l-1-multinational-executive-practice.png",
         content:
           "Our firm supports multinational companies with L-1A and L-1B petitions.",
       },
@@ -153,7 +154,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "o-visas",
         description: "Visas for individuals with extraordinary ability.",
         image: "/images/services/img9.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/o-visas.png",
         content:
           "We assist artists, athletes, and professionals with O-1 visa applications and extensions.",
       },
@@ -162,7 +163,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "u-visa",
         description: "Immigration relief for victims of qualifying crimes.",
         image: "/images/services/img10.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/u-visa.png",
         content:
           "We help eligible crime victims obtain lawful status and work authorization through U visas.",
       },
@@ -171,7 +172,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "t-visa",
         description: "Immigration protection for victims of human trafficking.",
         image: "/images/services/img11.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/t-visa.png",
         content:
           "Our firm represents trafficking victims seeking safety and lawful immigration status.",
       },
@@ -180,7 +181,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "vawa",
         description: "Self-petitions for survivors of domestic abuse.",
         image: "/images/services/img12.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/vawa.png",
         content:
           "We assist eligible applicants with VAWA self-petitions confidentially and compassionately.",
       },
@@ -190,7 +191,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Protection-based relief for individuals fearing persecution.",
         image: "/images/services/img13.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/asylum.png",
         content:
           "We represent asylum seekers in affirmative and defensive asylum cases.",
       },
@@ -199,7 +200,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "criminal-provisional-waivers",
         description: "Waivers for grounds of inadmissibility.",
         image: "/images/services/img14.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/criminal-provisional-waiver.png",
         content:
           "We prepare I-601, I-601A, and other waivers to overcome immigration barriers.",
       },
@@ -209,7 +210,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Non-immigrant visa services for work, travel, and religious purposes.",
         image: "/images/services/img15.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/visas-b1-b2-r-h-1b.png",
         content:
           "We assist with visitor, religious worker, and specialty occupation visas.",
       },
@@ -219,7 +220,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Case preparation and document submission through the NVC.",
         image: "/images/services/img16.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/national-visa-center-processing.png",
         content:
           "Our firm manages NVC correspondence, fees, and document qualification.",
       },
@@ -229,7 +230,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         description:
           "Preparation and representation for U.S. consular interviews.",
         image: "/images/services/img17.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/consular-interviews.png",
         content:
           "We prepare clients for visa interviews and address consular concerns.",
       },
@@ -238,7 +239,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "ds160-ds260-processing",
         description: "Accurate completion of visa application forms.",
         image: "/images/services/img18.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/ds-160-ds-260-visa-processing.png",
         content:
           "We ensure proper submission of non-immigrant and immigrant visa applications.",
       },
@@ -247,7 +248,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "passports",
         description: "Assistance with U.S. passport applications and issues.",
         image: "/images/services/img19.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/passports.png",
         content:
           "We help with new passport applications, renewals, and corrections.",
       },
@@ -256,7 +257,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "i94-practice",
         description: "Legal assistance with I-94 records and corrections.",
         image: "/images/services/img20.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/i-94-practice.png",
         content:
           "We resolve admission record issues to maintain lawful status.",
       },
@@ -265,7 +266,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "reentry-advance-parole",
         description: "Travel authorization and lawful re-entry services.",
         image: "/images/services/img21.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/re-entry-and-advance-parole.png",
         content:
           "We assist with advance parole and re-entry permits for international travel.",
       },
@@ -274,7 +275,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "congressional-assistance",
         description: "Help resolving delayed or complex immigration matters.",
         image: "/images/services/img22.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/congressional-assistance.png",
         content:
           "We work with congressional offices to address case delays and agency issues.",
       },
@@ -283,7 +284,7 @@ export const PRACTICE_DATA: Record<string, PracticeArea> = {
         slug: "import-export-practice",
         description: "Legal guidance on trade and border-related matters.",
         image: "/images/services/img23.png",
-        details_img: "/images/services/car-accident.png",
+        details_img: "/images/services/import-export-practice.png",
         content:
           "We assist businesses with compliance, documentation, and CBP-related issues.",
       },
