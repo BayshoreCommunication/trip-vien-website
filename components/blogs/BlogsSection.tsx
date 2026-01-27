@@ -64,7 +64,7 @@ export default function BlogsSection({
   );
 
   return (
-    <section className="px-4 md:px-6 lg:px-10 py-8 bg-white">
+    <section className=" md:px-6 lg:px-8 py-8 bg-white md:pt-0 pt-0">
       <Breadcrumb
         title="Legal Insights Grounded in Strategy and Experience"
         breadcrumbs={[
