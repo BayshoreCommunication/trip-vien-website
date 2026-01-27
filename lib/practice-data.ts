@@ -446,7 +446,7 @@ Our goal is helping businesses operate smoothly while remaining compliant with t
   description:
     "Defense where criminal law and immigration law intersect.",
   image: "/images/services/img19.png",
-  details_img: "/images/services/car-accident.png",
+  details_img: "/images/services/crimmigration.png",
   content: `
 Crimmigration involves cases where criminal charges or convictions affect immigration status. Even minor offenses can have serious immigration consequences. Early legal analysis is essential.
 
