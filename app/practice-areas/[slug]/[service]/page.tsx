@@ -60,7 +60,7 @@ export default function ServiceDetailPage({ params }: PageProps) {
             {/* <p className="text-sm text-gray-500 mb-8">July 25, 2023</p> */}
 
             {/* CONTENT */}
-            <div className="space-y-6 text-gray-700 leading-relaxed my-8">
+            <div className="space-y-6 text-gray-700 leading-relaxed my-8 whitespace-pre-line">
               {service.content}
             </div>
 
