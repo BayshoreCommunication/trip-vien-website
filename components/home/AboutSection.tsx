@@ -102,14 +102,14 @@ export default function AboutSection() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700">
                     <div className="border-l pl-6 space-y-2">
-                      <p>Citizenship</p>
-                      <p>Naturalization</p>
-                      <p>Family Immigration</p>
+                      <p>Immigration & Nationality Law</p>
+                      <p>Business & investor immigration</p>
+                      <p>Employment visas & green cards</p>
                     </div>
                     <div className="border-l pl-6 space-y-2">
-                      <p>Removal Defense</p>
-                      <p>Consular Processing</p>
-                      <p>Criminal Defense</p>
+                      <p>Family immigration</p>
+                      <p>Citizenship & naturalization</p>
+                      <p>Deportation defense</p>
                     </div>
                   </div>
 

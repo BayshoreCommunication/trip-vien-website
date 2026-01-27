@@ -61,7 +61,7 @@ export const team: TeamMember[] = [
 
   {
     id: 2,
-    name: "Viengphone Vongsyrprasom, Esq.",
+    name: "Viengphone Vongsyprasom, Esq.",
     title: "U.S. Immigration, DUI Defense, and Personal Injury Attorney",
     subtitle: "",
     image: "/images/about/viengphone.png",
