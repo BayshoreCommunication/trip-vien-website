@@ -7,10 +7,10 @@ export default function Footer() {
       {/*  TOP DISCLAIMER BAR */}
       <div className="bg-[#D80808] text-white text-md md:text-lg text-center px-4 py-4 leading-relaxed ">
         <p className="w-full max-w-6xl text-center mx-auto">
-          Disclaimer: Licensed
-          attorneys in the District of Columbia and the states of <br /> Wisconsin
-          and Florida. Practices Immigration Law in all 50 states, territories, and
-          Embassies/Consulates abroad via Federal Jurisdiction.
+          Disclaimer: Licensed attorneys in the District of Columbia and the
+          states of <br /> Wisconsin and Florida. Practices Immigration Law in
+          all 50 states, territories, and Embassies/Consulates abroad via
+          Federal Jurisdiction.
         </p>
       </div>
 
@@ -120,7 +120,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link href="mailto:vien@tripvienlaw.com">
-                   info@tripvienlaw.com
+                  info@tripvienlaw.com
                 </Link>
               </li>
               <li>
@@ -200,7 +200,7 @@ export default function Footer() {
       <div className="text-sm md:text-lg text-gray-400 px-4 py-6">
         <div className="max-w-[1640px] mx-auto flex flex-col md:flex-row justify-between gap-3">
           <span className="text-primary">
-            © {new Date().getFullYear()} Tripathi Yongsyprasom, P.A. All Rights
+            © {new Date().getFullYear()} Tripathi Vongsyprasom, P.A. All Rights
             Reserved.
           </span>
           <span>
