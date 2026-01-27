@@ -80,7 +80,7 @@ export default function PracticeAreaPage({ params }: PageProps) {
                 </div>
 
                 {/* DIVIDER */}
-                <div className="w-full h-[2px] bg-[#E7B540]/50 mb-4" />
+                <div className="w-full h-[2px] bg-[#E7B540]/20 mb-4" />
 
                 {/* DESCRIPTION */}
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
