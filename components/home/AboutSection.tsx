@@ -8,42 +8,42 @@ import Reveal from "../motion/Reveal";
 export default function AboutSection() {
   const rightScrollRef = useRef<HTMLDivElement>(null);
 
-  /* 🔑 Wheel scroll only applies on DESKTOP */
-  const handleImageWheel = (e: React.WheelEvent) => {
-    // ❌ Do nothing on mobile
+  /* 🔑 Scroll hijack for whole section (DESKTOP ONLY) */
+  const handleSectionWheel = (e: React.WheelEvent) => {
     if (window.innerWidth < 1024) return;
-
     if (!rightScrollRef.current) return;
 
     const el = rightScrollRef.current;
+    const delta = e.deltaY;
 
-    const atTop = el.scrollTop === 0;
+    const atTop = el.scrollTop <= 0;
     const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
 
-    if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
+    /* Allow normal page scroll when limits reached */
+    if ((delta < 0 && atTop) || (delta > 0 && atBottom)) {
       return;
     }
 
+    /* Otherwise lock page + scroll content */
     e.preventDefault();
 
     el.scrollBy({
-      top: e.deltaY,
-      behavior: "smooth",
+      top: delta,
+      behavior: "auto",
     });
   };
 
   return (
-    <section className="relative px-4 md:px-6 lg:px-8 py-8 lg:h-[220vh]">
+    <section
+      className="relative px-4 md:px-6 lg:px-8 py-8 lg:h-[220vh]"
+      onWheel={handleSectionWheel}
+    >
       <div className="max-w-[1640px] mx-auto h-full">
         <div className="lg:sticky lg:top-48 flex items-start">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full">
             {/* IMAGE */}
             <Reveal x={-100} opacityFrom={0} duration={3}>
-              <div
-                className="relative rounded-[20px] overflow-hidden"
-                onWheel={handleImageWheel}
-                onWheelCapture={handleImageWheel}
-              >
+              <div className="relative rounded-[20px] overflow-hidden">
                 <Image
                   src="/images/home/about/img.png"
                   alt="About"
@@ -55,12 +55,12 @@ export default function AboutSection() {
               </div>
             </Reveal>
 
-            {/* CONTENT */}
+            {/* CONTENT (SCROLL TARGET) */}
             <div
               ref={rightScrollRef}
               className="
-              space-y-10
-              md:space-y-20   
+                space-y-10
+                md:space-y-20
                 lg:space-y-40
                 pr-0 lg:pr-4
                 h-auto overflow-visible
@@ -80,9 +80,9 @@ export default function AboutSection() {
                   </h2>
 
                   <p className="text-gray-700 mb-4">
-                    At Tripathi Vongsyprasom Law, P.A. we set out to create a unique law firm
-                    where outstanding representation and humanity go hand in
-                    hand.
+                    At Tripathi Vongsyprasom Law, P.A. we set out to create a
+                    unique law firm where outstanding representation and
+                    humanity go hand in hand.
                   </p>
 
                   <p className="text-gray-700 mb-6">
@@ -97,7 +97,7 @@ export default function AboutSection() {
               <Reveal y={100} opacityFrom={0} duration={3}>
                 <div className="pb-8 md:pb-10 lg:pb-20">
                   <h2 className="text-3xl md:text-4xl xl:text-6xl mb-6">
-                    Your advocate in  personal injury, immigration, & defense
+                    Your advocate in personal injury, immigration, & defense
                   </h2>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700">
