@@ -483,14 +483,7 @@ Our attorneys prepare testimony, exhibits, and legal briefs in advance. We advoc
 Our goal is achieving relief and protecting clients’ rights in immigration court.
   `,
 },
-
-    ],
-  },
-
-  "dui-defense": {
-  title: "DUI & Defense Services",
-  services: [
-    {
+{
       title: "Motion Practice",
       slug: "motion-practice",
       description:
@@ -520,6 +513,14 @@ We represent detained clients before immigration judges and advocate for bond re
 Our goal is securing release so clients can continue their cases from outside detention. Effective bond advocacy allows individuals to better prepare their defense and maintain family and employment stability.
       `,
     },
+
+    ],
+  },
+
+  "dui-defense": {
+  title: "DUI Defense Services",
+  services: [
+    
     {
       title: "DUI Defense",
       slug: "dui-defense",

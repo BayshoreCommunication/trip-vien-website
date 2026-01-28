@@ -1,5 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaTiktok,
+} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -51,7 +58,7 @@ export default function Footer() {
                 <Link href="https://www.tripvienlaw.com/practice-areas/immigration">U.S. Immigration</Link>
               </li>
               <li>
-                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">DUI / Defense</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">DUI Defense</Link>
               </li>
               <li>
                 <Link href="https://www.tripvienlaw.com/practice-areas/personal-injury">Personal Injury</Link>
@@ -68,12 +75,12 @@ export default function Footer() {
               <li>
                 <Link href="/about">About Us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/case-studies">Case Studies</Link>
               </li>
               <li>
                 <Link href="/attorneys">Attorneys</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/blog">Blogs</Link>
               </li>
@@ -92,12 +99,12 @@ export default function Footer() {
               <li>
                 <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/disclaimer">Disclaimers & Terms</Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="/investor">Angel Investor</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/terms">Terms of Service</Link>
               </li>
@@ -119,7 +126,7 @@ export default function Footer() {
                 </Link>
               </li> */}
               <li>
-                <Link href="mailto:vien@tripvienlaw.com">
+                <Link href="mailto:info@tripvienlaw.com">
                   info@tripvienlaw.com
                 </Link>
               </li>
@@ -133,50 +140,73 @@ export default function Footer() {
             </ul>
 
             {/* SOCIAL ICONS */}
-            <div className="flex gap-3 mt-5">
-              {[
-                {
-                  name: "Facebook",
-                  href: "https://www.facebook.com/TripVienLawPA/",
-                  icon: "/images/fb.png",
-                },
-                {
-                  name: "Twitter",
-                  href: "https://x.com/TripVienLawPA",
-                  icon: "/images/tw.png",
-                },
-                {
-                  name: "LinkedIn",
-                  href: "https://www.linkedin.com/company/tripvienlawpa/",
-                  icon: "/images/ld.png",
-                },
-                {
-                  name: "Instagram",
-                  href: "https://www.instagram.com/tripvienlawpa/",
-                  icon: "/images/in.png",
-                },
-              ].map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  className="
-        w-9 h-9 rounded-full border border-primary
-        flex items-center justify-center
-        hover:bg-primary transition
-        group
-      "
-                  aria-label={social.name}
-                >
-                  <Image
-                    src={social.icon}
-                    alt={social.name}
-                    width={16}
-                    height={16}
-                    className="group-hover:invert transition"
-                  />
-                </Link>
-              ))}
-            </div>
+<div className="flex gap-3 mt-5">
+  <Link
+    href="https://www.facebook.com/TripVienLawPA/"
+    aria-label="Facebook"
+    className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+  >
+    <FaFacebookF className="text-white group-hover:text-black text-sm transition" />
+  </Link>
+
+  <Link
+    href="https://x.com/TripVienLawPA"
+    aria-label="Twitter / X"
+    className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+  >
+    <FaXTwitter className="text-white group-hover:text-black text-sm transition" />
+  </Link>
+
+  <Link
+    href="https://www.linkedin.com/company/tripvienlawpa/"
+    aria-label="LinkedIn"
+    className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+  >
+    <FaLinkedinIn className="text-white group-hover:text-black text-sm transition" />
+  </Link>
+
+  <Link
+    href="https://www.instagram.com/tripvienlawpa/"
+    aria-label="Instagram"
+    className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+  >
+    <FaInstagram className="text-white group-hover:text-black text-sm transition" />
+  </Link>
+
+  <Link
+    href="https://www.tiktok.com/@tripvienlawpa"
+    aria-label="TikTok"
+    className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+  >
+    <FaTiktok className="text-white group-hover:text-black text-sm transition" />
+  </Link>
+</div>
+
           </div>
         </div>
       </div>
