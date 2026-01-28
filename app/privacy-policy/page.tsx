@@ -87,8 +87,7 @@ const PrivacyPolicy = () => {
               </li>
               <li>
                 frame, mirror, or in-line link the Site, or incorporate into
-                another website, application, or other service any TRIP LAW,
-                P.A. intellectual property;
+                another website, application, or other service any Tripathi Vongsyprasom Law, P.A. intellectual property;
               </li>
               <li>
                 use the Site for any unlawful, fraudulent, or malicious
@@ -116,8 +115,7 @@ const PrivacyPolicy = () => {
               </li>
               <li>
                 violate, infringe, or misappropriate the intellectual property,
-                publicity, privacy, or other proprietary rights of TRIP LAW,
-                P.A., its licensors, or any other person or entity.
+                publicity, privacy, or other proprietary rights of Tripathi Vongsyprasom Law, P.A., its licensors, or any other person or entity.
               </li>
             </ul>
             <p className='text-lg text-stone-950 text-center md:text-left'>
