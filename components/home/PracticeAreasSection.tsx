@@ -42,9 +42,9 @@ export default function PracticeAreasSection() {
             </Link>
           ))}
         </div>
-        <div className="mt-8 flex justify-start md:justify-center items-center">
+        {/* <div className="mt-8 flex justify-start md:justify-center items-center">
           <Button title="Explore Our Practice Areas" href="/practice-areas" />
-        </div>
+        </div> */}
       </div>
     </section>
   );
