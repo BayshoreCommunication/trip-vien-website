@@ -99,12 +99,12 @@ export default function Footer() {
               <li>
                 <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
-              {/* <li>
+              <li>
                 <Link href="/disclaimer">Disclaimers & Terms</Link>
-              </li> */}
-              {/* <li>
+              </li> 
+               <li>
                 <Link href="/investor">Angel Investor</Link>
-              </li> */}
+              </li>
               <li>
                 <Link href="/terms">Terms of Service</Link>
               </li>
