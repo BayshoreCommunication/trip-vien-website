@@ -119,8 +119,7 @@ const PrivacyPolicy = () => {
               </li>
             </ul>
             <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`We reserve the right to prohibit access, use, conduct of Trip Law,
-              P.A. communications, or content that we, in our sole discretion,
+              {`We reserve the right to prohibit access, use, conduct of Tripathi Vongsyprasom Law, P.A. communications, or content that we, in our sole discretion,
               deem to be harmful to the Site, users, us, our brand, our business
               partners and licensors, or any other person or entity, or that
               violates these Terms of Use and/or applicable law.`}
@@ -157,8 +156,7 @@ const PrivacyPolicy = () => {
               be construed as legal advice. The content and features of the
               Site, including means to submit a question or information, do not
               constitute an offer to represent you or otherwise give rise to an
-              attorney/client relationship. THE SITE IS PROVIDED "AS IS”. TRIP
-              LAW, P.A. MAKES NO WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE
+              attorney/client relationship. THE SITE IS PROVIDED "AS IS”. Tripathi Vongsyprasom Law, P.A. MAKES NO WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE
               SITE AND ONLINE SERVICES AND HEREBY DISCLAIMS ALL WARRANTIES OF
               ANY KIND OR NATURE, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
               WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
@@ -196,8 +194,7 @@ const PrivacyPolicy = () => {
             <p className='text-lg text-stone-950 text-center md:text-left'>
               {` Information sent to Tripathi Vongsyprasom Law, P.A., P.A. via Internet e-mail or
               through the Site is not secure and is done on a non-confidential
-              basis. Tripathi Vongsyprasom Law, P.A. may make reasonable efforts to keep Trip
-              Law, P.A. communications private, but because of the nature of
+              basis. Tripathi Vongsyprasom Law, P.A. may make reasonable efforts to keep Tripathi Vongsyprasom Law, P.A. communications private, but because of the nature of
               Internet Tripathi Vongsyprasom Law, P.A. communications and the absence of an
               attorney/client relationship, we cannot promise or guarantee
               confidentiality.`}
@@ -241,8 +238,7 @@ const PrivacyPolicy = () => {
               {`Tripathi Vongsyprasom Law, P.A. may periodically change, remove, or add the
               material on the Site without notice. This material may contain
               technical or typographical errors. Tripathi Vongsyprasom Law, P.A. DOES NOT
-              GUARANTEE ITS ACCURACY, COMPLETENESS OR SUITABILITY. TRIP LAW,
-              P.A. assumes no liability or responsibility for any errors or
+              GUARANTEE ITS ACCURACY, COMPLETENESS OR SUITABILITY. Tripathi Vongsyprasom Law, P.A. assumes no liability or responsibility for any errors or
               omissions in the contents of the Site. Your use of the Site is at
               your own risk. Under no circumstances shall Tripathi Vongsyprasom Law, P.A. or any
               other party involved in the creation, production or delivery of
@@ -309,11 +305,8 @@ const PrivacyPolicy = () => {
 
             <p className='text-lg text-stone-950 text-center md:text-left'>
               {` Only individuals who have entered into a mutually signed retainer
-              agreement with Tripathi Vongsyprasom Law, P.A. are Tripathi Vongsyprasom Law, P.A. clients (“TRIP
-              LAW, P.A. Clients”). Certain portions of the Site designated may
-              be available for use only by Tripathi Vongsyprasom Law, P.A. Clients. When TRIP
-              LAW, P.A. Clients use such portions of the Site designated by TRIP
-              LAW, P.A. to communicate with us pursuant to our representation of
+              agreement with Tripathi Vongsyprasom Law, P.A. are Tripathi Vongsyprasom Law, P.A. clients (“Tripathi Vongsyprasom Law, P.A. Clients”). Certain portions of the Site designated may
+              be available for use only by Tripathi Vongsyprasom Law, P.A. Clients. When Tripathi Vongsyprasom Law, P.A. Clients use such portions of the Site designated by Tripathi Vongsyprasom Law, P.A. to communicate with us pursuant to our representation of
               a Tripathi Vongsyprasom Law, P.A. Client, we will ensure that any information
               provided pursuant to such attorney/client relationship may not be
               shared with third parties except as is done with such precautions
