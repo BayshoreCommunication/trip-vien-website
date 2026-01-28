@@ -103,7 +103,7 @@ export default function AboutSection() {
               <Reveal y={100} opacityFrom={0} duration={2}>
                 <div className="pb-40">
                   <h2 className="text-3xl md:text-4xl xl:text-6xl mb-6">
-                    Your advocate in personal injury, immigration, & defense
+                    Your advocate in personal injury, immigration, & DUI defense
                   </h2>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700">
@@ -129,5 +129,6 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
+    
   );
 }
