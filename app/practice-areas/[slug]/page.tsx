@@ -17,7 +17,7 @@ export default function PracticeAreaPage({ params }: PageProps) {
     return (
       <section className="px-4 py-20 text-center">
         <h2 className="text-3xl">Page not found</h2>
-        <Link href="/service" className="underline">
+        <Link href="/services" className="underline">
           ← Back to Practice Areas
         </Link>
       </section>
