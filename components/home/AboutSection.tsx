@@ -23,7 +23,6 @@ export default function AboutSection() {
       const viewportHeight = window.innerHeight;
 
       const totalScroll = section.offsetHeight - viewportHeight;
-
       if (totalScroll <= 0) return;
 
       // Scroll progress (0 → 1)
@@ -45,10 +44,14 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative px-4 md:px-6 lg:px-8 h-[220vh]"
+      className="
+        relative
+        px-4 md:px-6 lg:px-8
+        h-auto lg:h-[220vh]
+      "
     >
       {/* Sticky container */}
-      <div className="sticky top-16 h-screen flex items-center">
+      <div className="lg:sticky lg:top-16 h-auto lg:h-screen flex items-center">
         <div className="max-w-[1640px] mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* IMAGE */}
@@ -65,12 +68,12 @@ export default function AboutSection() {
               </div>
             </Reveal>
 
-            {/* RIGHT CONTENT (SCROLLS VIA PAGE SCROLL) */}
+            {/* RIGHT CONTENT (SCROLLS VIA PAGE SCROLL ON DESKTOP) */}
             <div
               ref={rightScrollRef}
               className="
-                lg:h-[450px]
-                overflow-hidden
+                h-auto lg:h-[450px]
+                overflow-visible lg:overflow-hidden
                 space-y-40
                 pr-0 lg:pr-4
               "
@@ -129,6 +132,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-    
   );
 }
