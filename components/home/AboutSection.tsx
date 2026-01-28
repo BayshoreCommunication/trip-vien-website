@@ -2,74 +2,81 @@
 
 import Image from "next/image";
 import Button from "components/shared/Button";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Reveal from "../motion/Reveal";
 
 export default function AboutSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const rightScrollRef = useRef<HTMLDivElement>(null);
 
-  /* 🔑 Wheel scroll only applies on DESKTOP */
-  const handleImageWheel = (e: React.WheelEvent) => {
-    // ❌ Do nothing on mobile
+  useEffect(() => {
+    // ❌ Disable on mobile
     if (window.innerWidth < 1024) return;
 
-    if (!rightScrollRef.current) return;
+    const handleScroll = () => {
+      if (!sectionRef.current || !rightScrollRef.current) return;
 
-    const el = rightScrollRef.current;
+      const section = sectionRef.current;
+      const content = rightScrollRef.current;
 
-    const atTop = el.scrollTop === 0;
-    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+      const rect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
 
-    if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
-      return;
-    }
+      const totalScroll = section.offsetHeight - viewportHeight;
 
-    e.preventDefault();
+      if (totalScroll <= 0) return;
 
-    el.scrollBy({
-      top: e.deltaY,
-      behavior: "smooth",
-    });
-  };
+      // Scroll progress (0 → 1)
+      const progress = Math.min(
+        Math.max(-rect.top / totalScroll, 0),
+        1
+      );
+
+      const maxInnerScroll =
+        content.scrollHeight - content.clientHeight;
+
+      content.scrollTop = progress * maxInnerScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <section className="relative px-4 md:px-6 lg:px-8 py-8 lg:h-[220vh]">
-      <div className="max-w-[1640px] mx-auto h-full">
-        <div className="lg:sticky lg:top-48 flex items-start">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full">
+    <section
+      ref={sectionRef}
+      className="relative px-4 md:px-6 lg:px-8 h-[220vh]"
+    >
+      {/* Sticky container */}
+      <div className="sticky top-16 h-screen flex items-center">
+        <div className="max-w-[1640px] mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* IMAGE */}
-            <Reveal x={-100} opacityFrom={0} duration={3}>
-              <div
-                className="relative rounded-[20px] overflow-hidden"
-                onWheel={handleImageWheel}
-                onWheelCapture={handleImageWheel}
-              >
+            <Reveal x={-100} opacityFrom={0} duration={2}>
+              <div className="relative rounded-[20px] overflow-hidden">
                 <Image
                   src="/images/home/about/img.png"
                   alt="About"
                   width={1000}
                   height={800}
                   priority
-                  className="object-cover object-top w-full h-full"
+                  className="object-cover w-full h-full"
                 />
               </div>
             </Reveal>
 
-            {/* CONTENT */}
+            {/* RIGHT CONTENT (SCROLLS VIA PAGE SCROLL) */}
             <div
               ref={rightScrollRef}
               className="
-              space-y-10
-              md:space-y-20   
-                lg:space-y-40
+                lg:h-[450px]
+                overflow-hidden
+                space-y-40
                 pr-0 lg:pr-4
-                h-auto overflow-visible
-                lg:h-[450px] lg:overflow-y-auto
-                no-scrollbar
               "
             >
               {/* BLOCK 1 */}
-              <Reveal y={100} opacityFrom={0} duration={3}>
+              <Reveal y={100} opacityFrom={0} duration={2}>
                 <div>
                   <span className="inline-block mb-4 border border-gray-400 rounded-full px-4 py-1">
                     About Us
@@ -81,8 +88,7 @@ export default function AboutSection() {
 
                   <p className="text-gray-700 mb-4">
                     At Tripathi Vongsyprasom Law, P.A. we set out to create a unique law firm
-                    where outstanding representation and humanity go hand in
-                    hand.
+                    where outstanding representation and humanity go hand in hand.
                   </p>
 
                   <p className="text-gray-700 mb-6">
@@ -94,10 +100,10 @@ export default function AboutSection() {
               </Reveal>
 
               {/* BLOCK 2 */}
-              <Reveal y={100} opacityFrom={0} duration={3}>
-                <div className="pb-8 md:pb-10 lg:pb-20">
+              <Reveal y={100} opacityFrom={0} duration={2}>
+                <div className="pb-40">
                   <h2 className="text-3xl md:text-4xl xl:text-6xl mb-6">
-                    Your advocate in  personal injury, immigration, & defense
+                    Your advocate in personal injury, immigration, & defense
                   </h2>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700">
