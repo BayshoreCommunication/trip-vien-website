@@ -48,13 +48,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm md:text-lg text-gray-300">
               <li>
-                <Link href="#">U.S. Immigration</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/immigration">U.S. Immigration</Link>
               </li>
               <li>
-                <Link href="#">DUI / Defense</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">DUI / Defense</Link>
               </li>
               <li>
-                <Link href="#">Personal Injury</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/personal-injury">Personal Injury</Link>
               </li>
             </ul>
           </div>
