@@ -50,7 +50,7 @@ const TermsOfService = () => {
 
           <div className="privacy-title">
             <h5>AGREEMENT TO OUR LEGAL TERMS</h5>
-            <p>We are Trip Law ("Company," "we," "us," "our").</p>
+            <p>We are Tripathi Vongsyprasom Law, P.A. ("Company," "we," "us," "our").</p>
             <p>
               We operate the website{" "}
               <Link
@@ -65,7 +65,7 @@ const TermsOfService = () => {
               "Services").`}
             </p>
             <p>
-              {` At Trip Law, we aim to combine exceptional immigration services
+              {` At Tripathi Vongsyprasom Law, P.A., we aim to combine exceptional immigration services
               with a strong dedication to humanity. Founded by Hardam H.
               Tripathi, a former federal legal professional, our firm is now
               home to some of the most experienced lawyers in the field. Trip
@@ -77,7 +77,7 @@ const TermsOfService = () => {
               {`You can contact us by phone at (863)-599-6735, email at info@trip-law.com, or by mail to 1820 Florida Ave S, Ste. C, Lakeland, FL 33803, 1820 Florida Ave S, Ste. C, Lakeland, FL 33803, USA.`}
             </p>
             <p>
-              {`These Terms constitute a legally binding agreement between you, whether personally or on behalf of an entity ("you"), and Trip Law, concerning your access to and use of the Services.`}
+              {`These Terms constitute a legally binding agreement between you, whether personally or on behalf of an entity ("you"), and Tripathi Vongsyprasom Law, P.A., concerning your access to and use of the Services.`}
             </p>
             <p>
               <strong>{`If you do not agree with all of these legal terms, you are prohibited from using the services and must discontinue use immediately.`}</strong>
