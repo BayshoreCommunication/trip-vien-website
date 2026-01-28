@@ -487,7 +487,7 @@ Our goal is achieving relief and protecting clients’ rights in immigration cou
     ],
   },
 
-  "criminal-defense": {
+  "dui-defense": {
   title: "DUI & Defense Services",
   services: [
     {

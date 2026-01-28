@@ -15,7 +15,7 @@ export const practiceAreas = [
   },
   {
     title: "DUI Defense",
-    slug: "criminal-defense",
+    slug: "dui-defense",
     image: "/images/home/practice/img3.png",
     description:
       "Protecting your rights with strategic and experienced defense.",
