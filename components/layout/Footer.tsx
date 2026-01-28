@@ -51,7 +51,7 @@ export default function Footer() {
                 <Link href="https://www.tripvienlaw.com/practice-areas/immigration">U.S. Immigration</Link>
               </li>
               <li>
-                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">DUI / Defense</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">DUI Defense</Link>
               </li>
               <li>
                 <Link href="https://www.tripvienlaw.com/practice-areas/personal-injury">Personal Injury</Link>
@@ -153,6 +153,11 @@ export default function Footer() {
                 {
                   name: "Instagram",
                   href: "https://www.instagram.com/tripvienlawpa/",
+                  icon: "/images/in.png",
+                },
+                {
+                  name: "TikTok",
+                  href: "https://www.tiktok.com/@tripvienlawpa",
                   icon: "/images/in.png",
                 },
               ].map((social) => (
