@@ -1,3 +1,4 @@
+import Breadcrumb from 'components/share/Breadcrumb';
 import SectionLayout from 'components/shared/SectionLayout';
 import Link from 'next/link';
 import React from 'react';
@@ -37,6 +38,11 @@ const DisclaimersTermsOfUse = () => {
   return (
     <>
       <style>{css}</style>
+      <Breadcrumb
+        src="/images/home/hero/bg.png"
+        title="Disclaimers & Terms"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label:"Disclaimers & Terms" }]}
+      />
       <SectionLayout>
         <div className='text-center md:text-left text-md md:text-xl'>
           <div className='my-2'>

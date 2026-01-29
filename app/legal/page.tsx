@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionLayout from 'components/shared/SectionLayout';
 import Link from 'next/link';
+import Breadcrumb from 'components/share/Breadcrumb';
 
 const css = `
   h1{
@@ -41,6 +42,11 @@ const LegalInformation = () => {
   return (
     <>
       <style>{css}</style>
+      <Breadcrumb
+        src="/images/home/hero/bg.png"
+        title="Legal Information"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Legal Information" }]}
+      />
       <SectionLayout>
         <div className='text-center md:text-left'>
           <div className='my-8'>

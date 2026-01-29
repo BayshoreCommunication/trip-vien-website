@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionLayout from 'components/shared/SectionLayout';
+import Breadcrumb from 'components/share/Breadcrumb';
 
 const css = `
   h1{
@@ -40,6 +41,11 @@ const AngelInvestor = () => {
   return (
     <>
       <style>{css}</style>
+      <Breadcrumb
+        src="/images/home/hero/bg.png"
+        title="Angel Investor"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Angel Investor" }]}
+      />
       <SectionLayout>
         <div className='text-center md:text-left'>
           {/* <div className='my-8'>
