@@ -55,13 +55,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm md:text-lg text-gray-300">
               <li>
-                <Link href="https://www.tripvienlaw.com/practice-areas/immigration">U.S. Immigration</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/immigration">
+                  U.S. Immigration
+                </Link>
               </li>
               <li>
-                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">DUI Defense</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/dui-defense">
+                  DUI Defense
+                </Link>
               </li>
               <li>
-                <Link href="https://www.tripvienlaw.com/practice-areas/personal-injury">Personal Injury</Link>
+                <Link href="https://www.tripvienlaw.com/practice-areas/personal-injury">
+                  Personal Injury
+                </Link>
               </li>
             </ul>
           </div>
@@ -101,12 +107,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/disclaimer">Disclaimers & Terms</Link>
-              </li> 
-               <li>
+              </li>
+              <li>
                 <Link href="/investor">Angel Investor</Link>
               </li>
               <li>
-                <Link href="/terms">Terms of Service</Link>
+                <Link href="/">Terms of Service</Link>
+                {/* <Link href="/terms">Terms of Service</Link> */}
               </li>
               <li>
                 <Link href="/legal">Legal Information</Link>
@@ -140,73 +147,72 @@ export default function Footer() {
             </ul>
 
             {/* SOCIAL ICONS */}
-<div className="flex gap-3 mt-5">
-  <Link
-    href="https://www.facebook.com/TripVienLawPA/"
-    aria-label="Facebook"
-    className="
+            <div className="flex gap-3 mt-5">
+              <Link
+                href="https://www.facebook.com/TripVienLawPA/"
+                aria-label="Facebook"
+                className="
       w-9 h-9 rounded-full border border-primary
       flex items-center justify-center
       hover:bg-primary transition
       group
     "
-  >
-    <FaFacebookF className="text-white group-hover:text-black text-sm transition" />
-  </Link>
+              >
+                <FaFacebookF className="text-white group-hover:text-black text-sm transition" />
+              </Link>
 
-  <Link
-    href="https://x.com/TripVienLawPA"
-    aria-label="Twitter / X"
-    className="
+              <Link
+                href="https://x.com/TripVienLawPA"
+                aria-label="Twitter / X"
+                className="
       w-9 h-9 rounded-full border border-primary
       flex items-center justify-center
       hover:bg-primary transition
       group
     "
-  >
-    <FaXTwitter className="text-white group-hover:text-black text-sm transition" />
-  </Link>
+              >
+                <FaXTwitter className="text-white group-hover:text-black text-sm transition" />
+              </Link>
 
-  <Link
-    href="https://www.linkedin.com/company/tripvienlawpa/"
-    aria-label="LinkedIn"
-    className="
+              <Link
+                href="https://www.linkedin.com/company/tripvienlawpa/"
+                aria-label="LinkedIn"
+                className="
       w-9 h-9 rounded-full border border-primary
       flex items-center justify-center
       hover:bg-primary transition
       group
     "
-  >
-    <FaLinkedinIn className="text-white group-hover:text-black text-sm transition" />
-  </Link>
+              >
+                <FaLinkedinIn className="text-white group-hover:text-black text-sm transition" />
+              </Link>
 
-  <Link
-    href="https://www.instagram.com/tripvienlawpa/"
-    aria-label="Instagram"
-    className="
+              <Link
+                href="https://www.instagram.com/tripvienlawpa/"
+                aria-label="Instagram"
+                className="
       w-9 h-9 rounded-full border border-primary
       flex items-center justify-center
       hover:bg-primary transition
       group
     "
-  >
-    <FaInstagram className="text-white group-hover:text-black text-sm transition" />
-  </Link>
+              >
+                <FaInstagram className="text-white group-hover:text-black text-sm transition" />
+              </Link>
 
-  <Link
-    href="https://www.tiktok.com/@tripvienlawpa"
-    aria-label="TikTok"
-    className="
+              <Link
+                href="https://www.tiktok.com/@tripvienlawpa"
+                aria-label="TikTok"
+                className="
       w-9 h-9 rounded-full border border-primary
       flex items-center justify-center
       hover:bg-primary transition
       group
     "
-  >
-    <FaTiktok className="text-white group-hover:text-black text-sm transition" />
-  </Link>
-</div>
-
+              >
+                <FaTiktok className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
