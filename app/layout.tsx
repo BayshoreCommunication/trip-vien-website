@@ -29,10 +29,22 @@ const playfair = Playfair_Display({
 
 /* ---------------- METADATA ---------------- */
 
+/* ---------------- METADATA ---------------- */
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tripvienlaw.com"),
   title: "Trip Vien",
   description: "Trip Vien Website",
+  openGraph: {
+    title: "Trip Vien",
+    description: "Trip Vien Website",
+    url: "https://www.tripvienlaw.com/",
+    siteName: "Trip Vien",
+    locale: "en_US",
+    type: "website",
+  },
 };
+
 
 /* ---------------- ROOT LAYOUT ---------------- */
 
