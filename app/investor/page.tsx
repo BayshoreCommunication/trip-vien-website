@@ -191,12 +191,12 @@ const AngelInvestor = () => {
             </p>
           </div>
           <div className='privacy-title'>
-            <h5>The Role of Trip Law in Angel Investing</h5>
+            <h5>The Role of Tripathi Vongsyprasom Law, P.A. in Angel Investing</h5>
             <p>
-              Trip Law refers to the regulations and legal considerations that
+              Tripathi Vongsyprasom Law, P.A. refers to the regulations and legal considerations that
               govern the actions of angel investors and startups. These laws are
               designed to protect both parties and ensure fair and transparent
-              investment practices. Key aspects of Trip Law include:
+              investment practices. Key aspects of Tripathi Vongsyprasom Law, P.A. include:
             </p>
             <ul>
               <li>
@@ -232,7 +232,7 @@ const AngelInvestor = () => {
               entrepreneurs.
             </p>
             <p>
-              Understanding and complying with Trip Law is essential for both
+              Understanding and complying with Tripathi Vongsyprasom Law, P.A. is essential for both
               angel investors and startups to avoid legal pitfalls and build a
               strong, trustworthy partnership with your consent.
             </p>
