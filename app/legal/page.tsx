@@ -1,7 +1,7 @@
-import React from 'react';
-import SectionLayout from 'components/shared/SectionLayout';
-import Link from 'next/link';
-import Breadcrumb from 'components/share/Breadcrumb';
+import React from "react";
+import SectionLayout from "components/shared/SectionLayout";
+import Link from "next/link";
+import Breadcrumb from "components/share/Breadcrumb";
 
 const css = `
   h1{
@@ -26,214 +26,173 @@ const css = `
   ul{
     list-style-type: disc;
     margin-left: 30px;
-
   }
   li{
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
-  br{
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
 `;
 
 const LegalInformation = () => {
   return (
     <>
       <style>{css}</style>
+
       <Breadcrumb
         src="/images/home/hero/bg.png"
         title="Legal Information"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Legal Information" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Legal Information" },
+        ]}
       />
+
       <SectionLayout>
-        <div className='text-center md:text-left'>
-          <div className='my-8'>
-            <h2 className='font-extrabold'>Legal Information</h2>
+        <div className="text-center md:text-left">
+          <div className="my-8">
+            <h2 className="font-extrabold">Legal Information</h2>
           </div>
 
-          <div className='privacy-title'>
+          {/* PRIVACY POLICY */}
+          <div className="privacy-title">
             <h5>Privacy Policy</h5>
             <p>
-              At Tripathi Vongsyprasom Law, P.A., we respect your privacy and are committed to
-              protecting your personal information. Our Privacy Policy outlines
-              how we collect, use, disclose, and safeguard your information when
-              you visit our website,{' '}
-              <Link
-                href='/'
-                target='_blank'
-                className='text-blue-500 underline'
-              >
-               https://www.tripvienlaw.com
+              Tripathi Vongsyprasom Law, P.A. respects your privacy and is
+              committed to protecting personal information collected through
+              this website and related online services.
+            </p>
+            <p>
+              This Legal Information page summarizes our privacy practices. For
+              full details, please review our Privacy Policy as it applies to
+              your use of{" "}
+              <Link href="/" className="text-blue-500 underline">
+                https://www.tripvienlaw.com
               </Link>
-              , or any related media. Please read it carefully. If you have any
-              disagreements, kindly do not use the site.
+              .
             </p>
             <p>
-              We may update this policy at any time. Changes will be effective
-              immediately upon posting the updated policy, and the "Last
-              Updated" date will be revised. Continuing to use the site after
-              changes are posted means you accept those changes. Periodically
-              review this policy to stay informed.
+              By using this website, you consent to the collection and use of
+              information as described. If you do not agree, please discontinue
+              use of the site.
             </p>
           </div>
-          <div className='privacy-title'>
-            <h5>Information Collection</h5>
-            <p>We collect information in various ways, including:</p>
+
+          {/* INFORMATION WE COLLECT */}
+          <div className="privacy-title">
+            <h5>Information We Collect</h5>
+            <p>We may collect the following types of information:</p>
             <ul>
               <li>
-                <strong>Personal Data: </strong> Information you provide, such
-                as name, address, email, and phone number.
-              </li>
-
-              <li>
-                <strong>Derivative Data: </strong> Information our servers
-                collect, like IP address, browser type, and pages visited.
-              </li>
-
-              <li>
-                <strong>Mobile Device Data: </strong> Device details if
-                accessing via mobile, like device ID and location.
+                <strong>Personal Information:</strong> Information you
+                voluntarily provide, such as your name, email address, phone
+                number, or other contact details.
               </li>
               <li>
-                <strong>Third-Party Data: </strong>
-                Information from third parties if you connect your account with
-                them.
+                <strong>Usage and Technical Data:</strong> Information
+                automatically collected, including IP address, browser type,
+                device information, and pages visited.
               </li>
               <li>
-                <strong>Contest and Survey Data: </strong>
-                Information from your participation in contests or surveys.
+                <strong>Mobile Access Information:</strong> Basic device details
+                and approximate location data when accessing the site via
+                mobile.
+              </li>
+              <li>
+                <strong>Third-Party Information:</strong> Information received
+                through third-party platforms or integrations you choose to use.
               </li>
             </ul>
           </div>
-          <div className='privacy-title'>
-            <h5>Use of Information</h5>
-            <p>We use the collected information to:</p>
+
+          {/* USE OF INFORMATION */}
+          <div className="privacy-title">
+            <h5>How We Use Your Information</h5>
             <ul>
-              <li>Manage your account and provide services.</li>
-              <li>Send marketing and promotional materials.</li>
-              <li>Analyze usage trends to improve the site.</li>
-              <li>Prevent fraud and ensure security.</li>
-              <li>Respond to legal requests and protect our rights.</li>
+              <li>Respond to inquiries and provide requested services</li>
+              <li>Communicate regarding your inquiry or legal matter</li>
+              <li>Improve website functionality and user experience</li>
+              <li>Maintain security and prevent fraud</li>
+              <li>Comply with legal and regulatory obligations</li>
             </ul>
+            <p>We do not sell your personal information.</p>
           </div>
 
-          <div className='privacy-title'>
+          {/* DISCLOSURE */}
+          <div className="privacy-title">
             <h5>Disclosure of Information</h5>
-            <p>We collect information in various ways, including:</p>
+            <p>We may share information only as permitted by law, including:</p>
             <ul>
-              <li>
-                <strong>By Law: </strong> To comply with legal processes or
-                protect rights.
-              </li>
-              <li>
-                <strong>Third-Party Providers: </strong> With partners providing
-                services like payment processing and marketing.
-              </li>
-
-              <li>
-                <strong>Marketing Communications: </strong> Marketing
-                Communications: With your consent for promotional purposes.
-              </li>
-
-              <li>
-                <strong> Interactions and Postings: </strong> With other users
-                as part of site interactions.
-              </li>
-
-              <li>
-                <strong>Business Transfers: </strong> In case of mergers, sales,
-                or bankruptcy.
-              </li>
-
-              <li>
-                <strong>Third-Party Advertisers: </strong> For targeted
-                advertising.
-              </li>
+              <li>When required by legal process or court order</li>
+              <li>With service providers assisting with website operations</li>
+              <li>In connection with a business transfer or reorganization</li>
             </ul>
+            <p>All disclosures are limited to lawful and necessary purposes.</p>
           </div>
 
-          <div className='privacy-title'>
-            <h5>Cookies and Web Beacons</h5>
+          {/* COOKIES */}
+          <div className="privacy-title">
+            <h5>Cookies and Tracking Technologies</h5>
             <p>
-              We apply cookies, web beacons, tracking pixels, and various other
-              tracking technologies to help you personalize the site as well as
-              enhance your experience. When you visit the site, these
-              technologies do not gather your personal information. Most
-              browsers allow cookies by default. You can remove or reject
-              cookies, but this may compromise the site's availability and
-              execution. Web beacons cannot be disabled, although their impact
-              can be minimized by adjusting cookie settings.
+              We may use cookies and similar technologies to enhance website
+              functionality and improve user experience. You may disable cookies
+              through your browser settings, though some site features may not
+              function properly.
             </p>
           </div>
 
-          <div className='privacy-title'>
+          {/* SECURITY */}
+          <div className="privacy-title">
             <h5>Security</h5>
             <p>
-              We use various measures to protect your information, but no system
-              is foolproof. Be cautious when sharing information online.
+              We use reasonable administrative and technical safeguards to
+              protect your information. However, no method of transmission over
+              the internet is completely secure.
             </p>
           </div>
 
-          <div className='privacy-title'>
-            <h5>Children's Privacy</h5>
+          {/* ATTORNEY CLIENT */}
+          <div className="privacy-title">
+            <h5>No Attorney-Client Relationship</h5>
             <p>
-              We strictly discourage collecting any data from children aged
-              below 13. Contact us if you believe we have collected such data.
+              Submitting information through this website does not create an
+              attorney-client relationship. Such a relationship is established
+              only through a signed written agreement.
             </p>
           </div>
 
-          <div className='privacy-title'>
-            <h5>Do-Not-Track Features</h5>
-            <p>Currently, we are not responding to any DNT signals.</p>
-          </div>
-
-          <div className='privacy-title'>
-            <h5>Managing Your Information</h5>
+          {/* CHILDREN */}
+          <div className="privacy-title">
+            <h5>Children’s Privacy</h5>
             <p>
-              You can opt out of communications by updating your account
-              settings or contacting us. For third-party communications, contact
-              the third party directly.
+              This website is not intended for children under the age of 13. We
+              do not knowingly collect personal information from children.
             </p>
           </div>
 
-          <div className='privacy-title'>
-            <h5>Privacy Rights</h5>
+          {/* DNT */}
+          <div className="privacy-title">
+            <h5>Do-Not-Track Signals</h5>
             <p>
-              United States residents can request information on personal data
-              shared with third parties for marketing once a year, free of
-              charge. Minors can request the removal of publicly posted data.
+              At this time, we do not respond to Do-Not-Track browser signals.
             </p>
           </div>
 
-          <div className='privacy-title'>
-            <h5>Consent</h5>
+          {/* USER CHOICES */}
+          <div className="privacy-title">
+            <h5>Your Choices</h5>
             <p>
-              When you are using our site, we consider your consent to our
-              privacy policy. Check this page frequently for updates and
-              changes. Please contact us if you have further queries or want
-              additional information.
+              You may opt out of non-essential communications by contacting us
+              directly. Third-party communications are governed by the
+              respective third party’s policies.
             </p>
           </div>
 
-          <div className='privacy-title'>
-            <h5>Comment Policy</h5>
-            <p>
-              We welcome your comments and feedback on our site. However, we
-              expect all users to be respectful and refrain from posting
-              offensive or inappropriate content. We reserve the right to remove
-              any comments that violate these guidelines.
-            </p>
-          </div>
-
-          <div className='privacy-title'>
+          {/* COPYRIGHT */}
+          <div className="privacy-title">
             <h5>Copyright Notice</h5>
             <p>
-              All content on this site is the property of Tripathi Vongsyprasom Law, P.A. and is
-              protected by copyright laws. Unauthorized use or duplication of
-              this content without express and written permission from Tripathi Vongsyprasom Law, P.A.
-              is strictly prohibited.
+              All content on this website is the property of Tripathi
+              Vongsyprasom Law, P.A. and is protected by copyright laws.
+              Unauthorized use, reproduction, or distribution is prohibited.
             </p>
           </div>
         </div>

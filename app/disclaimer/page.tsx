@@ -1,7 +1,7 @@
-import Breadcrumb from 'components/share/Breadcrumb';
-import SectionLayout from 'components/shared/SectionLayout';
-import Link from 'next/link';
-import React from 'react';
+import Breadcrumb from "components/share/Breadcrumb";
+import SectionLayout from "components/shared/SectionLayout";
+import Link from "next/link";
+import React from "react";
 
 const css = `
   h2{
@@ -22,141 +22,163 @@ const css = `
   ul{
     list-style-type: disc;
     margin-left: 30px;
-
   }
   li{
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
-  br{
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
 `;
 
 const DisclaimersTermsOfUse = () => {
   return (
     <>
       <style>{css}</style>
+
       <Breadcrumb
         src="/images/home/hero/bg.png"
         title="Disclaimers & Terms"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label:"Disclaimers & Terms" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Disclaimers & Terms" },
+        ]}
       />
+
       <SectionLayout>
-        <div className='text-center md:text-left text-md md:text-xl'>
-          <div className='my-2'>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              Last updated July 08, 2024
+        <div className="text-center md:text-left text-md md:text-xl">
+          <p className="text-lg text-stone-950 my-4">
+            Last Updated: July 08, 2024
+          </p>
+
+          {/* CONSUMER COMMUNICATION */}
+          <div>
+            <h5>CONSUMER COMMUNICATION</h5>
+            <p>
+              To ensure that consumer inquiries are handled accurately,
+              courteously, and promptly, phone calls between you and Tripathi
+              Vongsyprasom Law, P.A., including its affiliates, agents, case
+              managers, paralegals, and attorneys, may be recorded where
+              permitted by law.
+            </p>
+            <p>
+              From time to time, we may contact you by telephone, text message
+              (SMS), or email using the contact information you provide.
+              Communications may include prerecorded or artificial voice
+              messages and may be delivered using an automatic telephone dialing
+              system, to the extent permitted by law.
+            </p>
+            <p>
+              By providing your contact information, you certify that the phone
+              numbers and email addresses you provide are yours and that you are
+              authorized to receive communications at those numbers and
+              addresses. You agree that Tripathi Vongsyprasom Law, P.A. may
+              communicate with you electronically as permitted by applicable
+              law.
             </p>
           </div>
-          <div className=''>
-            <h5 className='text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left'>
-              Consumer CoTripathi Vongsyprasom Law, P.A.unication
-            </h5>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`To ensure that consumers’ inquiries are handled accurately, courteously, and promptly, phone calls between you and Tripathi Vongsyprasom Law, P.A. or any of our affiliates, agents, case managers, paralegals, and/or attorneys may be recorded. We may from time to time make calls and/or send text messages to you at any telephone number associated with your account. The manner in which these calls or text (SMS) messages are made to you may include, but is not limited to, the use of prerecorded/artificial voice messages and/or an automatic telephone dialing system. You certify, warrant, and represent that the telephone numbers you have provided to us are your contact numbers. You represent that you are permitted to receive calls at each of the telephone numbers you have provided to us. You agree that Tripathi Vongsyprasom Law, P.A. may send emails to you at any email address you provide us, or use other electronic means of coTripathi Vongsyprasom Law, P.A.unication to the extent permitted by law.`}
-            </p>
-          </div>
-          <div className=''>
-            <h5 className='text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left'>
-              Content Is Information Only, Not Advice
-            </h5>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`Thank you for visiting the web site of Tripathi Vongsyprasom Law, P.A., P.A. These
-              Terms of Use ("Terms of Use" or “Terms”) are a legal and binding
-              agreement between you and Tripathi Vongsyprasom Law, P.A. governing your access to
-              and use of the website located at`}{' '}
+
+          {/* INFORMATIONAL PURPOSES */}
+          <div>
+            <h5>CONTENT IS FOR INFORMATIONAL PURPOSES ONLY</h5>
+            <p>
+              These Disclaimers and Terms of Use (“Terms”) govern your access to
+              and use of{" "}
               <Link
-                href='www.trip-law.com'
-                target='_blank'
-                className='hover:underline'
+                href="https://www.tripvienlaw.com"
+                target="_blank"
+                className="text-blue-500 underline"
               >
-                www.trip-law.com
+                www.tripvienlaw.com
               </Link>
-              {`, any websites that Tripathi Vongsyprasom Law, P.A. maintains which link to these
-              terms, and any mobile applications currently in use or as we may
-              introduce from time to time (the website and mobile applications,
-              or any portion thereof, the “Site”). The information contained on
-              the Site is provided for educational and informational purposes
-              only and the contents of the Site are not and should not be
-              construed as legal advice. As is described further below, nothing
-              on the Site is legal advice or should supplement or inform in
-              anyway your legal decisions or a decision to seek legal advice.`}
+              , any other websites maintained by the firm that link to these
+              Terms, and any related mobile applications (collectively, the
+              “Site”).
             </p>
-
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`The Site is not an offer to perform services on any matter. This Site contains general information from a variety of sources and might not reflect current legal developments. We do not undertake to update material in our Site to reflect subsequent legal or other developments.`}
+            <p>
+              The information provided on this Site is for general informational
+              and educational purposes only. It does not constitute legal advice
+              and should not be relied upon as such. Use of this Site does not
+              create an attorney-client relationship between you and Tripathi
+              Vongsyprasom Law, P.A.
             </p>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {` Please read our Disclaimer below, which is incorporated into these
-              Terms, for additional limitations on the use and effect of the
-              Site. This “Terms of Use” outlines the conditions on which the
-              Site is made available to you. Read the Terms of Use carefully. If
-              you use this Site, you are deemed to have agreed to these Terms of
-              Use. This Site is designed to be accessible to and usable by
-              people with and without disabilities. Please call us at`}{' '}
-              <Link
-                href={'tel:863.370.2427'}
-                className='hover:underline text-blue-500'
-              >
-                863.370.2427
-              </Link>{' '}
-              or{' '}
-              <Link
-                href={'mailto:info@trip-law.com'}
-                className='hover:underline text-blue-500'
-              >
-                email us
-              </Link>{' '}
-              {` us if you encounter an accessibility or usability issue on this
-              site.`}
-            </p>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`We may update, change, modify, or revise these Terms of Use at any time and for any reason. Any changes will become effective upon posting to the Site, along with the date on which it was most recently revised as indicated by the “Last Updated” heading at the top of these Terms of Use. Your continued access to and/or use of the Site after any such modifications constitute your acceptance of the Terms of Use as modified. It is your responsibility to review the Terms of Use regularly for updates. Please contact us as provided above if you would like information regarding any modifications. If any modification to these Terms of Use is held to be invalid, void, or unenforceable for any reason, such modifications shall be deemed severable and shall not affect the validity and enforceability of these Terms of Use and the remaining provision.`}
+            <p>
+              Nothing on this Site constitutes an offer to provide legal
+              services for any specific matter. Content may not reflect the most
+              current legal developments.
             </p>
           </div>
-          <div className=''>
-            <h5 className='text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left'>
-              Use
-            </h5>
 
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {` Tripathi Vongsyprasom Law, P.A. hereby grants you a non-exclusive,
-              non-transferable, revocable, limited right and license to access
-              and use the Site solely for your personal use in accordance with
-              these Terms of Use. You shall not, in any way, otherwise copy,
-              reproduce, distribute, transmit, display, perform, reproduce,
-              publish, license, modify, create derivative works from, sell, or
-              exploit the Site.`}
-            </p>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`Tripathi Vongsyprasom Law, P.A. may at any time, for any reason, and without notice
-              or liability: (a) modify, suspend, or terminate operation of or
-              access to the Site and related services, or (b) change, revise, or
-              modify the Site and affiliated services.`}
+          {/* NO DUTY */}
+          <div>
+            <h5>NO DUTY TO UPDATE</h5>
+            <p>
+              The materials on this Site are provided “as-is.” We do not
+              undertake any obligation to update content to reflect changes in
+              the law or subsequent legal developments.
             </p>
           </div>
-          <div className=''>
-            <h5 className='text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left'>
-              Ownership and Intellectual Property Rights
-            </h5>
 
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`The Site and Tripathi Vongsyprasom Law, P.A. software, systems, technology, and
-              know-how (“`}
-              <strong>{`Tripathi Vongsyprasom Law, P.A. Technology`}</strong>
-              {`”) are owned by or
-              licensed to Tripathi Vongsyprasom Law, P.A. and are protected by copyright,
-              trademark, trade dress, patent, and/or other intellectual property
-              rights and proprietary rights. All trademarks, trade names,
-              graphics, logos, and trade dress included in or made available
-              through the Site and Online Services are owned by or licensed to
-              Tripathi Vongsyprasom Law, P.A. and protected by U.S. and international trademark
-              laws (collectively, the “Marks”).`}
+          {/* ACCEPTANCE */}
+          <div>
+            <h5>ACCEPTANCE OF TERMS</h5>
+            <p>
+              By accessing or using this Site, you acknowledge that you have
+              read, understood, and agreed to be bound by these Terms. If you do
+              not agree, you must discontinue use of the Site immediately.
             </p>
-            <p className='text-lg text-stone-950 text-center md:text-left'>
-              {`Except as expressly set forth herein, nothing herein shall be construed to confer any grant or license of any Tripathi Vongsyprasom Law, P.A. Intellectual Property Rights, whether by estoppel, by implication, or otherwise. You are strictly prohibited from using any Tripathi Vongsyprasom Law, P.A. intellectual property except as expressly provided in these Terms of Use. You are also advised that Tripathi Vongsyprasom Law, P.A. and its licensors will aggressively enforce its intellectual property rights to the fullest extent of the law.`}
+            <p>
+              This Site is designed to be accessible to individuals with and
+              without disabilities. If you experience accessibility issues,
+              please contact us by email so we may assist you.
+            </p>
+          </div>
+
+          {/* CHANGES */}
+          <div>
+            <h5>CHANGES TO THESE TERMS</h5>
+            <p>
+              We reserve the right to update or modify these Terms at any time.
+              Changes become effective immediately upon posting and will be
+              reflected by the “Last Updated” date above.
+            </p>
+            <p>
+              Continued use of the Site constitutes acceptance of the revised
+              Terms. If any provision is deemed unenforceable, the remaining
+              provisions remain in effect.
+            </p>
+          </div>
+
+          {/* PERMITTED USE */}
+          <div>
+            <h5>PERMITTED USE OF THE SITE</h5>
+            <p>
+              Tripathi Vongsyprasom Law, P.A. grants you a limited,
+              non-exclusive, non-transferable, revocable license to access and
+              use the Site solely for personal, non-commercial use.
+            </p>
+            <p>
+              You may not copy, reproduce, distribute, modify, create derivative
+              works from, sell, or exploit any portion of the Site without prior
+              written permission.
+            </p>
+            <p>
+              We may modify, suspend, or discontinue access to the Site at any
+              time without notice.
+            </p>
+          </div>
+
+          {/* IP */}
+          <div>
+            <h5>OWNERSHIP AND INTELLECTUAL PROPERTY RIGHTS</h5>
+            <p>
+              All content, software, systems, technology, trademarks, logos,
+              designs, and materials made available through the Site
+              (collectively, the “Intellectual Property”) are owned by or
+              licensed to Tripathi Vongsyprasom Law, P.A. and protected by U.S.
+              and international law.
+            </p>
+            <p>
+              Nothing in these Terms grants you ownership or license rights
+              except as expressly stated. Unauthorized use may result in legal
+              action.
             </p>
           </div>
         </div>

@@ -112,8 +112,7 @@ export default function Footer() {
                 <Link href="/investor">Angel Investor</Link>
               </li>
               <li>
-                <Link href="/">Terms of Service</Link>
-                {/* <Link href="/terms">Terms of Service</Link> */}
+                <Link href="/terms">Terms of Service</Link>
               </li>
               <li>
                 <Link href="/legal">Legal Information</Link>
