@@ -170,7 +170,7 @@ export default function Header() {
               </div>
 
               {/* CTA */}
-              <Button title="Request A Quote" href="/contact" />
+              <Button title="Schedule a Free Consultation" href="/contact" />
             </div>
 
             {/* MOBILE TOGGLE */}
@@ -229,7 +229,7 @@ export default function Header() {
 
                 {/* MOBILE CTA */}
                 <li className="px-5 py-4">
-                  <Button title="Request A Quote" href="/quote" />
+                  <Button title="Schedule a Free Consultation" href="/contact" />
                 </li>
               </ul>
             </div>

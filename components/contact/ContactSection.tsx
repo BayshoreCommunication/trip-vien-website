@@ -195,7 +195,7 @@ const ContactSection = () => {
             {/* RIGHT: MAP */}
             <div className="relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-full">
               <iframe
-                src="https://www.google.com/maps?q=Common%20Ground%20Playground&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1175565885352!2d-82.63289813037255!3d28.071196181840637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2eb6ea1b59e1f%3A0x58868bd2b0e6bf3e!2s13046%20Race%20Track%20Rd%20%23195%2C%20Tampa%2C%20FL%2033626%2C%20USA!5e0!3m2!1sen!2sbd!4v1769915575407!5m2!1sen!2sbd"
                 className="absolute inset-0 w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
