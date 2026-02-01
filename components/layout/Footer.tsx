@@ -138,7 +138,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="block">
-                  13046 Race Track Rd., #195, Tampa, FL 33626
+                  13046 Race Track Rd., <br /> #195, Tampa, FL 33626
                 </span>
               </li>
             </ul>
