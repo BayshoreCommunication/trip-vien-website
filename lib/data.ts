@@ -99,27 +99,27 @@ export const team: TeamMember[] = [
   // },
 {
   id: 2,
-  name: "ວຽງພອນ ວົງສີປາສົມ, Esq.",
-  title: "U.S. ກົດໝາຍຄົນເຂົ້າເມືອງ, ຂັບລົດພາຍໃຕ້ອິດທິພົນ, and ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​ Attorney",
+  name: "Viengphone Vongsyprasom (ວຽງພອນ ວົງສີປາສົມ), Esq.",
+  title: "U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ), DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ), and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Attorney",
   subtitle: "",
   image: "/images/about/viengphone.png",
 
   bio: [
-    "Attorney ວົງສີປາສົມ is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
-    "She focuses her practice on U.S. ກົດໝາຍຄົນເຂົ້າເມືອງ and Nationality Law, ຂັບລົດພາຍໃຕ້ອິດທິພົນ, and ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​ Litigation, offering clients the skill, empathy, and dedication they deserve.",
-    "Her ກົດໝາຍຄົນເຂົ້າເມືອງ practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
+    "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
+    "She focuses her practice on U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) and Nationality Law, DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) Defense, and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Litigation, offering clients the skill, empathy, and dedication they deserve.",
+    "Her Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
     "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
-    "Her deep understanding of the U.S. ກົດໝາຍຄົນເຂົ້າເມືອງ system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
+    "Her deep understanding of the U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
   ],
 
   extendedBio: [
-    "As a ຂັບລົດພາຍໃຕ້ອິດທິພົນ attorney, Ms. ວົງສີປາສົມ provides strong, client-focused representation for individuals facing charges that threaten their freedom or ກົດໝາຍຄົນເຂົ້າເມືອງ status.",
-    "In her ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​ practice, Ms. ວົງສີປາສົມ brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
-    "Before co-founding Tripathi ວົງສີປາສົມ Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
+    "As a DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) status.",
+    "In her Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
+    "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
   ],
 
   philosophy: [
-    "Attorney ວົງສີປາສົມ believes in providing honest, compassionate, and results-driven representation.",
+    "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
     "She understands that behind every case is a person or family with dreams, fears, and goals."
   ],
 
@@ -131,10 +131,11 @@ export const team: TeamMember[] = [
   barAdmissions: ["The Florida Bar"],
 
   courtAdmissions: [
-    "United States ກົດໝາຍຄົນເຂົ້າເມືອງ Courts",
+    "United States Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) Courts",
     "Supreme Court of Florida"
   ]
-},
+}
+,
   {
     id: 3,
     name: "Arjo Neel",
