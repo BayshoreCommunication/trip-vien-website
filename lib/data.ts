@@ -66,7 +66,7 @@ export const team: TeamMember[] = [
     id: 2,
     name: "Viengphone Vongsyprasom, Esq.",
     title: "U.S. Immigration, DUI Defense, and Personal Injury Attorney",
-    nameLao:"ທ່ານ ວຽງພອນ ວົງສີປາສົມ, Esq.",
+    nameLao:"ວຽງພອນ ວົງສີປາສົມ, Esq.",
     titleLao:"ທະນາຍຄວາມກົດໝາຍຄົນເຂົ້າເມືອງສະຫະລັດ, ຄະດີ DUI, ແລະ ອຸປະຕິເຫດລົດ ",
     subtitle: "",
     image: "/images/about/viengphone.png",
