@@ -19,7 +19,6 @@ const AboutSection = () => {
             }`}
           >
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 items-start">
-              
               {/* LEFT IMAGE */}
               <Reveal x={-100} opacityFrom={0} duration={3}>
                 <div
@@ -60,16 +59,27 @@ const AboutSection = () => {
                 {/* HEADER */}
                 <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
                   <div className="border-b border-[#E7B540] pb-1 mb-4">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl mb-3">
-                      {member.name}
-                    </h3>
+                    <div>
+                      <h3 className="text-3xl md:text-4xl lg:text-5xl mb-3">
+                        {member.name}
+                      </h3>
 
-                    <p className="text-xl font-semibold uppercase tracking-wide text-black/80 mb-2">
-                      {member.title}
-                    </p>
-                    <p className="text-base mb-4 opacity-80">
-                      {member.subtitle}
-                    </p>
+                      <p className="text-xl font-semibold uppercase tracking-wide text-black/80 mb-2">
+                        {member.title}
+                      </p>
+                      <p className="text-base mb-4 opacity-80">
+                        {member.subtitle}
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-3xl md:text-4xl lg:text-5xl mb-3">
+                        {member.nameLao}
+                      </h3>
+
+                      <p className="text-xl font-semibold uppercase tracking-wide text-black/80 mb-2">
+                        {member.titleLao}
+                      </p>
+                    </div>
                   </div>
                 </Reveal>
 
@@ -89,10 +99,7 @@ const AboutSection = () => {
                   <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
                     <div className="space-y-4 mt-6">
                       {member.extendedBio.map((text, i) => (
-                        <p
-                          key={i}
-                          className="leading-relaxed opacity-80"
-                        >
+                        <p key={i} className="leading-relaxed opacity-80">
                           {text}
                         </p>
                       ))}
@@ -104,9 +111,7 @@ const AboutSection = () => {
                 {member.philosophy && (
                   <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
                     <div className="mt-10">
-                      <h4 className="text-xl mb-3">
-                        Professional Philosophy
-                      </h4>
+                      <h4 className="text-xl mb-3">Professional Philosophy</h4>
                       <div className="space-y-3 opacity-90">
                         {member.philosophy.map((text, i) => (
                           <p key={i}>{text}</p>
@@ -124,9 +129,7 @@ const AboutSection = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                       {member.education && (
                         <div>
-                          <h4 className="font-semibold mb-2">
-                            Education
-                          </h4>
+                          <h4 className="font-semibold mb-2">Education</h4>
                           <ul className="space-y-1 opacity-80">
                             {member.education.map((edu, i) => (
                               <li key={i}>• {edu}</li>
@@ -137,9 +140,7 @@ const AboutSection = () => {
 
                       {member.barAdmissions && (
                         <div>
-                          <h4 className="font-semibold mb-2">
-                            Bar Admissions
-                          </h4>
+                          <h4 className="font-semibold mb-2">Bar Admissions</h4>
                           <ul className="space-y-1 opacity-80">
                             {member.barAdmissions.map((bar, i) => (
                               <li key={i}>• {bar}</li>

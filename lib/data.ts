@@ -1,7 +1,10 @@
 export interface TeamMember {
   id: number;
   name: string;
+  nameLao?: string;
+  nameLaoTitle?: string;
   title: string;
+  titleLao?: string;
   subtitle: string;
   image: string;
 
@@ -59,83 +62,85 @@ export const team: TeamMember[] = [
     ],
   },
 
-  // {
-  //   id: 2,
-  //   name: "Viengphone Vongsyprasom, Esq.",
-  //   title: "U.S. Immigration, DUI Defense, and Personal Injury Attorney",
-  //   subtitle: "",
-  //   image: "/images/about/viengphone.png",
+  {
+    id: 2,
+    name: "Viengphone Vongsyprasom, Esq.",
+    title: "U.S. Immigration, DUI Defense, and Personal Injury Attorney",
+    nameLao:"ທ່ານ ວຽງພອນ ວົງສີປາສົມ, Esq.",
+    titleLao:"ທະນາຍຄວາມກົດໝາຍຄົນເຂົ້າເມືອງສະຫະລັດ, ຄະດີ DUI, ແລະ ອຸປະຕິເຫດລົດ ",
+    subtitle: "",
+    image: "/images/about/viengphone.png",
 
-  //   bio: [
-  //     "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
-  //     "She focuses her practice on U.S. Immigration and Nationality Law, DUI Defense, and Personal Injury Litigation, offering clients the skill, empathy, and dedication they deserve.",
-  //     "Her immigration practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
-  //     "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
-  //     "Her deep understanding of the U.S. immigration system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States.",
-  //   ],
+    bio: [
+      "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
+      "She focuses her practice on U.S. Immigration and Nationality Law, DUI Defense, and Personal Injury Litigation, offering clients the skill, empathy, and dedication they deserve.",
+      "Her immigration practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
+      "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
+      "Her deep understanding of the U.S. immigration system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States.",
+    ],
 
-  //   extendedBio: [
-  //     "As a DUI defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or immigration status.",
-  //     "In her personal injury practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
-  //     "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense.",
-  //   ],
+    extendedBio: [
+      "As a DUI defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or immigration status.",
+      "In her personal injury practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
+      "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense.",
+    ],
 
-  //   philosophy: [
-  //     "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
-  //     "She understands that behind every case is a person or family with dreams, fears, and goals.",
-  //   ],
+    philosophy: [
+      "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
+      "She understands that behind every case is a person or family with dreams, fears, and goals.",
+    ],
 
-  //   education: [
-  //     "Western Michigan University Cooley Law School, J.D., 2018",
-  //     "University of South Florida, B.S. in Criminology, 2013",
-  //   ],
+    education: [
+      "Western Michigan University Cooley Law School, J.D., 2018",
+      "University of South Florida, B.S. in Criminology, 2013",
+    ],
 
-  //   barAdmissions: ["The Florida Bar"],
+    barAdmissions: ["The Florida Bar"],
 
-  //   courtAdmissions: [
-  //     "United States Immigration Courts",
-  //     "Supreme Court of Florida",
-  //   ],
-  // },
-{
-  id: 2,
-  name: "Viengphone Vongsyprasom (ວຽງພອນ ວົງສີປາສົມ), Esq.",
-  title: "U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ), DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ), and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Attorney",
-  subtitle: "",
-  image: "/images/about/viengphone.png",
+    courtAdmissions: [
+      "United States Immigration Courts",
+      "Supreme Court of Florida",
+    ],
+  },
+// {
+//   id: 2,
+//   name: "Viengphone Vongsyprasom (ວຽງພອນ ວົງສີປາສົມ), Esq.",
+//   title: "U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ), DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ), and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Attorney",
+//   subtitle: "",
+//   image: "/images/about/viengphone.png",
 
-  bio: [
-    "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
-    "She focuses her practice on U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) and Nationality Law, DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) Defense, and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Litigation, offering clients the skill, empathy, and dedication they deserve.",
-    "Her Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
-    "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
-    "Her deep understanding of the U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
-  ],
+//   bio: [
+//     "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
+//     "She focuses her practice on U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) and Nationality Law, DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) Defense, and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Litigation, offering clients the skill, empathy, and dedication they deserve.",
+//     "Her Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
+//     "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
+//     "Her deep understanding of the U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
+//   ],
 
-  extendedBio: [
-    "As a DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) status.",
-    "In her Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
-    "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
-  ],
+//   extendedBio: [
+//     "As a DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) status.",
+//     "In her Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
+//     "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
+//   ],
 
-  philosophy: [
-    "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
-    "She understands that behind every case is a person or family with dreams, fears, and goals."
-  ],
+//   philosophy: [
+//     "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
+//     "She understands that behind every case is a person or family with dreams, fears, and goals."
+//   ],
 
-  education: [
-    "Western Michigan University Cooley Law School, J.D., 2018",
-    "University of South Florida, B.S. in Criminology, 2013"
-  ],
+//   education: [
+//     "Western Michigan University Cooley Law School, J.D., 2018",
+//     "University of South Florida, B.S. in Criminology, 2013"
+//   ],
 
-  barAdmissions: ["The Florida Bar"],
+//   barAdmissions: ["The Florida Bar"],
 
-  courtAdmissions: [
-    "United States Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) Courts",
-    "Supreme Court of Florida"
-  ]
-}
-,
+//   courtAdmissions: [
+//     "United States Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) Courts",
+//     "Supreme Court of Florida"
+//   ]
+// }
+
   {
     id: 3,
     name: "Arjo Neel",
