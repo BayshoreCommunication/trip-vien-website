@@ -66,7 +66,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="https://www.tripvienlaw.com/practice-areas/personal-injury">
-                  Personal Injury
+                  Auto Accident/Personal Injury
                 </Link>
               </li>
             </ul>

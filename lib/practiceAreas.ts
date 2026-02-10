@@ -1,6 +1,6 @@
 export const practiceAreas = [
   {
-    title: "Personal Injury",
+    title: "Auto Accident/Personal Injury ",
     slug: "personal-injury",
     image: "/images/home/practice/img1.png",
     description:

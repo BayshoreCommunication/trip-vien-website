@@ -1,7 +1,7 @@
 export default function PracticeBanner() {
   const items = [
     // "Criminal Case",
-    "Personal Injury Cases",
+    "Auto Accident/Personal Injury",
     "DUI Defense",
     "Immigration",
   ];

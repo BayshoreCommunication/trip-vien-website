@@ -65,7 +65,7 @@ export const team: TeamMember[] = [
   {
     id: 2,
     name: "Viengphone Vongsyprasom, Esq.",
-    title: "U.S. Immigration, DUI Defense, and Personal Injury Attorney",
+    title: "U.S. Immigration, DUI Defense, & Auto Accident/Personal Injury Attorney",
     nameLao:"ວຽງພອນ ວົງສີປາສົມ, Esq.",
     titleLao:"ທະນາຍຄວາມກົດໝາຍຄົນເຂົ້າເມືອງສະຫະລັດ, ຄະດີ DUI, ແລະ ອຸປະຕິເຫດລົດ ",
     subtitle: "",
@@ -166,7 +166,7 @@ export const team: TeamMember[] = [
   {
     id: 4,
     name: "Sakawat Hossain",
-    title: "Senior Associate Paralegal",
+    title: " Director of Legal Operations",
     subtitle: "",
     image: "/images/about/sakawat-hossain.png",
 
@@ -179,7 +179,7 @@ export const team: TeamMember[] = [
   {
     id: 5,
     name: "S. M. Faisal Abrar",
-    title: "Senior Case Manager",
+    title: "Director of Case Management",
     subtitle: "",
     image: "/images/about/sm-faisal-abrar.png",
     dark: true,

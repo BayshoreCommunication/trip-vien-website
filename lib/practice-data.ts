@@ -14,7 +14,7 @@ export type PracticeArea = {
 
 export const PRACTICE_DATA: Record<string, PracticeArea> = {
   "personal-injury": {
-  title: "Personal Injury Services",
+  title: "Auto Accident/Personal Injury Services",
   services: [
     {
       title: "Car Accidents",
