@@ -440,77 +440,95 @@ We assist companies with compliance, licensing, and documentation. Our firm advi
 Our goal is helping businesses operate smoothly while remaining compliant with trade laws.
   `,
 },
-{
-  title: "Crimmigration",
-  slug: "crimmigration",
-  description:
-    "Defense where criminal law and immigration law intersect.",
-  image: "/images/services/img19.png",
-  details_img: "/images/services/crimmigration.png",
-  content: `
-Crimmigration involves cases where criminal charges or convictions affect immigration status. Even minor offenses can have serious immigration consequences. Early legal analysis is essential.
+// {
+//   title: "Crimmigration",
+//   slug: "crimmigration",
+//   description:
+//     "Defense where criminal law and immigration law intersect.",
+//   image: "/images/services/img19.png",
+//   details_img: "/images/services/crimmigration.png",
+//   content: `
+// Crimmigration involves cases where criminal charges or convictions affect immigration status. Even minor offenses can have serious immigration consequences. Early legal analysis is essential.
 
-We evaluate criminal records to assess immigration impact. Our firm coordinates defense strategies to minimize adverse outcomes. Each case is reviewed carefully.
+// We evaluate criminal records to assess immigration impact. Our firm coordinates defense strategies to minimize adverse outcomes. Each case is reviewed carefully.
 
-Our goal is protecting lawful status and preventing removal whenever possible.
-  `,
-},
-{
-  title: "Master Calendar Hearings",
-  slug: "master-calendar-hearings",
-  description: "Representation at initial immigration court hearings.",
-  image: "/images/services/img15.png",
-  details_img: "/images/services/Master-Calendar-Hearings.png",
-  content: `
-Master calendar hearings are the first stage of immigration court proceedings. These hearings address procedural matters, pleadings, and scheduling. Mistakes can negatively affect the case.
+// Our goal is protecting lawful status and preventing removal whenever possible.
+//   `,
+// },
+// {
+//   title: "Master Calendar Hearings",
+//   slug: "master-calendar-hearings",
+//   description: "Representation at initial immigration court hearings.",
+//   image: "/images/services/img15.png",
+//   details_img: "/images/services/Master-Calendar-Hearings.png",
+//   content: `
+// Master calendar hearings are the first stage of immigration court proceedings. These hearings address procedural matters, pleadings, and scheduling. Mistakes can negatively affect the case.
 
-We represent clients during master calendar hearings and handle all court filings. Our firm ensures proper responses to charges and deadlines. Strategic planning begins at this stage.
+// We represent clients during master calendar hearings and handle all court filings. Our firm ensures proper responses to charges and deadlines. Strategic planning begins at this stage.
 
-Our objective is positioning the case for the best possible outcome.
-  `,
-},
-{
-  title: "Individual Hearings",
-  slug: "individual-hearings",
-  description: "Full representation during immigration court trials.",
-  image: "/images/services/img16.png",
-  details_img: "/images/services/Individual-Hearings.png",
-  content: `
-Individual hearings are full trials before an immigration judge. Evidence is presented, witnesses are examined, and legal arguments are made. Preparation is critical.
+// Our objective is positioning the case for the best possible outcome.
+//   `,
+// },
+// {
+//   title: "Individual Hearings",
+//   slug: "individual-hearings",
+//   description: "Full representation during immigration court trials.",
+//   image: "/images/services/img16.png",
+//   details_img: "/images/services/Individual-Hearings.png",
+//   content: `
+// Individual hearings are full trials before an immigration judge. Evidence is presented, witnesses are examined, and legal arguments are made. Preparation is critical.
 
-Our attorneys prepare testimony, exhibits, and legal briefs in advance. We advocate aggressively on behalf of clients during hearings. Every detail is addressed.
+// Our attorneys prepare testimony, exhibits, and legal briefs in advance. We advocate aggressively on behalf of clients during hearings. Every detail is addressed.
 
-Our goal is achieving relief and protecting clients’ rights in immigration court.
-  `,
-},
-{
-      title: "Motion Practice",
-      slug: "motion-practice",
-      description:
-        "We provide strategic motion practice in both immigration and criminal cases to protect clients’ rights. Our motions are carefully prepared to challenge legal errors, procedural defects, and improper government actions.",
-      image: "/images/services/img17.png",
-      details_img: "/images/services/Motion-Practice.png",
-      content: `
-Motion practice plays a critical role in both criminal and immigration cases. Well-prepared legal motions can correct errors, challenge unlawful procedures, and reopen cases that were previously denied or closed. These motions often determine whether a case moves forward or is dismissed.
+// Our goal is achieving relief and protecting clients’ rights in immigration court.
+//   `,
+// },
+// {
+//       title: "Motion Practice",
+//       slug: "motion-practice",
+//       description:
+//         "We provide strategic motion practice in both immigration and criminal cases to protect clients’ rights. Our motions are carefully prepared to challenge legal errors, procedural defects, and improper government actions.",
+//       image: "/images/services/img17.png",
+//       details_img: "/images/services/Motion-Practice.png",
+//       content: `
+// Motion practice plays a critical role in both criminal and immigration cases. Well-prepared legal motions can correct errors, challenge unlawful procedures, and reopen cases that were previously denied or closed. These motions often determine whether a case moves forward or is dismissed.
 
-Our firm prepares and files a wide range of motions, including motions to reopen, motions to reconsider, and motions to terminate proceedings. Each case is thoroughly reviewed to identify legal flaws, due process violations, or improper government actions. We support every motion with detailed legal arguments and relevant evidence.
+// Our firm prepares and files a wide range of motions, including motions to reopen, motions to reconsider, and motions to terminate proceedings. Each case is thoroughly reviewed to identify legal flaws, due process violations, or improper government actions. We support every motion with detailed legal arguments and relevant evidence.
 
-Strategic motion practice can significantly change the outcome of a case. Our goal is to protect our clients’ rights, correct injustices, and pursue favorable rulings that move cases toward successful resolution.
-      `,
-    },
+// Strategic motion practice can significantly change the outcome of a case. Our goal is to protect our clients’ rights, correct injustices, and pursue favorable rulings that move cases toward successful resolution.
+//       `,
+//     },
+//     {
+//       title: "Bond Redetermination Hearings",
+//       slug: "bond-redetermination-hearings",
+//       description:
+//         "We advocate for detained individuals seeking bond reduction or release from immigration detention. Our representation focuses on demonstrating eligibility, community ties, and lack of flight or safety risk.",
+//       image: "/images/services/img18.png",
+//       details_img: "/images/services/bond-redetermination-hearings.png",
+//       content: `
+// Bond redetermination hearings provide detained individuals an opportunity to seek release from immigration detention. These hearings require strong legal arguments and persuasive evidence to demonstrate eligibility for bond. Preparation is essential to success.
+
+// We represent detained clients before immigration judges and advocate for bond reduction or release. Our attorneys present evidence of family ties, employment history, community involvement, and good moral character. We also address any government concerns related to public safety or flight risk.
+
+// Our goal is securing release so clients can continue their cases from outside detention. Effective bond advocacy allows individuals to better prepare their defense and maintain family and employment stability.
+//       `,
+//     },
     {
-      title: "Bond Redetermination Hearings",
-      slug: "bond-redetermination-hearings",
+      title: "Deportation Defense",
+      slug: "deportation-defense",
       description:
-        "We advocate for detained individuals seeking bond reduction or release from immigration detention. Our representation focuses on demonstrating eligibility, community ties, and lack of flight or safety risk.",
+        "Legal defense for individuals facing deportation, detention, or removal proceedings.",
       image: "/images/services/img18.png",
-      details_img: "/images/services/bond-redetermination-hearings.png",
+      details_img: "/images/services/deportation-defense.png",
       content: `
-Bond redetermination hearings provide detained individuals an opportunity to seek release from immigration detention. These hearings require strong legal arguments and persuasive evidence to demonstrate eligibility for bond. Preparation is essential to success.
+Facing Deportation Does Not Mean You Are Out of Options
 
-We represent detained clients before immigration judges and advocate for bond reduction or release. Our attorneys present evidence of family ties, employment history, community involvement, and good moral character. We also address any government concerns related to public safety or flight risk.
+A deportation notice can feel overwhelming, but it is not the end of the road. Immigration law is complex, and many people qualify for defenses they are not aware of.
 
-Our goal is securing release so clients can continue their cases from outside detention. Effective bond advocacy allows individuals to better prepare their defense and maintain family and employment stability.
+At Tripathi Vongsyprasom Law, we defend individuals and families facing removal proceedings. From cancellation of removal to asylum claims, waivers, and motions to reopen, our team evaluates every possible legal path to protect your right to remain in the United States.
+
+Timing matters. The earlier you act, the more options you may have.
+
       `,
     },
 
