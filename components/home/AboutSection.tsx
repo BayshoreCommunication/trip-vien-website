@@ -55,7 +55,7 @@ export default function AboutSection() {
             <Reveal x={-100} opacityFrom={0} duration={2}>
               <div className="relative rounded-[20px] overflow-hidden">
                 <Image
-                  src="/images/home/about/img.png"
+                  src="/images/home/about/img.jpeg"
                   alt="About"
                   width={1000}
                   height={800}

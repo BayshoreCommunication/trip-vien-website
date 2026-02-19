@@ -204,7 +204,7 @@ export const team: TeamMember[] = [
   {
     id: 6,
     name: "Md. Alamin Arefen",
-    title: "",
+    title: "Senior Paralegal",
     subtitle: "",
     image: "/images/about/Arifin.png",
     dark: false,
@@ -225,7 +225,7 @@ export const team: TeamMember[] = [
   {
     id: 7,
     name: "Md Rakib Hasan",
-    title: "Client Relationship Executive",
+    title: "Paralegal ",
     subtitle: "",
     image: "/images/about/Rakib.png",
     dark: true,
