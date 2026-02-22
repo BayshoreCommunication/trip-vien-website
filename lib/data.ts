@@ -201,42 +201,40 @@ export const team: TeamMember[] = [
   },
 
 
-  {
-    id: 6,
-    name: "Md. Alamin Arefen",
-    title: "Senior Paralegal",
-    subtitle: "",
-    image: "/images/about/Arifin.png",
-    dark: false,
-    bio: [
-      "Md. Alamin Arefen completed his Bachelor of Science in Computer Science and Engineering (CSE) from Daffodil International University in 2020. He also pursued a Master of Science in Artificial Intelligence at Friedrich Alexander University.",
+ {
+  id: 6,
+  name: "Md. Alamin Arefen",
+  title: "Junior Paralegal",
+  subtitle: "",
+  image: "/images/about/Arifin.png",
+  dark: false,
+  bio: [
+    "Md. Alamin Arefen completed his Bachelor of Science in Computer Science and Engineering (CSE) from Daffodil International University in 2020. He also pursued a Master of Science in Artificial Intelligence at Friedrich Alexander University.",
 
-      "He specializes in Client Communication, AI tools, and Immigration Services.",
+    "He specializes in Client Communication, AI tools, and Immigration Services.",
 
-      "Currently, Mr. Arefen serves as a Junior Paralegal at Tripathi Vongsyprasom Law. He has experience in family-based immigration matters, including the processing of Green Cards, Citizenship applications, and visa petitions with the U.S. Citizenship and Immigration Services.",
-    ],
+    "Currently, Mr. Arefen serves as a Junior Paralegal at Tripathi Vongsyprasom Law. He has experience in family-based immigration matters, including the processing of Green Cards, Citizenship applications, and visa petitions with the U.S. Citizenship and Immigration Services.",
+  ],
 
-    education: [
-      "Bachelor of Science in Computer Science and Engineering (CSE), 2020 – Daffodil International University",
-      "Master of Science in Artificial Intelligence (AI), 2025 – Friedrich Alexander University",
-    ],
-  },
+  education: [
+    "Bachelor of Science in Computer Science and Engineering (CSE), 2020 – Daffodil International University",
+    "Master of Science in Artificial Intelligence (AI), 2025 – Friedrich Alexander University",
+  ],
+},
 
-  {
-    id: 7,
-    name: "Md Rakib Hasan",
-    title: "Paralegal ",
-    subtitle: "",
-    image: "/images/about/Rakib.png",
-    dark: true,
-    bio: [
-      "Md Rakib Hasan serves as Client Relationship Executive at Trip Law, where he oversees client engagement strategy and operational coordination for immigration and travel-related legal matters. He plays a key role in ensuring procedural accuracy, regulatory compliance, and the seamless progression of client cases from initial consultation to final resolution.",
+{
+  id: 7,
+  name: "Md Rakib Hasan",
+  title: "Client Relationship Executive",
+  subtitle: "",
+  image: "/images/about/Rakib.png",
+  dark: true,
+  bio: [
+    "Md Rakib Hasan serves as Client Relationship Executive at Trip Law, where he oversees client engagement strategy and operational coordination for immigration and travel-related legal matters. He plays a key role in ensuring procedural accuracy, regulatory compliance, and the seamless progression of client cases from initial consultation to final resolution.",
 
-      "Mr. Hasan holds a Master of Science in Marketing Communications at International Business School from Bristol, United Kingdom, and brings over four years of multidisciplinary professional experience across telecommunications, financial services, education, and travel industries. His expertise in structured client communication, CRM systems, and cross-border service management strengthens Trip Law’s commitment to transparency, confidentiality, and service excellence.",
+    "Mr. Hasan holds a Master of Science in Marketing Communications at International Business School from Bristol, United Kingdom, and brings over four years of multidisciplinary professional experience across telecommunications, financial services, education, and travel industries. His expertise in structured client communication, CRM systems, and cross-border service management strengthens Trip Law’s commitment to transparency, confidentiality, and service excellence.",
 
-      "He is guided by principles of diligence, accountability, and professional integrity, contributing to the firm’s reputation for dependable and client-focused legal support.",
-    ],
-
-    
-  },
+    "He is guided by principles of diligence, accountability, and professional integrity, contributing to the firm’s reputation for dependable and client-focused legal support.",
+  ],
+},
 ];
