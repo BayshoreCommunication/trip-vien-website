@@ -36,8 +36,7 @@ const ContactSection = () => {
 
     if (!form.name) errs.name = "Name is required!";
     if (!form.email) errs.email = "Email is required!";
-    else if (!regex.test(form.email))
-      errs.email = "Invalid email format!";
+    else if (!regex.test(form.email)) errs.email = "Invalid email format!";
     if (!form.phone) errs.phone = "Phone number is required!";
     if (!form.message) errs.message = "Message is required!";
 
@@ -57,12 +56,7 @@ const ContactSection = () => {
       return;
     }
 
-    send(
-      "service_etf0i4l",
-      "template_8l7sxxf",
-      form,
-      "wTZ0rPZvEyuoCP8vU"
-    )
+    send("service_etf0i4l", "template_8l7sxxf", form, "wTZ0rPZvEyuoCP8vU")
       .then(() => {
         Swal.fire({
           icon: "success",
@@ -112,14 +106,10 @@ const ContactSection = () => {
                     placeholder="Your Name"
                     className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                     value={form.name}
-                    onChange={(e) =>
-                      setForm({ ...form, name: e.target.value })
-                    }
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
                   />
                   {errors.name && (
-                    <span className="text-red-500 text-sm">
-                      {errors.name}
-                    </span>
+                    <span className="text-red-500 text-sm">{errors.name}</span>
                   )}
                 </div>
 
@@ -135,9 +125,7 @@ const ContactSection = () => {
                     }
                   />
                   {errors.email && (
-                    <span className="text-red-500 text-sm">
-                      {errors.email}
-                    </span>
+                    <span className="text-red-500 text-sm">{errors.email}</span>
                   )}
                 </div>
 
@@ -153,9 +141,7 @@ const ContactSection = () => {
                     }
                   />
                   {errors.phone && (
-                    <span className="text-red-500 text-sm">
-                      {errors.phone}
-                    </span>
+                    <span className="text-red-500 text-sm">{errors.phone}</span>
                   )}
                 </div>
 
@@ -195,7 +181,7 @@ const ContactSection = () => {
             {/* RIGHT: MAP */}
             <div className="relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1175565885352!2d-82.63289813037255!3d28.071196181840637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2eb6ea1b59e1f%3A0x58868bd2b0e6bf3e!2s13046%20Race%20Track%20Rd%20%23195%2C%20Tampa%2C%20FL%2033626%2C%20USA!5e0!3m2!1sen!2sbd!4v1769915575407!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4335.929720435966!2d-81.96523692387974!3d27.9693127138875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd3bfd1378a773%3A0xab83b70a1069293d!2s5304%20Florida%20Ave%20S%20404%20f%2C%20Lakeland%2C%20FL%2033813%2C%20USA!5e1!3m2!1sen!2sbd!4v1771836692589!5m2!1sen!2sbd"
                 className="absolute inset-0 w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
