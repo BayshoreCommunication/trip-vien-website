@@ -31,7 +31,7 @@ export default function Footer() {
         "
         >
           {/* LOGO + ABOUT */}
-          <div className="space-y-5 col-span-2">
+          <div className="space-y-5 col-span-1 md:col-span-2">
             <Image
               src="/images/footer-logo.png"
               alt="Tripathi Yongsyprasom"
