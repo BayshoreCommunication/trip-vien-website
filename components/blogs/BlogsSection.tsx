@@ -10,7 +10,6 @@ type ApiBlog = {
   title: string;
   slug: string;
   createdAt: string;
-  excerpt?: string;
   featuredImage?: {
     image?: {
       url?: string;
@@ -42,35 +41,31 @@ export default function BlogsSection({
         month: "short",
         day: "numeric",
       }),
-      image:
-        p.featuredImage?.image?.url ||
-        "/images/home/blog/img1.png",
-      href: `/blog/${p.slug}`,
+      image: p.featuredImage?.image?.url || "/images/home/blog/img1.png",
+      href: `/blogs/${p.slug}`, // FIXED route
     }));
 
   if (!posts.length) {
     return (
-      <div className="text-center py-20 text-gray-500">
-        No blogs found
-      </div>
+      <div className="text-center py-20 text-gray-500">No blogs found</div>
     );
   }
 
   const totalPages = Math.ceil(posts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentBlogs = posts.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE
-  );
+
+  const currentBlogs = posts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const changePage = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <section className=" md:px-6 lg:px-8 py-8 bg-white md:pt-0 pt-0">
+    <section className="md:px-6 lg:px-8 py-8 bg-white md:pt-0 pt-0">
       <Breadcrumb
         title="Legal Insights Grounded in Strategy and Experience"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Blogs" },
-        ]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blogs" }]}
       />
 
       <div className="max-w-[1640px] mx-auto">
@@ -80,6 +75,7 @@ export default function BlogsSection({
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
               Explore Our Latest Blogs
             </h2>
+
             <p className="text-gray-600">
               Stay informed with practical insights, legal updates, and guidance
               crafted to help you navigate your immigration journey with
@@ -90,20 +86,19 @@ export default function BlogsSection({
 
         {/* BLOG GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {currentBlogs.map((blog) => (
+          {currentBlogs.map((blog, index) => (
             <Link
-              key={blog.href}
+              key={`${blog.href}-${index}`}
               href={blog.href}
               className="group block cursor-pointer"
             >
               <article className="bg-white rounded-xl overflow-hidden h-full">
-                
                 {/* IMAGE */}
                 <Reveal x={-100} opacityFrom={0} duration={3}>
                   <div className="relative overflow-hidden">
                     <Image
                       src={blog.image}
-                      alt={blog.title}
+                      alt={`Blog image for ${blog.title}`}
                       width={1000}
                       height={800}
                       className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
@@ -112,33 +107,26 @@ export default function BlogsSection({
                 </Reveal>
 
                 {/* TEXT */}
-                <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>
-                  <div className="py-6">
-                    <p className="text-sm text-gray-400 mb-3">
-                      {blog.date}
-                    </p>
 
-                    <h3 className="text-xl font-serif mb-6">
-                      {blog.title}
-                    </h3>
+                <div className="py-6">
+                  <p className="text-sm text-gray-400 mb-3">{blog.date}</p>
 
-                    <span className="text-primary font-medium">
-                      View Details →
-                    </span>
-                  </div>
-                </Reveal>
+                  <h3 className="text-xl font-serif mb-6">{blog.title}</h3>
+
+                  <span className="text-primary font-medium">
+                    View Details →
+                  </span>
+                </div>
               </article>
             </Link>
           ))}
         </div>
 
-        {/* PAGINATION (unchanged) */}
+        {/* PAGINATION */}
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mt-16">
             <button
-              onClick={() =>
-                setCurrentPage((p) => Math.max(p - 1, 1))
-              }
+              onClick={() => changePage(Math.max(currentPage - 1, 1))}
               disabled={currentPage === 1}
               className="px-4 py-2 border rounded disabled:opacity-40"
             >
@@ -148,11 +136,9 @@ export default function BlogsSection({
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
                 key={i}
-                onClick={() => setCurrentPage(i + 1)}
+                onClick={() => changePage(i + 1)}
                 className={`w-10 h-10 rounded ${
-                  currentPage === i + 1
-                    ? "bg-primary text-white"
-                    : "border"
+                  currentPage === i + 1 ? "bg-primary text-white" : "border"
                 }`}
               >
                 {i + 1}
@@ -160,11 +146,7 @@ export default function BlogsSection({
             ))}
 
             <button
-              onClick={() =>
-                setCurrentPage((p) =>
-                  Math.min(p + 1, totalPages)
-                )
-              }
+              onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
               disabled={currentPage === totalPages}
               className="px-4 py-2 border rounded disabled:opacity-40"
             >

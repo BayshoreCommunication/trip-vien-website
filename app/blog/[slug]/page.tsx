@@ -3,7 +3,58 @@ import { getAllPostData } from "lib/GetPostData";
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
 
-// HTML formatting CSS (only for this page)
+// ---------- SEO / OG Metadata ----------
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const blogPost = await getAllPostData();
+  const post = blogPost.data.find((p: any) => p.slug === params.slug);
+
+  if (!post) {
+    return {
+      title: "Blog Not Found",
+      description: "The blog you are looking for does not exist.",
+    };
+  }
+
+  const description =
+    post.excerpt || post.body.replace(/<[^>]+>/g, "").slice(0, 160);
+
+  const image = post.featuredImage?.image?.url || "/images/home/blog/img1.png";
+
+  return {
+    title: post.title,
+    description: description,
+
+    openGraph: {
+      title: post.title,
+      description: description,
+      url: `https://www.medicalweightlosstampa.com/blog/${post.slug}`,
+      siteName: "medicalweightlosstampa.com",
+      type: "article",
+
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: description,
+      images: [image],
+    },
+  };
+}
+
+// ---------- HTML Styling ----------
 const css = `
 article h1, article h2, article h3, article h4 {
   padding-top: 10px;
@@ -61,6 +112,7 @@ article blockquote {
 }
 `;
 
+// ---------- PAGE ----------
 export default async function BlogDetails({
   params,
 }: {
