@@ -57,7 +57,7 @@ export default function BlogsSection({
   const currentBlogs = posts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <section className=" md:px-6 lg:px-8 py-8 bg-white md:pt-0 pt-0">
+    <section className=" px-4 md:px-6 lg:px-8 py-8 bg-white md:pt-0 pt-0">
       <Breadcrumb
         title="Legal Insights Grounded in Strategy and Experience"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blogs" }]}
