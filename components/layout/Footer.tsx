@@ -1,11 +1,11 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaFacebookF,
-  FaXTwitter,
-  FaLinkedinIn,
   FaInstagram,
+  FaLinkedinIn,
   FaTiktok,
+  FaXTwitter,
 } from "react-icons/fa6";
 
 export default function Footer() {
@@ -133,12 +133,22 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link href="mailto:info@tripvienlaw.com">
-                  info@tripvienlaw.com
+                  trip@tripvienlaw.com
+                </Link>
+              </li>
+              <li>
+                <Link href="mailto:info@tripvienlaw.com">
+                  vien@tripvienlaw.com
                 </Link>
               </li>
               <li>
                 <span className="block">
-                  5304 S FLORIDA AVE, STE. 404-F, LAKELAND FL 33813
+                  5304 S Florida Ave, Ste. 406-I, Lakeland, FL 33813
+                </span>
+              </li>
+              <li>
+                <span className="block">
+                  411 St. Petersburg Dr. Ste. E., Oldsmar, FL 34677
                 </span>
               </li>
             </ul>
