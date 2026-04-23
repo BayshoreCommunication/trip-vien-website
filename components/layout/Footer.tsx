@@ -6,6 +6,7 @@ import {
   FaLinkedinIn,
   FaTiktok,
   FaXTwitter,
+  FaYoutube,
 } from "react-icons/fa6";
 
 export default function Footer() {
@@ -46,6 +47,85 @@ export default function Footer() {
               business visas, family immigration, and removal defense, we guide
               clients through complex legal systems with confidence.
             </p>
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-3 mt-5">
+              <Link
+                href="https://www.facebook.com/TripVienLawPA/"
+                aria-label="Facebook"
+                className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+              >
+                <FaFacebookF className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+
+              <Link
+                href="https://x.com/TripVienLawPA"
+                aria-label="Twitter / X"
+                className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+              >
+                <FaXTwitter className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+
+              <Link
+                href="https://www.linkedin.com/company/tripvienlawpa/"
+                aria-label="LinkedIn"
+                className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+              >
+                <FaLinkedinIn className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+
+              <Link
+                href="https://www.instagram.com/tripvienlawpa/"
+                aria-label="Instagram"
+                className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+              >
+                <FaInstagram className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+
+              <Link
+                href="https://www.tiktok.com/@tripvienlawpa"
+                aria-label="TikTok"
+                className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+              >
+                <FaTiktok className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@TripVienLawPA"
+                aria-label="YouTube"
+                className="
+      w-9 h-9 rounded-full border border-primary
+      flex items-center justify-center
+      hover:bg-primary transition
+      group
+    "
+              >
+                <FaYoutube className="text-white group-hover:text-black text-sm transition" />
+              </Link>
+            </div>
           </div>
 
           {/* PRACTICE AREAS */}
@@ -152,74 +232,6 @@ export default function Footer() {
                 </span>
               </li>
             </ul>
-
-            {/* SOCIAL ICONS */}
-            <div className="flex gap-3 mt-5">
-              <Link
-                href="https://www.facebook.com/TripVienLawPA/"
-                aria-label="Facebook"
-                className="
-      w-9 h-9 rounded-full border border-primary
-      flex items-center justify-center
-      hover:bg-primary transition
-      group
-    "
-              >
-                <FaFacebookF className="text-white group-hover:text-black text-sm transition" />
-              </Link>
-
-              <Link
-                href="https://x.com/TripVienLawPA"
-                aria-label="Twitter / X"
-                className="
-      w-9 h-9 rounded-full border border-primary
-      flex items-center justify-center
-      hover:bg-primary transition
-      group
-    "
-              >
-                <FaXTwitter className="text-white group-hover:text-black text-sm transition" />
-              </Link>
-
-              <Link
-                href="https://www.linkedin.com/company/tripvienlawpa/"
-                aria-label="LinkedIn"
-                className="
-      w-9 h-9 rounded-full border border-primary
-      flex items-center justify-center
-      hover:bg-primary transition
-      group
-    "
-              >
-                <FaLinkedinIn className="text-white group-hover:text-black text-sm transition" />
-              </Link>
-
-              <Link
-                href="https://www.instagram.com/tripvienlawpa/"
-                aria-label="Instagram"
-                className="
-      w-9 h-9 rounded-full border border-primary
-      flex items-center justify-center
-      hover:bg-primary transition
-      group
-    "
-              >
-                <FaInstagram className="text-white group-hover:text-black text-sm transition" />
-              </Link>
-
-              <Link
-                href="https://www.tiktok.com/@tripvienlawpa"
-                aria-label="TikTok"
-                className="
-      w-9 h-9 rounded-full border border-primary
-      flex items-center justify-center
-      hover:bg-primary transition
-      group
-    "
-              >
-                <FaTiktok className="text-white group-hover:text-black text-sm transition" />
-              </Link>
-            </div>
           </div>
         </div>
       </div>
