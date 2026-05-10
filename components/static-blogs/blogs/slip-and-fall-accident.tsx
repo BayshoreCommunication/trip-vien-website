@@ -216,19 +216,18 @@ export default function SlipAndFallAccidentBlog() {
   ];
 
   return (
-    <article className="bg-[#eeeeee] px-4 py-10 text-black">
-      <div className="mx-auto max-w-[1640px] bg-white px-6 py-8 shadow-sm md:px-[72px] md:py-[72px]">
-        <div className="mx-auto max-w-[760px]">
-          <div className="relative mb-10 aspect-[16/7] w-full overflow-hidden">
-            <Image
-              src="/images/services/Slip-and-Fall.png"
-              alt="Slip and fall accident legal guidance"
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="760px"
-            />
-          </div>
+    <article className="text-black">
+      <div className="mx-auto max-w-[760px]">
+        <div className="relative mb-10 aspect-[16/7] w-full overflow-hidden">
+          <Image
+            src="/images/services/Slip-and-Fall.png"
+            alt="Slip and fall accident legal guidance"
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="760px"
+          />
+        </div>
           <section
             className="px-8 py-8 text-center"
             style={{ backgroundColor: navy }}
@@ -556,7 +555,6 @@ export default function SlipAndFallAccidentBlog() {
             does not constitute legal advice. For specific guidance on your
             case, please consult with a licensed attorney at TripVien Law.
           </p>
-        </div>
       </div>
     </article>
   );

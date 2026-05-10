@@ -119,13 +119,13 @@ export default function Sidebar({
   /* ---------------- UI ---------------- */
 
   return (
-    <aside className="space-y-10">
+    <aside className="space-y-8 lg:sticky lg:top-24 lg:self-start">
       {/* SEARCH */}
       <form onSubmit={handleSearch}>
         <input
           type="text"
           placeholder="Search"
-          className="w-full border px-4 py-3 rounded-md"
+          className="w-full rounded-[3px] border border-[#273244] bg-[#273244] px-4 py-3 text-sm text-white placeholder:text-[#9aa7ba] outline-none transition focus:border-primary"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -133,12 +133,12 @@ export default function Sidebar({
 
       {/* OTHER BLOGS (REAL DATA) */}
       <div className="bg-[#F3F3F3] p-4">
-        <h3 className="text-lg md:text-xl mb-4 border-b-2 border-primary inline-block pb-2">
+        <h3 className="mb-4 inline-block border-b border-primary pb-2 font-serif text-lg md:text-xl">
           Others Blogs
         </h3>
 
         {blogs.length > 0 ? (
-          <ul className="space-y-3 text-sm md:text-base">
+          <ul className="space-y-3 text-sm leading-relaxed">
             {blogs
               .filter(
                 (b) =>
@@ -150,7 +150,7 @@ export default function Sidebar({
                 <li key={blog.slug}>
                   <Link
                     href={`/blog/${blog.slug}`}
-                    className="hover:text-primary"
+                    className="text-[#06142c] transition hover:text-primary"
                   >
                     {blog.title}
                   </Link>
@@ -165,8 +165,8 @@ export default function Sidebar({
       </div>
 
       {/* BOOK APPOINTMENT */}
-      <div className="bg-primary p-6 rounded-lg text-white">
-        <h3 className="font-serif text-lg mb-4">
+      <div className="rounded-md bg-primary p-5 text-white">
+        <h3 className="mb-4 font-serif text-lg">
           Book An Appointment
         </h3>
 
@@ -174,7 +174,7 @@ export default function Sidebar({
           {/* Name */}
           <div>
             <input
-              className="w-full px-3 py-2 rounded text-black"
+              className="w-full rounded-[3px] bg-[#273244] px-3 py-2 text-sm text-white placeholder:text-[#b8c4d6] outline-none focus:ring-1 focus:ring-white/70"
               placeholder="Your Name"
               value={form.name}
               onChange={(e) =>
@@ -191,7 +191,7 @@ export default function Sidebar({
           {/* Phone */}
           <div>
             <input
-              className="w-full px-3 py-2 rounded text-black"
+              className="w-full rounded-[3px] bg-[#273244] px-3 py-2 text-sm text-white placeholder:text-[#b8c4d6] outline-none focus:ring-1 focus:ring-white/70"
               placeholder="Phone Number"
               value={form.phone}
               onChange={(e) =>
@@ -208,7 +208,7 @@ export default function Sidebar({
           {/* Email */}
           <div>
             <input
-              className="w-full px-3 py-2 rounded text-black"
+              className="w-full rounded-[3px] bg-[#273244] px-3 py-2 text-sm text-white placeholder:text-[#b8c4d6] outline-none focus:ring-1 focus:ring-white/70"
               placeholder="Email Address"
               value={form.email}
               onChange={(e) =>
@@ -225,7 +225,7 @@ export default function Sidebar({
           {/* Message */}
           <div>
             <textarea
-              className="w-full px-3 py-2 rounded text-black"
+              className="min-h-[88px] w-full rounded-[3px] bg-[#273244] px-3 py-2 text-sm text-white placeholder:text-[#b8c4d6] outline-none focus:ring-1 focus:ring-white/70"
               placeholder="Type your message"
               value={form.message}
               onChange={(e) =>
@@ -243,7 +243,7 @@ export default function Sidebar({
           <button
             type="submit"
             disabled={loading}
-            className={`w-full rounded-md bg-white text-black py-2 font-medium transition ${
+            className={`w-full rounded-[4px] bg-white py-2 text-sm font-medium text-black transition hover:bg-[#f4f4f4] ${
               loading
                 ? "opacity-60 cursor-not-allowed"
                 : ""

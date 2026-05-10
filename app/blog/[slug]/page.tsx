@@ -151,20 +151,29 @@ export default async function BlogDetails({
   params: { slug: string };
 }) {
   const staticPost = getStaticBlogBySlug(params.slug);
-
-  if (staticPost) {
-    return <SlipAndFallAccidentBlog />;
-  }
-
   const blogPost = await getAllPostData();
-  const post = blogPost.data.find((p: any) => p.slug === params.slug);
 
-  if (!post) return null;
-
-  const blogs = [...staticBlogs, ...blogPost.data].map((p: any) => ({
+  const blogs = [...staticBlogs, ...(blogPost.data || [])].map((p: any) => ({
     title: p.title,
     slug: p.slug,
   }));
+
+  if (staticPost) {
+    return (
+      <section className="bg-[#eeeeee] px-4 py-8 md:py-16">
+        <div className="mx-auto max-w-[1640px] bg-white px-6 py-8 shadow-sm md:px-[72px] md:py-[72px]">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
+            <SlipAndFallAccidentBlog />
+            <Sidebar currentSlug={params.slug} blogs={blogs} />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const post = blogPost.data.find((p: any) => p.slug === params.slug);
+
+  if (!post) return null;
 
   return (
     <>
