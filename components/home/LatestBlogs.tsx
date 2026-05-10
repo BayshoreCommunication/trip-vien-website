@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPostData } from "lib/GetPostData";
+import { staticBlogs } from "lib/staticBlogs";
 import Reveal from "../motion/Reveal";
 
 /* ---------------- API TYPE ---------------- */
@@ -8,6 +9,7 @@ type ApiBlog = {
   title: string;
   slug: string;
   createdAt: string;
+  excerpt?: string;
   featuredImage?: {
     image?: {
       url?: string;
@@ -20,6 +22,7 @@ type BlogCard = {
   title: string;
   date: string;
   image: string;
+  excerpt: string;
   href: string;
 };
 
@@ -35,8 +38,10 @@ function slugify(text: string) {
 export default async function LatestBlogs() {
   const blogPost = await getAllPostData();
 
+  const allBlogs: ApiBlog[] = [...staticBlogs, ...(blogPost.data || [])];
+
   const blogs: BlogCard[] =
-    blogPost.data?.slice(0, 3).map((blog: ApiBlog) => ({
+    allBlogs.slice(0, 3).map((blog: ApiBlog) => ({
       title: blog.title,
       date: new Date(blog.createdAt).toLocaleDateString("en-US", {
         year: "numeric",
@@ -46,6 +51,9 @@ export default async function LatestBlogs() {
       image:
         blog.featuredImage?.image?.url ||
         "/images/home/blog/img1.png",
+      excerpt:
+        blog.excerpt ||
+        "Stay informed with practical legal insights and guidance from TripVien Law.",
       href: `/blog/${slugify(blog.slug)}`,
     })) || [];
 
@@ -98,6 +106,12 @@ export default async function LatestBlogs() {
                   <h3 className="text-lg md:text-xl font-serif leading-snug mb-4">
                     {blog.title}
                   </h3>
+                </Reveal>
+
+                <Reveal tag="p" y={100} opacityFrom={0} duration={3}>
+                  <p className="mb-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    {blog.excerpt}
+                  </p>
                 </Reveal>
 
                 <Reveal tag="h2" y={100} opacityFrom={0} duration={3}>

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { getAllPostData } from "lib/GetPostData";
+import { getStaticBlogBySlug, staticBlogs } from "lib/staticBlogs";
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
+import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
 
 // ---------- SEO / OG Metadata ----------
 export async function generateMetadata({
@@ -9,6 +11,36 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
+  const staticPost = getStaticBlogBySlug(params.slug);
+
+  if (staticPost) {
+    return {
+      title: staticPost.title,
+      description: staticPost.excerpt,
+      openGraph: {
+        title: staticPost.title,
+        description: staticPost.excerpt,
+        url: `https://www.tripvienlaw.com/blog/${staticPost.slug}`,
+        siteName: "TripVien Law",
+        type: "article",
+        images: [
+          {
+            url: staticPost.featuredImage.image.url,
+            width: 1200,
+            height: 630,
+            alt: staticPost.title,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: staticPost.title,
+        description: staticPost.excerpt,
+        images: [staticPost.featuredImage.image.url],
+      },
+    };
+  }
+
   const blogPost = await getAllPostData();
   const post = blogPost.data.find((p: any) => p.slug === params.slug);
 
@@ -118,12 +150,18 @@ export default async function BlogDetails({
 }: {
   params: { slug: string };
 }) {
+  const staticPost = getStaticBlogBySlug(params.slug);
+
+  if (staticPost) {
+    return <SlipAndFallAccidentBlog />;
+  }
+
   const blogPost = await getAllPostData();
   const post = blogPost.data.find((p: any) => p.slug === params.slug);
 
   if (!post) return null;
 
-  const blogs = blogPost.data.map((p: any) => ({
+  const blogs = [...staticBlogs, ...blogPost.data].map((p: any) => ({
     title: p.title,
     slug: p.slug,
   }));

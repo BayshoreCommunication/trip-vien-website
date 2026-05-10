@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Reveal from "../motion/Reveal";
+import { staticBlogs } from "lib/staticBlogs";
 
 type ApiBlog = {
   title: string;
@@ -22,6 +23,7 @@ type BlogUI = {
   title: string;
   date: string;
   image: string;
+  excerpt: string;
   href: string;
 };
 
@@ -33,7 +35,7 @@ export default function BlogsSection({
   const ITEMS_PER_PAGE = 9;
   const [currentPage, setCurrentPage] = useState(1);
 
-  const posts: BlogUI[] = blogPost.data
+  const posts: BlogUI[] = [...staticBlogs, ...blogPost.data]
     .filter((p) => p.slug)
     .map((p) => ({
       title: p.title,
@@ -43,6 +45,9 @@ export default function BlogsSection({
         day: "numeric",
       }),
       image: p.featuredImage?.image?.url || "/images/home/blog/img1.png",
+      excerpt:
+        p.excerpt ||
+        "Stay informed with practical legal insights and guidance from TripVien Law.",
       href: `/blog/${p.slug}`,
     }));
 
@@ -106,6 +111,10 @@ export default function BlogsSection({
                   <p className="text-sm text-gray-400 mb-3">{blog.date}</p>
 
                   <h3 className="text-xl font-serif mb-6">{blog.title}</h3>
+
+                  <p className="mb-6 line-clamp-3 text-sm leading-6 text-gray-600">
+                    {blog.excerpt}
+                  </p>
 
                   <span className="text-primary font-medium">
                     View Details →
