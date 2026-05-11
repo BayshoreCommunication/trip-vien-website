@@ -19,7 +19,7 @@ export const staticBlogs: StaticBlog[] = [
       "Understand property owner responsibility under Florida premises liability law, including business invitee protections, constructive knowledge, and filing deadlines.",
     featuredImage: {
       image: {
-        url: "/images/services/Slip-and-Fall.png",
+        url: "/images/static-blogs/slip-and-fall-accident.jpg",
       },
     },
   },

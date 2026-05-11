@@ -220,7 +220,7 @@ export default function SlipAndFallAccidentBlog() {
       <div className="mx-auto max-w-[760px]">
         <div className="relative mb-10 aspect-[16/7] w-full overflow-hidden">
           <Image
-            src="/images/services/Slip-and-Fall.png"
+            src="/images/static-blogs/slip-and-fall-accident.jpg"
             alt="Slip and fall accident legal guidance"
             fill
             priority
@@ -228,333 +228,327 @@ export default function SlipAndFallAccidentBlog() {
             sizes="760px"
           />
         </div>
-          <section
-            className="px-8 py-8 text-center"
+        <section
+          className="px-8 py-8 text-center"
+          style={{ backgroundColor: navy }}
+        >
+          <p className="mb-2 font-['Arial'] text-[12px] font-bold uppercase tracking-wide text-[#b8860b]">
+            TripVien Law
+          </p>
+          <h1 className="mx-auto max-w-[560px] font-['Arial'] text-[26px] font-bold leading-tight text-white md:text-[28px]">
+            Who Is Liable in a Slip and Fall Accident in Florida?
+          </h1>
+          <p className="mt-3 font-['Georgia'] text-[15px] italic text-[#b0c4de]">
+            Understanding Property Owner Responsibility
+          </p>
+        </section>
+
+        <section
+          className="mt-6 border px-4 py-3"
+          style={{ borderColor: navy, backgroundColor: paleBlue }}
+        >
+          <p className="font-['Georgia'] text-[15px] leading-[1.45] text-[#1b2a4a]">
+            In Florida, the property owner is liable when they knew or should
+            have known about a hazard and failed to fix it or warn you. If you
+            were a business invitee, they owed you the highest duty of care
+            under premises liability law.
+          </p>
+        </section>
+
+        <section className="mt-5">
+          <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
+            Key Points
+          </p>
+          <BulletList items={keyPoints} />
+        </section>
+
+        <Divider />
+
+        <SectionLabel>By The Numbers</SectionLabel>
+        <section className="mt-3 grid grid-cols-1 border border-[#d0d7e2] md:grid-cols-3">
+          <div className="border-b border-[#d0d7e2] bg-[#f4f7fb] px-3 py-4 text-center md:border-b-0 md:border-r">
+            <p className="font-['Arial'] text-[24px] font-bold text-[#1b2a4a]">
+              $52K+
+            </p>
+            <p className="mt-1 font-['Arial'] text-[11px] text-[#555555]">
+              Median hospital admission per fall in FL
+            </p>
+          </div>
+          <div
+            className="border-b border-[#d0d7e2] px-3 py-4 text-center md:border-b-0 md:border-r"
             style={{ backgroundColor: navy }}
           >
-            <p className="mb-2 font-['Arial'] text-[12px] font-bold uppercase tracking-wide text-[#b8860b]">
-              TripVien Law
+            <p className="font-['Arial'] text-[24px] font-bold text-[#b8860b]">
+              #1
             </p>
-            <h1 className="mx-auto max-w-[560px] font-['Arial'] text-[26px] font-bold leading-tight text-white md:text-[28px]">
-              Who Is Liable in a Slip and Fall Accident in Florida?
-            </h1>
-            <p className="mt-3 font-['Georgia'] text-[15px] italic text-[#b0c4de]">
-              Understanding Property Owner Responsibility
+            <p className="mt-1 font-['Arial'] text-[11px] text-[#b0c4de]">
+              Falls are FL's leading cause of injury hospitalization
             </p>
-          </section>
-
-          <section
-            className="mt-6 border px-4 py-3"
-            style={{ borderColor: navy, backgroundColor: paleBlue }}
-          >
-            <p className="font-['Georgia'] text-[15px] leading-[1.45] text-[#1b2a4a]">
-              In Florida, the property owner is liable when they knew or should
-              have known about a hazard and failed to fix it or warn you. If you
-              were a business invitee, they owed you the highest duty of care
-              under premises liability law.
+          </div>
+          <div className="bg-[#f4f7fb] px-3 py-4 text-center">
+            <p className="font-['Arial'] text-[24px] font-bold text-[#1b2a4a]">
+              2 Yrs
             </p>
-          </section>
-
-          <section className="mt-5">
-            <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
-              Key Points
+            <p className="mt-1 font-['Arial'] text-[11px] text-[#555555]">
+              Florida statute of limitations to file
             </p>
-            <BulletList items={keyPoints} />
-          </section>
+          </div>
+        </section>
 
-          <Divider />
-
-          <SectionLabel>By The Numbers</SectionLabel>
-          <section className="mt-3 grid grid-cols-1 border border-[#d0d7e2] md:grid-cols-3">
-            <div className="border-b border-[#d0d7e2] bg-[#f4f7fb] px-3 py-4 text-center md:border-b-0 md:border-r">
-              <p className="font-['Arial'] text-[24px] font-bold text-[#1b2a4a]">
-                $52K+
-              </p>
-              <p className="mt-1 font-['Arial'] text-[11px] text-[#555555]">
-                Median hospital admission per fall in FL
-              </p>
-            </div>
-            <div
-              className="border-b border-[#d0d7e2] px-3 py-4 text-center md:border-b-0 md:border-r"
-              style={{ backgroundColor: navy }}
-            >
-              <p className="font-['Arial'] text-[24px] font-bold text-[#b8860b]">
-                #1
-              </p>
-              <p className="mt-1 font-['Arial'] text-[11px] text-[#b0c4de]">
-                Falls are FL's leading cause of injury hospitalization
-              </p>
-            </div>
-            <div className="bg-[#f4f7fb] px-3 py-4 text-center">
-              <p className="font-['Arial'] text-[24px] font-bold text-[#1b2a4a]">
-                2 Yrs
-              </p>
-              <p className="mt-1 font-['Arial'] text-[11px] text-[#555555]">
-                Florida statute of limitations to file
-              </p>
-            </div>
-          </section>
-
-          <SectionLabel>Settlement Range Guide</SectionLabel>
-          <h2 className="mt-2 font-['Arial'] text-[14px] font-bold text-[#1b2a4a]">
-            Florida Slip and Fall Settlement Range Guide
-          </h2>
-          <section className="mt-3 overflow-x-auto">
-            <table className="w-full min-w-[480px] border-collapse font-['Arial'] text-[12px]">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: navy }}>
-                  <th className="px-2 py-2 text-left">Injury Level</th>
-                  <th className="px-2 py-2 text-left">
-                    Typical Range Indicator
-                  </th>
-                  <th className="px-2 py-2 text-right">Settlement Range</th>
+        <SectionLabel>Settlement Range Guide</SectionLabel>
+        <h2 className="mt-2 font-['Arial'] text-[14px] font-bold text-[#1b2a4a]">
+          Florida Slip and Fall Settlement Range Guide
+        </h2>
+        <section className="mt-3 overflow-x-auto">
+          <table className="w-full min-w-[480px] border-collapse font-['Arial'] text-[12px]">
+            <thead>
+              <tr className="text-white" style={{ backgroundColor: navy }}>
+                <th className="px-2 py-2 text-left">Injury Level</th>
+                <th className="px-2 py-2 text-left">Typical Range Indicator</th>
+                <th className="px-2 py-2 text-right">Settlement Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Minor injuries", "w-1/4", "$5K - $20K", paleBlue],
+                ["Moderate injuries", "w-1/2", "$20K - $75K", "#ffffff"],
+                ["Severe / surgical", "w-5/6", "$75K - $300K+", paleBlue],
+              ].map(([level, width, range, bg]) => (
+                <tr key={level} style={{ backgroundColor: bg }}>
+                  <td className="border border-white px-2 py-3 font-bold text-[#1b2a4a]">
+                    {level}
+                  </td>
+                  <td className="border border-white px-2 py-3">
+                    <div className="h-4 bg-[#e8eef4]">
+                      <div
+                        className={`h-4 ${width}`}
+                        style={{ backgroundColor: navy }}
+                      />
+                    </div>
+                  </td>
+                  <td className="border border-white px-2 py-3 text-right font-bold text-[#b8860b]">
+                    {range}
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Minor injuries", "w-1/4", "$5K - $20K", paleBlue],
-                  ["Moderate injuries", "w-1/2", "$20K - $75K", "#ffffff"],
-                  ["Severe / surgical", "w-5/6", "$75K - $300K+", paleBlue],
-                ].map(([level, width, range, bg]) => (
-                  <tr key={level} style={{ backgroundColor: bg }}>
-                    <td className="border border-white px-2 py-3 font-bold text-[#1b2a4a]">
-                      {level}
-                    </td>
-                    <td className="border border-white px-2 py-3">
-                      <div className="h-4 bg-[#e8eef4]">
-                        <div
-                          className={`h-4 ${width}`}
-                          style={{ backgroundColor: navy }}
-                        />
-                      </div>
-                    </td>
-                    <td className="border border-white px-2 py-3 text-right font-bold text-[#b8860b]">
-                      {range}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
-          <p className="mt-3 font-['Arial'] text-[10px] italic text-[#999999]">
-            * Figures are illustrative estimates. Actual amounts vary by case.
-          </p>
+              ))}
+            </tbody>
+          </table>
+        </section>
+        <p className="mt-3 font-['Arial'] text-[10px] italic text-[#999999]">
+          * Figures are illustrative estimates. Actual amounts vary by case.
+        </p>
 
-          <Divider />
+        <Divider />
 
-          <ArticleHeading>
-            1. What Is the Stark Reality of Slip and Fall Injuries in Florida?
-          </ArticleHeading>
-          <Paragraph>
-            One wrong step on a wet floor can shatter a routine errand. Then the
-            bills arrive. You miss weeks of work. The financial pressure crushes
-            recovery before it can begin.
-          </Paragraph>
-          <Paragraph>
-            Falls are Florida's leading cause of injury hospitalization. The{" "}
-            <DocLink href="https://www.floridahealth.gov">
-              Florida Department of Health
-            </DocLink>{" "}
-            reports that median admission charges exceed $52,000 per stay. That
-            figure does not include lost wages, therapy, or long-term care.
-          </Paragraph>
-          <Paragraph>
-            Florida law organizes visitors by category. Most grocery shoppers
-            and restaurant guests qualify as business invitees. That
-            classification grants you the highest legal shield under the
-            premises liability Florida statute.
-          </Paragraph>
+        <ArticleHeading>
+          1. What Is the Stark Reality of Slip and Fall Injuries in Florida?
+        </ArticleHeading>
+        <Paragraph>
+          One wrong step on a wet floor can shatter a routine errand. Then the
+          bills arrive. You miss weeks of work. The financial pressure crushes
+          recovery before it can begin.
+        </Paragraph>
+        <Paragraph>
+          Falls are Florida's leading cause of injury hospitalization. The{" "}
+          <DocLink href="https://www.floridahealth.gov">
+            Florida Department of Health
+          </DocLink>{" "}
+          reports that median admission charges exceed $52,000 per stay. That
+          figure does not include lost wages, therapy, or long-term care.
+        </Paragraph>
+        <Paragraph>
+          Florida law organizes visitors by category. Most grocery shoppers and
+          restaurant guests qualify as business invitees. That classification
+          grants you the highest legal shield under the premises liability
+          Florida statute.
+        </Paragraph>
 
-          <SurveyBox>
-            In our client intake reviews at TripVien Law, over 70% of slip and
-            fall clients had visited the property for a routine commercial
-            purpose. That status alone significantly strengthened their claims
-            against negligent owners.
-          </SurveyBox>
+        <SurveyBox>
+          In our client intake reviews at TripVien Law, over 70% of slip and
+          fall clients had visited the property for a routine commercial
+          purpose. That status alone significantly strengthened their claims
+          against negligent owners.
+        </SurveyBox>
 
-          <QuoteBox
-            label="Expert Perspective"
-            quote="Premises liability cases in Florida hinge on what the owner knew and when they knew it. Surveillance footage, maintenance logs, and incident reports are the three pillars that make or break a claim."
-            author="Florida Premises Liability Attorney, American Bar Association Member"
-          />
+        <QuoteBox
+          label="Expert Perspective"
+          quote="Premises liability cases in Florida hinge on what the owner knew and when they knew it. Surveillance footage, maintenance logs, and incident reports are the three pillars that make or break a claim."
+          author="Florida Premises Liability Attorney, American Bar Association Member"
+        />
 
-          <ArticleHeading>
-            2. What Does Florida Law Say About Your Status as a Business
-            Invitee?
-          </ArticleHeading>
-          <Paragraph>
-            A property owner invites a business invitee onto the premises for a
-            commercial purpose. Because the owner profits from your presence,
-            their responsibility is strict. They must inspect, repair, and warn.
-            Failure to do any one of those three things is a breach.
-          </Paragraph>
-          <BulletList items={responsibilities} />
+        <ArticleHeading>
+          2. What Does Florida Law Say About Your Status as a Business Invitee?
+        </ArticleHeading>
+        <Paragraph>
+          A property owner invites a business invitee onto the premises for a
+          commercial purpose. Because the owner profits from your presence,
+          their responsibility is strict. They must inspect, repair, and warn.
+          Failure to do any one of those three things is a breach.
+        </Paragraph>
+        <BulletList items={responsibilities} />
 
-          <ArticleHeading>
-            3. How Does the Duty of Care Protect You on Someone Else's Property?
-          </ArticleHeading>
-          <Paragraph>
-            The duty of care is a legal promise. It requires owners to keep
-            visitors safe from harm they should reasonably foresee. A freshly
-            mopped floor demands a yellow warning sign. Without it, the owner
-            creates an unreasonable risk for every person who walks by.
-          </Paragraph>
-          <Paragraph>
-            We analyze whether the owner acted as a careful person would. This
-            is the reasonable person standard. If a typical owner would have
-            spotted the danger, the defendant should have spotted it too.
-          </Paragraph>
-          <Paragraph>
-            This investigation often uncovers patterns. A roof that leaked for
-            weeks without repair. Staff who skipped hourly floor checks for
-            multiple shifts in a row. Patterns of neglect are among the most
-            persuasive elements in a liability claim.
-          </Paragraph>
+        <ArticleHeading>
+          3. How Does the Duty of Care Protect You on Someone Else's Property?
+        </ArticleHeading>
+        <Paragraph>
+          The duty of care is a legal promise. It requires owners to keep
+          visitors safe from harm they should reasonably foresee. A freshly
+          mopped floor demands a yellow warning sign. Without it, the owner
+          creates an unreasonable risk for every person who walks by.
+        </Paragraph>
+        <Paragraph>
+          We analyze whether the owner acted as a careful person would. This is
+          the reasonable person standard. If a typical owner would have spotted
+          the danger, the defendant should have spotted it too.
+        </Paragraph>
+        <Paragraph>
+          This investigation often uncovers patterns. A roof that leaked for
+          weeks without repair. Staff who skipped hourly floor checks for
+          multiple shifts in a row. Patterns of neglect are among the most
+          persuasive elements in a liability claim.
+        </Paragraph>
 
-          <ArticleHeading>
-            4. Why Is Premises Liability on Commercial Property in Florida So
-            Complex?
-          </ArticleHeading>
-          <Paragraph>
-            Supermarkets, shopping malls, and hotel lobbies are the most common
-            sites for these injuries. A{" "}
-            <DocLink href="https://www.nsc.org/home-safety/tools-resources/seasonal-safety/winter/ice/preventing-slips-trips-falls">
-              slip and fall on commercial property Florida
-            </DocLink>{" "}
-            often starts with a liquid on the floor. But liability also flows
-            from poor building maintenance, cracked tiles, loose rugs, and
-            uneven sidewalks.
-          </Paragraph>
-          <Paragraph>
-            Commercial owners sometimes try to blame the victim for not watching
-            where they step. We reject this excuse entirely. A shopper should
-            focus on the shelves. Businesses spend serious money on displays
-            specifically to capture your attention.
-          </Paragraph>
-          <Paragraph>
-            The official{" "}
-            <DocLink href="https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0768/Sections/0768.0755.html">
-              Florida Statute 768.0755
-            </DocLink>{" "}
-            governs transitory substance cases. To win, we must prove the
-            business had notice of the danger, actual or constructive. This is a
-            critical element of proving negligence in Florida slip and fall
-            claims.
-          </Paragraph>
+        <ArticleHeading>
+          4. Why Is Premises Liability on Commercial Property in Florida So
+          Complex?
+        </ArticleHeading>
+        <Paragraph>
+          Supermarkets, shopping malls, and hotel lobbies are the most common
+          sites for these injuries. A{" "}
+          <DocLink href="https://www.nsc.org/home-safety/tools-resources/seasonal-safety/winter/ice/preventing-slips-trips-falls">
+            slip and fall on commercial property Florida
+          </DocLink>{" "}
+          often starts with a liquid on the floor. But liability also flows from
+          poor building maintenance, cracked tiles, loose rugs, and uneven
+          sidewalks.
+        </Paragraph>
+        <Paragraph>
+          Commercial owners sometimes try to blame the victim for not watching
+          where they step. We reject this excuse entirely. A shopper should
+          focus on the shelves. Businesses spend serious money on displays
+          specifically to capture your attention.
+        </Paragraph>
+        <Paragraph>
+          The official{" "}
+          <DocLink href="https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0768/Sections/0768.0755.html">
+            Florida Statute 768.0755
+          </DocLink>{" "}
+          governs transitory substance cases. To win, we must prove the business
+          had notice of the danger, actual or constructive. This is a critical
+          element of proving negligence in Florida slip and fall claims.
+        </Paragraph>
 
-          <ArticleHeading>
-            5. How Do You Prove Constructive Knowledge When There Were No
-            Witnesses?
-          </ArticleHeading>
-          <Paragraph>
-            Constructive knowledge is the legal concept that states what the
-            owner should have known. If footprints or grocery cart tracks run
-            through the spill, it was likely there a long time. That timeline is
-            evidence the owner had enough opportunity to act.
-          </Paragraph>
-          <Paragraph>
-            Most modern Florida businesses have cameras recording every corner.
-            We move fast to preserve that footage before it gets deleted. Many
-            people ask us{" "}
-            <strong className="text-[#1b2a4a]">
-              how to prove property owners were negligent in Florida
-            </strong>{" "}
-            when no one witnessed the fall. Surveillance is frequently the
-            clearest answer available.
-          </Paragraph>
-          <Paragraph>
-            We also collect witness statements, incident reports, and
-            maintenance records. Sometimes an employee admits they meant to
-            clean the spill but got pulled away. That admission carries serious
-            weight. For context on how documentation shapes legal outcomes, this
-            overview of{" "}
-            <DocLink href="https://www.tripvienlaw.com/what-happens-after-dui-arrest-florida">
-              what to expect after a DUI arrest in Florida
-            </DocLink>{" "}
-            shows just how much the paper trail matters.
-          </Paragraph>
+        <ArticleHeading>
+          5. How Do You Prove Constructive Knowledge When There Were No
+          Witnesses?
+        </ArticleHeading>
+        <Paragraph>
+          Constructive knowledge is the legal concept that states what the owner
+          should have known. If footprints or grocery cart tracks run through
+          the spill, it was likely there a long time. That timeline is evidence
+          the owner had enough opportunity to act.
+        </Paragraph>
+        <Paragraph>
+          Most modern Florida businesses have cameras recording every corner. We
+          move fast to preserve that footage before it gets deleted. Many people
+          ask us{" "}
+          <strong className="text-[#1b2a4a]">
+            how to prove property owners were negligent in Florida
+          </strong>{" "}
+          when no one witnessed the fall. Surveillance is frequently the
+          clearest answer available.
+        </Paragraph>
+        <Paragraph>
+          We also collect witness statements, incident reports, and maintenance
+          records. Sometimes an employee admits they meant to clean the spill
+          but got pulled away. That admission carries serious weight. For
+          context on how documentation shapes legal outcomes, this overview of{" "}
+          <DocLink href="https://www.tripvienlaw.com/what-happens-after-dui-arrest-florida">
+            what to expect after a DUI arrest in Florida
+          </DocLink>{" "}
+          shows just how much the paper trail matters.
+        </Paragraph>
 
-          <SurveyBox>
-            In our case reviews, properties with no documented inspection
-            schedule were found liable at a significantly higher rate. Regular
-            maintenance logs are the first thing our attorneys request when
-            building your claim.
-          </SurveyBox>
+        <SurveyBox>
+          In our case reviews, properties with no documented inspection schedule
+          were found liable at a significantly higher rate. Regular maintenance
+          logs are the first thing our attorneys request when building your
+          claim.
+        </SurveyBox>
 
-          <ArticleHeading>
-            6. What Should You Do Immediately After a Florida Slip and Fall?
-          </ArticleHeading>
-          <Paragraph>
-            Speed matters on every front. Evidence disappears. Surveillance
-            footage gets overwritten. Witnesses move on. The two-year filing
-            window under Florida law sounds generous until the investigation
-            phase eats through it.
-          </Paragraph>
-          <BulletList items={actionSteps} />
-          <Paragraph>
-            Acting fast is critical regardless of the legal context. The same
-            principle applies to other injury matters. This guide on{" "}
-            <DocLink href="https://www.tripvienlaw.com/what-to-do-after-car-accident-florida">
-              what to do after a car accident in Florida
-            </DocLink>{" "}
-            reinforces why delay is dangerous in any personal injury claim.
-          </Paragraph>
+        <ArticleHeading>
+          6. What Should You Do Immediately After a Florida Slip and Fall?
+        </ArticleHeading>
+        <Paragraph>
+          Speed matters on every front. Evidence disappears. Surveillance
+          footage gets overwritten. Witnesses move on. The two-year filing
+          window under Florida law sounds generous until the investigation phase
+          eats through it.
+        </Paragraph>
+        <BulletList items={actionSteps} />
+        <Paragraph>
+          Acting fast is critical regardless of the legal context. The same
+          principle applies to other injury matters. This guide on{" "}
+          <DocLink href="https://www.tripvienlaw.com/what-to-do-after-car-accident-florida">
+            what to do after a car accident in Florida
+          </DocLink>{" "}
+          reinforces why delay is dangerous in any personal injury claim.
+        </Paragraph>
 
-          <QuoteBox
-            label="From TripVien Law"
-            accent={gold}
-            quote="We treat your family like our own. Whether you were hurt at a theme park or a local deli, Hardam and I are ready to fight for every dollar you are owed. Property owners must be held to their legal obligations, and we make sure they are."
-            author="Viengphone Vongsyprasom, Partner, TripVien Law, Lakeland, FL"
-          />
+        <QuoteBox
+          label="From TripVien Law"
+          accent={gold}
+          quote="We treat your family like our own. Whether you were hurt at a theme park or a local deli, Hardam and I are ready to fight for every dollar you are owed. Property owners must be held to their legal obligations, and we make sure they are."
+          author="Viengphone Vongsyprasom, Partner, TripVien Law, Lakeland, FL"
+        />
 
-          <Divider goldLine />
+        <Divider goldLine />
 
-          <section
-            className="my-6 px-8 py-6 text-center"
-            style={{ backgroundColor: red }}
-          >
-            <h2 className="font-['Arial'] text-[20px] font-bold leading-tight text-white">
-              Were You Hurt on Someone Else's Property?
-            </h2>
-            <p className="mx-auto mt-3 max-w-[520px] font-['Georgia'] text-[14px] leading-[1.45] text-[#ffcdd2]">
-              TripVien Law fights for Florida families. Hardam Tripathi and
-              Viengphone Vongsyprasom are ready to review your case today.
-            </p>
-            <p className="mt-3 font-['Arial'] text-[11px] font-bold text-[#b8860b]">
-              Lakeland Office: 5304 S Florida Ave, Ste. 404-F, Lakeland, FL
-              33813
-            </p>
-            <p className="mt-2 font-['Arial'] text-[11px] text-white underline">
-              info@tripvienlaw.com
-            </p>
-          </section>
-
-          <Divider />
-
-          <SectionLabel>People Also Ask</SectionLabel>
-          <h2 className="pb-2 font-['Arial'] text-[18px] font-bold text-[#1b2a4a]">
-            Frequently Asked Questions
+        <section
+          className="my-6 px-8 py-6 text-center"
+          style={{ backgroundColor: red }}
+        >
+          <h2 className="font-['Arial'] text-[20px] font-bold leading-tight text-white">
+            Were You Hurt on Someone Else's Property?
           </h2>
-          <section className="space-y-4">
-            {faqs.map(([question, answer]) => (
-              <div key={question} className="bg-[#f4f7fb] px-4 py-3">
-                <p className="font-['Arial'] text-[13px] font-bold text-[#1b2a4a]">
-                  Q: {question}
-                </p>
-                <p className="mt-2 font-['Georgia'] text-[14px] leading-[1.45] text-[#555555]">
-                  A: {answer}
-                </p>
-              </div>
-            ))}
-          </section>
-
-          <Divider />
-
-          <p className="mt-5 font-['Arial'] text-[10px] italic leading-[1.4] text-[#999999]">
-            Disclaimer: This blog post is for informational purposes only and
-            does not constitute legal advice. For specific guidance on your
-            case, please consult with a licensed attorney at TripVien Law.
+          <p className="mx-auto mt-3 max-w-[520px] font-['Georgia'] text-[14px] leading-[1.45] text-[#ffcdd2]">
+            TripVien Law fights for Florida families. Hardam Tripathi and
+            Viengphone Vongsyprasom are ready to review your case today.
           </p>
+          <p className="mt-3 font-['Arial'] text-[11px] font-bold text-[#b8860b]">
+            Lakeland Office: 5304 S Florida Ave, Ste. 404-F, Lakeland, FL 33813
+          </p>
+          <p className="mt-2 font-['Arial'] text-[11px] text-white underline">
+            info@tripvienlaw.com
+          </p>
+        </section>
+
+        <Divider />
+
+        <SectionLabel>People Also Ask</SectionLabel>
+        <h2 className="pb-2 font-['Arial'] text-[18px] font-bold text-[#1b2a4a]">
+          Frequently Asked Questions
+        </h2>
+        <section className="space-y-4">
+          {faqs.map(([question, answer]) => (
+            <div key={question} className="bg-[#f4f7fb] px-4 py-3">
+              <p className="font-['Arial'] text-[13px] font-bold text-[#1b2a4a]">
+                Q: {question}
+              </p>
+              <p className="mt-2 font-['Georgia'] text-[14px] leading-[1.45] text-[#555555]">
+                A: {answer}
+              </p>
+            </div>
+          ))}
+        </section>
+
+        <Divider />
+
+        <p className="mt-5 font-['Arial'] text-[10px] italic leading-[1.4] text-[#999999]">
+          Disclaimer: This blog post is for informational purposes only and does
+          not constitute legal advice. For specific guidance on your case,
+          please consult with a licensed attorney at TripVien Law.
+        </p>
       </div>
     </article>
   );
