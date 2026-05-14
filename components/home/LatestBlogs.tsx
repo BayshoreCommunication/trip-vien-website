@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPostData } from "lib/GetPostData";
-import { staticBlogs } from "lib/staticBlogs";
+import { sortBlogsByNewest, staticBlogs } from "lib/staticBlogs";
 import Reveal from "../motion/Reveal";
 
 /* ---------------- API TYPE ---------------- */
@@ -41,7 +41,7 @@ export default async function LatestBlogs() {
   const allBlogs: ApiBlog[] = [...staticBlogs, ...(blogPost.data || [])];
 
   const blogs: BlogCard[] =
-    allBlogs.slice(0, 3).map((blog: ApiBlog) => ({
+    allBlogs.sort(sortBlogsByNewest).slice(0, 3).map((blog: ApiBlog) => ({
       title: blog.title,
       date: new Date(blog.createdAt).toLocaleDateString("en-US", {
         year: "numeric",

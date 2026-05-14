@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Reveal from "../motion/Reveal";
-import { staticBlogs } from "lib/staticBlogs";
+import { sortBlogsByNewest, staticBlogs } from "lib/staticBlogs";
 
 type ApiBlog = {
   title: string;
@@ -37,6 +37,7 @@ export default function BlogsSection({
 
   const posts: BlogUI[] = [...staticBlogs, ...blogPost.data]
     .filter((p) => p.slug)
+    .sort(sortBlogsByNewest)
     .map((p) => ({
       title: p.title,
       date: new Date(p.createdAt).toLocaleDateString("en-US", {

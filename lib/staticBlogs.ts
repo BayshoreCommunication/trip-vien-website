@@ -6,6 +6,10 @@ export type StaticBlog = {
   featuredImage: {
     image: {
       url: string;
+      alt?: string;
+      title?: string;
+      description?: string;
+      caption?: string;
     };
   };
 };
@@ -23,8 +27,33 @@ export const staticBlogs: StaticBlog[] = [
       },
     },
   },
+  {
+    title: "Advance Parole Explained: What Immigrants Should Know Before Travel Outside the U.S.",
+    slug: "what-immigrants-should-know-before-travel-outside",
+    createdAt: "2026-05-14T00:00:00.000Z",
+    excerpt:
+      "Learn what advance parole is, who needs it, and how to apply before any international travel. Florida immigrants must read this.",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/advance-parole-document-us-immigration-travel.webp",
+        alt: "Traveler presenting a passport and advance parole document to a CBP officer at airport immigration",
+        title: "Advance Parole Travel and U.S. Immigration Processing",
+        description:
+          "International traveler presenting a passport and advance parole document to a U.S. Customs and Border Protection officer during airport immigration screening and travel authorization verification.",
+        caption:
+          "Traveler showing advance parole documents during U.S. airport immigration screening",
+      },
+    },
+  },
 ];
 
 export function getStaticBlogBySlug(slug: string) {
   return staticBlogs.find((blog) => blog.slug === slug);
+}
+
+export function sortBlogsByNewest<T extends { createdAt?: string }>(a: T, b: T) {
+  const aTime = Date.parse(a.createdAt || "");
+  const bTime = Date.parse(b.createdAt || "");
+
+  return (Number.isNaN(bTime) ? 0 : bTime) - (Number.isNaN(aTime) ? 0 : aTime);
 }

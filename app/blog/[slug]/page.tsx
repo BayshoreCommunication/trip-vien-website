@@ -1,9 +1,22 @@
 import Image from "next/image";
 import { getAllPostData } from "lib/GetPostData";
-import { getStaticBlogBySlug, staticBlogs } from "lib/staticBlogs";
+import {
+  getStaticBlogBySlug,
+  sortBlogsByNewest,
+  staticBlogs,
+} from "lib/staticBlogs";
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
 import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
+import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-blogs/blogs/what-immigrants-should-know-before-travel-outside";
+
+function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "what-immigrants-should-know-before-travel-outside") {
+    return <WhatImmigrantsShouldKnowBeforeTravelOutsideBlog />;
+  }
+
+  return <SlipAndFallAccidentBlog />;
+}
 
 // ---------- SEO / OG Metadata ----------
 export async function generateMetadata({
@@ -14,6 +27,8 @@ export async function generateMetadata({
   const staticPost = getStaticBlogBySlug(params.slug);
 
   if (staticPost) {
+    const image = staticPost.featuredImage.image;
+
     return {
       title: staticPost.title,
       description: staticPost.excerpt,
@@ -25,10 +40,10 @@ export async function generateMetadata({
         type: "article",
         images: [
           {
-            url: staticPost.featuredImage.image.url,
+            url: image.url,
             width: 1200,
             height: 630,
-            alt: staticPost.title,
+            alt: image.alt || staticPost.title,
           },
         ],
       },
@@ -36,7 +51,7 @@ export async function generateMetadata({
         card: "summary_large_image",
         title: staticPost.title,
         description: staticPost.excerpt,
-        images: [staticPost.featuredImage.image.url],
+        images: [image.url],
       },
     };
   }
@@ -153,17 +168,19 @@ export default async function BlogDetails({
   const staticPost = getStaticBlogBySlug(params.slug);
   const blogPost = await getAllPostData();
 
-  const blogs = [...staticBlogs, ...(blogPost.data || [])].map((p: any) => ({
-    title: p.title,
-    slug: p.slug,
-  }));
+  const blogs = [...staticBlogs, ...(blogPost.data || [])]
+    .sort(sortBlogsByNewest)
+    .map((p: any) => ({
+      title: p.title,
+      slug: p.slug,
+    }));
 
   if (staticPost) {
     return (
       <section className="bg-[#eeeeee] px-4 py-8 md:py-16">
         <div className="mx-auto max-w-[1640px] bg-white px-6 py-8 shadow-sm md:px-[72px] md:py-[72px]">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
-            <SlipAndFallAccidentBlog />
+            <StaticBlogArticle slug={params.slug} />
             <Sidebar currentSlug={params.slug} blogs={blogs} />
           </div>
         </div>
