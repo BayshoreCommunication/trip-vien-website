@@ -220,7 +220,7 @@ export default function SlipAndFallAccidentBlog() {
       <div className="mx-auto max-w-[760px]">
         <div className="relative mb-10 aspect-[16/7] w-full overflow-hidden">
           <Image
-            src="/images/static-blogs/slip-and-fall-accident.jpg"
+            src="/images/static-blogs/florida-slip-fall-property-owner-liability.webp"
             alt="Slip and fall accident legal guidance"
             fill
             priority
