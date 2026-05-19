@@ -23,7 +23,13 @@ export const staticBlogs: StaticBlog[] = [
       "Understand property owner responsibility under Florida premises liability law, including business invitee protections, constructive knowledge, and filing deadlines.",
     featuredImage: {
       image: {
-        url: "/images/static-blogs/slip-and-fall-accident.jpg",
+        url: "/images/static-blogs/florida-slip-fall-property-owner-liability.webp",
+        alt: "Slip and fall warning sign on a Florida property walkway",
+        title: "Florida Slip and Fall Property Owner Liability",
+        description:
+          "Slip and fall accident scene highlighting Florida premises liability and property owner responsibility.",
+        caption:
+          "Florida slip and fall premises liability and property owner responsibility",
       },
     },
   },
