@@ -8,9 +8,14 @@ import {
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
 import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
+import WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog from "components/static-blogs/blogs/what-evidence-strengthens-your-car-accident-case-the-most";
 import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-blogs/blogs/what-immigrants-should-know-before-travel-outside";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "what-evidence-strengthens-your-car-accident-case-the-most") {
+    return <WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog />;
+  }
+
   if (slug === "what-immigrants-should-know-before-travel-outside") {
     return <WhatImmigrantsShouldKnowBeforeTravelOutsideBlog />;
   }
@@ -28,14 +33,22 @@ export async function generateMetadata({
 
   if (staticPost) {
     const image = staticPost.featuredImage.image;
+    const title = staticPost.metaTitle || staticPost.title;
+    const description = staticPost.metaDescription || staticPost.excerpt;
+    const canonical =
+      staticPost.canonical ||
+      `https://www.tripvienlaw.com/blog/${staticPost.slug}`;
 
     return {
-      title: staticPost.title,
-      description: staticPost.excerpt,
+      title,
+      description,
+      alternates: {
+        canonical,
+      },
       openGraph: {
-        title: staticPost.title,
-        description: staticPost.excerpt,
-        url: `https://www.tripvienlaw.com/blog/${staticPost.slug}`,
+        title,
+        description,
+        url: canonical,
         siteName: "TripVien Law",
         type: "article",
         images: [
@@ -49,8 +62,8 @@ export async function generateMetadata({
       },
       twitter: {
         card: "summary_large_image",
-        title: staticPost.title,
-        description: staticPost.excerpt,
+        title,
+        description,
         images: [image.url],
       },
     };

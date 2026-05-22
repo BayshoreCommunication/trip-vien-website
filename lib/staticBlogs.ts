@@ -3,6 +3,9 @@ export type StaticBlog = {
   slug: string;
   createdAt: string;
   excerpt: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  canonical?: string;
   featuredImage: {
     image: {
       url: string;
@@ -30,6 +33,29 @@ export const staticBlogs: StaticBlog[] = [
           "Slip and fall accident scene highlighting Florida premises liability and property owner responsibility.",
         caption:
           "Florida slip and fall premises liability and property owner responsibility",
+      },
+    },
+  },
+  {
+    title: "What Evidence Strengthens Your Car Accident Case the Most?",
+    slug: "what-evidence-strengthens-your-car-accident-case-the-most",
+    createdAt: "2026-05-22T00:00:00.000Z",
+    excerpt:
+      "Discover the key evidence that strengthens a car accident case, including police reports, medical records, photos, and expert insights that help prove fault and damages.",
+    metaTitle: "What Evidence Strengthens Your Car Accident Case",
+    metaDescription:
+      "Discover the key evidence that strengthens a car accident case, including police reports, medical records, photos, and expert insights that help prove fault and damages.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/what-evidence-strengthens-your-car-accident-case-the-most",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/car-accident-evidence-documentation-scene.webp",
+        alt: "Documenting car accident evidence with vehicle damage, police report, and injury records at scene",
+        title: "Car Accident Evidence Documentation and Injury Claim Support",
+        description:
+          "Detailed car accident scene showing vehicle damage, police investigation, medical records, and photo evidence used to strengthen personal injury and insurance compensation claims.",
+        caption:
+          "Collecting photos, police reports, and medical records to support a strong car accident injury case.",
       },
     },
   },
