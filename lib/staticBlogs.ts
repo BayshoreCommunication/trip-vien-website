@@ -82,6 +82,27 @@ export const staticBlogs: StaticBlog[] = [
     },
   },
   {
+    title: "Proving Employer Negligence in Workplace Injury Cases",
+    slug: "proving-employer-negligence-in-workplace-injury-cases",
+    createdAt: "2026-05-22T02:00:00.000Z",
+    excerpt:
+      "Review the steps to prove employer fault after an injury. Gather documents, analyze conditions, and build a strong legal case.",
+    metaTitle: "How to Prove Employer Negligence in Work Injuries",
+    metaDescription:
+      "Review the steps to prove employer fault after an injury. Gather documents, analyze conditions, and build a strong legal case.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/proving-employer-negligence-in-workplace-injury-cases",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/workplace-injury-employer-negligence-consultation.webp",
+        alt: "Workplace injury victim consulting attorney about employer negligence and OSHA safety violations",
+        title: "Employer Negligence Consultation for Workplace Injury Claims",
+        description:
+          "Workplace injury consultation showing an attorney reviewing employer negligence, OSHA violations, and injury evidence for workers' compensation and personal injury claims.",
+      },
+    },
+  },
+  {
     title: "Advance Parole Explained: What Immigrants Should Know Before Travel Outside the U.S.",
     slug: "what-immigrants-should-know-before-travel-outside",
     createdAt: "2026-05-14T00:00:00.000Z",

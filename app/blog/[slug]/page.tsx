@@ -7,12 +7,17 @@ import {
 } from "lib/staticBlogs";
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
+import ProvingEmployerNegligenceInWorkplaceInjuryCasesBlog from "components/static-blogs/blogs/proving-employer-negligence-in-workplace-injury-cases";
 import RearEndCollisionLiabilityInvestigationSceneBlog from "components/static-blogs/blogs/rear-end-collision-liability-investigation-scene";
 import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
 import WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog from "components/static-blogs/blogs/what-evidence-strengthens-your-car-accident-case-the-most";
 import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-blogs/blogs/what-immigrants-should-know-before-travel-outside";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "proving-employer-negligence-in-workplace-injury-cases") {
+    return <ProvingEmployerNegligenceInWorkplaceInjuryCasesBlog />;
+  }
+
   if (slug === "rear-end-collision-liability") {
     return <RearEndCollisionLiabilityInvestigationSceneBlog />;
   }
