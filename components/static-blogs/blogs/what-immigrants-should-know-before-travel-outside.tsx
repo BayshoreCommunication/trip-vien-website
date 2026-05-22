@@ -282,16 +282,17 @@ export default function WhatImmigrantsShouldKnowBeforeTravelOutsideBlog() {
     <article className="text-black">
       <div className="mx-auto max-w-[760px]">
         <figure className="mb-10">
-          <div className="relative aspect-[16/7] w-full overflow-hidden">
+          <div className="w-full overflow-hidden">
             <Image
               src="/images/static-blogs/advance-parole-document-us-immigration-travel.webp"
               alt={imageAlt}
               title={imageTitle}
               aria-describedby="advance-parole-image-description"
-              fill
+              width={750}
+              height={383}
               priority
-              className="object-cover object-center"
-              sizes="760px"
+              className="h-auto w-full object-contain"
+              sizes="(max-width: 768px) 100vw, 760px"
             />
           </div>
           <figcaption className="mt-2 font-['Arial'] text-[10px] italic leading-[1.4] text-[#777777]">

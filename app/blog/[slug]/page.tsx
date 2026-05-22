@@ -7,11 +7,16 @@ import {
 } from "lib/staticBlogs";
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
+import RearEndCollisionLiabilityInvestigationSceneBlog from "components/static-blogs/blogs/rear-end-collision-liability-investigation-scene";
 import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
 import WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog from "components/static-blogs/blogs/what-evidence-strengthens-your-car-accident-case-the-most";
 import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-blogs/blogs/what-immigrants-should-know-before-travel-outside";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "rear-end-collision-liability") {
+    return <RearEndCollisionLiabilityInvestigationSceneBlog />;
+  }
+
   if (slug === "what-evidence-strengthens-your-car-accident-case-the-most") {
     return <WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog />;
   }
@@ -220,7 +225,7 @@ export default async function BlogDetails({
                 alt={post.title}
                 width={1000}
                 height={800}
-                className="object-cover rounded-xl"
+                className="h-auto w-full object-contain rounded-xl"
               />
             </div>
 

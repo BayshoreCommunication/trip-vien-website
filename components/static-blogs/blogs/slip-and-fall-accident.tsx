@@ -98,7 +98,7 @@ function QuoteBox({
         <div style={{ backgroundColor: accent }} />
         <div className="bg-[#fdf6e3] px-5 py-4">
           <p className="font-['Georgia'] text-[15px] italic leading-[1.45] text-[#1b2a4a]">
-            "{quote}"
+            &quot;{quote}&quot;
           </p>
           <p className="mt-2 font-['Arial'] text-[12px] font-bold text-[#555555]">
             - {author}
@@ -218,14 +218,15 @@ export default function SlipAndFallAccidentBlog() {
   return (
     <article className="text-black">
       <div className="mx-auto max-w-[760px]">
-        <div className="relative mb-10 aspect-[16/7] w-full overflow-hidden">
+        <div className="mb-10 w-full overflow-hidden">
           <Image
             src="/images/static-blogs/florida-slip-fall-property-owner-liability.webp"
             alt="Slip and fall accident legal guidance"
-            fill
+            width={750}
+            height={383}
             priority
-            className="object-cover object-top"
-            sizes="760px"
+            className="h-auto w-full object-contain"
+            sizes="(max-width: 768px) 100vw, 760px"
           />
         </div>
         <section
@@ -282,7 +283,7 @@ export default function SlipAndFallAccidentBlog() {
               #1
             </p>
             <p className="mt-1 font-['Arial'] text-[11px] text-[#b0c4de]">
-              Falls are FL's leading cause of injury hospitalization
+              Falls are FL&apos;s leading cause of injury hospitalization
             </p>
           </div>
           <div className="bg-[#f4f7fb] px-3 py-4 text-center">
@@ -349,7 +350,7 @@ export default function SlipAndFallAccidentBlog() {
           recovery before it can begin.
         </Paragraph>
         <Paragraph>
-          Falls are Florida's leading cause of injury hospitalization. The{" "}
+          Falls are Florida&apos;s leading cause of injury hospitalization. The{" "}
           <DocLink href="https://www.floridahealth.gov">
             Florida Department of Health
           </DocLink>{" "}
@@ -388,7 +389,7 @@ export default function SlipAndFallAccidentBlog() {
         <BulletList items={responsibilities} />
 
         <ArticleHeading>
-          3. How Does the Duty of Care Protect You on Someone Else's Property?
+          3. How Does the Duty of Care Protect You on Someone Else&apos;s Property?
         </ArticleHeading>
         <Paragraph>
           The duty of care is a legal promise. It requires owners to keep
@@ -509,7 +510,7 @@ export default function SlipAndFallAccidentBlog() {
           style={{ backgroundColor: red }}
         >
           <h2 className="font-['Arial'] text-[20px] font-bold leading-tight text-white">
-            Were You Hurt on Someone Else's Property?
+            Were You Hurt on Someone Else&apos;s Property?
           </h2>
           <p className="mx-auto mt-3 max-w-[520px] font-['Georgia'] text-[14px] leading-[1.45] text-[#ffcdd2]">
             TripVien Law fights for Florida families. Hardam Tripathi and

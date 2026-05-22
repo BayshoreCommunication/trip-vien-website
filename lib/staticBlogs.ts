@@ -60,6 +60,28 @@ export const staticBlogs: StaticBlog[] = [
     },
   },
   {
+    title: "Rear-End Collision Liability: Who Is at Fault and Why It Matters",
+    slug: "rear-end-collision-liability",
+    createdAt: "2026-05-22T01:00:00.000Z",
+    excerpt:
+      "Was the rear-end crash really your fault? Insurance adjusters often rely on bias. Examine the hidden evidence that flips liability and protects your claim.",
+    metaTitle: "Who Is at Fault in Rear-End Collision",
+    metaDescription:
+      "Was the rear-end crash really your fault? Insurance adjusters often rely on bias. Examine the hidden evidence that flips liability and protects your claim.",
+    canonical: "https://www.tripvienlaw.com/blog/rear-end-collision-liability",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/rear-end-collision-liability-investigation-scene.webp",
+        alt: "Police officer documenting rear-end collision while injured passenger sits near damaged vehicles",
+        title: "Rear-End Collision Liability and Accident Investigation Scene",
+        description:
+          "Rear-end car accident scene with police investigation, damaged vehicles, and injured individuals documenting evidence for insurance and personal injury liability claims.",
+        caption:
+          "Police documenting a rear-end collision accident while drivers and injured passengers assess the scene.",
+      },
+    },
+  },
+  {
     title: "Advance Parole Explained: What Immigrants Should Know Before Travel Outside the U.S.",
     slug: "what-immigrants-should-know-before-travel-outside",
     createdAt: "2026-05-14T00:00:00.000Z",
