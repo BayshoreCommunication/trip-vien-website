@@ -188,7 +188,7 @@ export const team: TeamMember[] = [
     bio: [
       "S. M. Faisal Abrar, is a practitioner lawyer in Bangladesh Obtained his LLB from AMERICAN INTERNATIONAL UNIVERSITY BANGLADESH & LLM from NORTH SOUTH UNIVERSITY. He specialized in Human Rights Law as his published documentary about Rohingya Refugees was exhibited at University of Barcelona, in Spain.",
 
-      "Currently Abrar serves as a Senior Paralegal at Tripathi Vongsyprasom Law, P.A. He has adequate knowledge on family based immigration matters involving processing of Green Cards, Citizenship, and Visa matters with respect to the U.S. Department of Homeland Security’s Citizenship and Immigration Services and the U.S. Department of State’s Bureau of Consular Affairs, respectively.",
+      "Currently Abrar serves as an Executive Vice President of Case Management / Chief of Staff at Tripathi Vongsyprasom Law, P.A. He has adequate knowledge on family based immigration matters involving processing of Green Cards, Citizenship, and Visa matters with respect to the U.S. Department of Homeland Security’s Citizenship and Immigration Services and the U.S. Department of State’s Bureau of Consular Affairs, respectively.",
     ],
 
     education: [
@@ -214,7 +214,7 @@ export const team: TeamMember[] = [
 
       "He specializes in Client Communication, AI tools, and Immigration Services.",
 
-      "Currently, Mr. Arefen serves as a Junior Paralegal at Tripathi Vongsyprasom Law. He has experience in family-based immigration matters, including the processing of Green Cards, Citizenship applications, and visa petitions with the U.S. Citizenship and Immigration Services.",
+      "Currently, Mr. Arefen serves as a Senior Paralegal at Tripathi Vongsyprasom Law. He has experience in family-based immigration matters, including the processing of Green Cards, Citizenship applications, and visa petitions with the U.S. Citizenship and Immigration Services.",
     ],
 
     education: [
