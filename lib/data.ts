@@ -65,9 +65,11 @@ export const team: TeamMember[] = [
   {
     id: 2,
     name: "Viengphone Vongsyprasom, Esq.",
-    title: "U.S. Immigration, DUI Defense, & Auto Accident/Personal Injury Attorney",
-    nameLao:"ວຽງພອນ ວົງສີປາສົມ, Esq.",
-    titleLao:"ທະນາຍຄວາມກົດໝາຍຄົນເຂົ້າເມືອງສະຫະລັດ, ຄະດີ DUI, ແລະ ອຸປະຕິເຫດລົດ ",
+    title:
+      "U.S. Immigration, DUI Defense, & Auto Accident/Personal Injury Attorney",
+    nameLao: "ວຽງພອນ ວົງສີປາສົມ, Esq.",
+    titleLao:
+      "ທະນາຍຄວາມກົດໝາຍຄົນເຂົ້າເມືອງສະຫະລັດ, ຄະດີ DUI, ແລະ ອຸປະຕິເຫດລົດ ",
     subtitle: "",
     image: "/images/about/viengphone.png",
 
@@ -102,44 +104,44 @@ export const team: TeamMember[] = [
       "Supreme Court of Florida",
     ],
   },
-// {
-//   id: 2,
-//   name: "Viengphone Vongsyprasom (ວຽງພອນ ວົງສີປາສົມ), Esq.",
-//   title: "U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ), DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ), and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Attorney",
-//   subtitle: "",
-//   image: "/images/about/viengphone.png",
+  // {
+  //   id: 2,
+  //   name: "Viengphone Vongsyprasom (ວຽງພອນ ວົງສີປາສົມ), Esq.",
+  //   title: "U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ), DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ), and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Attorney",
+  //   subtitle: "",
+  //   image: "/images/about/viengphone.png",
 
-//   bio: [
-//     "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
-//     "She focuses her practice on U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) and Nationality Law, DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) Defense, and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Litigation, offering clients the skill, empathy, and dedication they deserve.",
-//     "Her Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
-//     "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
-//     "Her deep understanding of the U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
-//   ],
+  //   bio: [
+  //     "Attorney Vongsyprasom is a compassionate and strategic advocate devoted to helping clients navigate some of lifes most challenging legal situations.",
+  //     "She focuses her practice on U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) and Nationality Law, DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) Defense, and Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) Litigation, offering clients the skill, empathy, and dedication they deserve.",
+  //     "Her Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) practice covers a wide range of cases, including family-based visa petitions, marriage-based green cards, adjustment of status, consular processing, citizenship and naturalization, and waivers of inadmissibility such as I-601 and I-601A.",
+  //     "She also represents clients in removal (deportation) defense, bond hearings, motions to reopen or reconsider, and humanitarian cases such as VAWA self-petitions, U visas for victims of crime, and humanitarian parole.",
+  //     "Her deep understanding of the U.S. Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) system and her fierce advocacy style have helped countless families stay together and achieve stability in the United States."
+  //   ],
 
-//   extendedBio: [
-//     "As a DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) status.",
-//     "In her Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
-//     "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
-//   ],
+  //   extendedBio: [
+  //     "As a DUI (ຂັບລົດພາຍໃຕ້ອິດທິພົນ) defense attorney, Ms. Vongsyprasom provides strong, client-focused representation for individuals facing charges that threaten their freedom or Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) status.",
+  //     "In her Personal Injury / Car Accident (ອຸ​ປະ​ຕິ​ເຫດ​ລົດ​) practice, Ms. Vongsyprasom brings unique experience as a former staff counsel for Government Employees Insurance Company (GEICO).",
+  //     "Before co-founding Tripathi Vongsyprasom Law, P.A., she practiced landlord-tenant disputes, homeowners association defense, family law, and criminal defense."
+  //   ],
 
-//   philosophy: [
-//     "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
-//     "She understands that behind every case is a person or family with dreams, fears, and goals."
-//   ],
+  //   philosophy: [
+  //     "Attorney Vongsyprasom believes in providing honest, compassionate, and results-driven representation.",
+  //     "She understands that behind every case is a person or family with dreams, fears, and goals."
+  //   ],
 
-//   education: [
-//     "Western Michigan University Cooley Law School, J.D., 2018",
-//     "University of South Florida, B.S. in Criminology, 2013"
-//   ],
+  //   education: [
+  //     "Western Michigan University Cooley Law School, J.D., 2018",
+  //     "University of South Florida, B.S. in Criminology, 2013"
+  //   ],
 
-//   barAdmissions: ["The Florida Bar"],
+  //   barAdmissions: ["The Florida Bar"],
 
-//   courtAdmissions: [
-//     "United States Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) Courts",
-//     "Supreme Court of Florida"
-//   ]
-// }
+  //   courtAdmissions: [
+  //     "United States Immigration (ກົດໝາຍຄົນເຂົ້າເມືອງ) Courts",
+  //     "Supreme Court of Florida"
+  //   ]
+  // }
 
   {
     id: 3,
@@ -166,7 +168,7 @@ export const team: TeamMember[] = [
   {
     id: 4,
     name: "Sakawat Hossain",
-    title: " Director of Legal Operations",
+    title: "Executive Vice President of Legal Operations",
     subtitle: "",
     image: "/images/about/sakawat-hossain.png",
 
@@ -179,7 +181,7 @@ export const team: TeamMember[] = [
   {
     id: 5,
     name: "S. M. Faisal Abrar",
-    title: "Director of Case Management",
+    title: "Executive Vice President of Case Management / Chief of Staff",
     subtitle: "",
     image: "/images/about/sm-faisal-abrar.png",
     dark: true,
@@ -200,41 +202,40 @@ export const team: TeamMember[] = [
     ],
   },
 
+  {
+    id: 6,
+    name: "Md. Alamin Arefen",
+    title: "Senior Paralegal",
+    subtitle: "",
+    image: "/images/about/Arifin.png",
+    dark: false,
+    bio: [
+      "Md. Alamin Arefen completed his Bachelor of Science in Computer Science and Engineering (CSE) from Daffodil International University in 2020. He also pursued a Master of Science in Artificial Intelligence at Friedrich Alexander University.",
 
- {
-  id: 6,
-  name: "Md. Alamin Arefen",
-  title: "Junior Paralegal",
-  subtitle: "",
-  image: "/images/about/Arifin.png",
-  dark: false,
-  bio: [
-    "Md. Alamin Arefen completed his Bachelor of Science in Computer Science and Engineering (CSE) from Daffodil International University in 2020. He also pursued a Master of Science in Artificial Intelligence at Friedrich Alexander University.",
+      "He specializes in Client Communication, AI tools, and Immigration Services.",
 
-    "He specializes in Client Communication, AI tools, and Immigration Services.",
+      "Currently, Mr. Arefen serves as a Junior Paralegal at Tripathi Vongsyprasom Law. He has experience in family-based immigration matters, including the processing of Green Cards, Citizenship applications, and visa petitions with the U.S. Citizenship and Immigration Services.",
+    ],
 
-    "Currently, Mr. Arefen serves as a Junior Paralegal at Tripathi Vongsyprasom Law. He has experience in family-based immigration matters, including the processing of Green Cards, Citizenship applications, and visa petitions with the U.S. Citizenship and Immigration Services.",
-  ],
+    education: [
+      "Bachelor of Science in Computer Science and Engineering (CSE), 2020 – Daffodil International University",
+      "Master of Science in Artificial Intelligence (AI), 2025 – Friedrich Alexander University",
+    ],
+  },
 
-  education: [
-    "Bachelor of Science in Computer Science and Engineering (CSE), 2020 – Daffodil International University",
-    "Master of Science in Artificial Intelligence (AI), 2025 – Friedrich Alexander University",
-  ],
-},
+  {
+    id: 7,
+    name: "Md Rakib Hasan",
+    title: "Client Relationship Senior Associate",
+    subtitle: "",
+    image: "/images/about/Rakib.png",
+    dark: true,
+    bio: [
+      "Md Rakib Hasan serves as Client Relationship Senior Associate at Trip Law, where he oversees client engagement strategy and operational coordination for immigration and travel-related legal matters. He plays a key role in ensuring procedural accuracy, regulatory compliance, and the seamless progression of client cases from initial consultation to final resolution.",
 
-{
-  id: 7,
-  name: "Md Rakib Hasan",
-  title: "Client Relationship Executive",
-  subtitle: "",
-  image: "/images/about/Rakib.png",
-  dark: true,
-  bio: [
-    "Md Rakib Hasan serves as Client Relationship Executive at Trip Law, where he oversees client engagement strategy and operational coordination for immigration and travel-related legal matters. He plays a key role in ensuring procedural accuracy, regulatory compliance, and the seamless progression of client cases from initial consultation to final resolution.",
+      "Mr. Hasan holds a Master of Science in Marketing Communications at International Business School from Bristol, United Kingdom, and brings over four years of multidisciplinary professional experience across telecommunications, financial services, education, and travel industries. His expertise in structured client communication, CRM systems, and cross-border service management strengthens Trip Law’s commitment to transparency, confidentiality, and service excellence.",
 
-    "Mr. Hasan holds a Master of Science in Marketing Communications at International Business School from Bristol, United Kingdom, and brings over four years of multidisciplinary professional experience across telecommunications, financial services, education, and travel industries. His expertise in structured client communication, CRM systems, and cross-border service management strengthens Trip Law’s commitment to transparency, confidentiality, and service excellence.",
-
-    "He is guided by principles of diligence, accountability, and professional integrity, contributing to the firm’s reputation for dependable and client-focused legal support.",
-  ],
-},
+      "He is guided by principles of diligence, accountability, and professional integrity, contributing to the firm’s reputation for dependable and client-focused legal support.",
+    ],
+  },
 ];
