@@ -7,6 +7,7 @@ import {
 } from "lib/staticBlogs";
 import Button from "components/shared/Button";
 import Sidebar from "components/blogs/Sidebar";
+import DuiCheckpointsInFloridaLegalRightsBlog from "components/static-blogs/blogs/are-they-legal-and-can-you-avoid-them";
 import ProvingEmployerNegligenceInWorkplaceInjuryCasesBlog from "components/static-blogs/blogs/proving-employer-negligence-in-workplace-injury-cases";
 import RearEndCollisionLiabilityInvestigationSceneBlog from "components/static-blogs/blogs/rear-end-collision-liability-investigation-scene";
 import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
@@ -14,6 +15,10 @@ import WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog from "components/st
 import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-blogs/blogs/what-immigrants-should-know-before-travel-outside";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "are-they-legal-and-can-you-avoid-them") {
+    return <DuiCheckpointsInFloridaLegalRightsBlog />;
+  }
+
   if (slug === "proving-employer-negligence-in-workplace-injury-cases") {
     return <ProvingEmployerNegligenceInWorkplaceInjuryCasesBlog />;
   }

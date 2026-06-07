@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "DUI Checkpoints in Florida: Are They Legal and Can You Avoid Them?",
+    slug: "are-they-legal-and-can-you-avoid-them",
+    createdAt: "2026-06-07T00:00:00.000Z",
+    excerpt:
+      "Yes, DUI checkpoints are legal in Florida, but police must follow strict rules. Learn what drivers can legally do and what checkpoint mistakes can support a DUI defense.",
+    metaTitle: "DUI Checkpoints in Florida: Are They Legal?",
+    metaDescription:
+      "Yes, DUI checkpoints are legal in Florida, but police must follow strict rules. Learn what drivers can legally do and what checkpoint mistakes can support a DUI defense.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/are-they-legal-and-can-you-avoid-them",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/florida-dui-checkpoints-legal-rights-guide.webp",
+        alt: "Florida DUI checkpoint at night with police vehicles, traffic cones, and drivers approaching a sobriety checkpoint.",
+        title: "DUI Checkpoints in Florida: Your Rights and Legal Options",
+        description:
+          "Legal information graphic explaining DUI checkpoints in Florida and the rights of motorists during sobriety stops.",
+        caption:
+          "Learn how DUI checkpoints operate in Florida, what rights drivers have during sobriety stops, and the legal considerations surrounding checkpoint enforcement.",
+      },
+    },
+  },
+  {
     title: "Who Is Liable in a Slip and Fall Accident in Florida?",
     slug: "slip-and-fall-accident",
     createdAt: "2026-05-10T00:00:00.000Z",
