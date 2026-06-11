@@ -225,7 +225,8 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
       text: "A driver should not be held longer without reasonable suspicion.",
     },
     {
-      strong: "Field sobriety tests are different from post-arrest chemical tests. ",
+      strong:
+        "Field sobriety tests are different from post-arrest chemical tests. ",
       text: "Refusing each one can create very different consequences.",
     },
     {
@@ -367,7 +368,8 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "DUI Checkpoints in Florida: Are They Legal and Can You Avoid Them?",
+    headline:
+      "DUI Checkpoints in Florida: Are They Legal and Can You Avoid Them?",
     description:
       "Yes, DUI checkpoints are legal in Florida, but police must follow strict rules. Learn what drivers can legally do and what checkpoint mistakes can support a DUI defense.",
     image:
@@ -438,7 +440,7 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           style={{ borderColor: navy, backgroundColor: paleBlue }}
         >
           <p className="mb-2 font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
-            Quick Answer
+            <h2>Quick Answer</h2>
           </p>
           <p className="font-['Georgia'] text-[15px] leading-[1.45] text-[#1b2a4a]">
             DUI checkpoints are legal in Florida. You can legally avoid one
@@ -452,7 +454,7 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
 
         <section className="mt-5">
           <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
-            Key Points
+            <h2>Key Points</h2>
           </p>
           <BulletList items={keyPoints} />
         </section>
@@ -496,9 +498,8 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           1. Are DUI Checkpoints Actually Legal in Florida?
         </ArticleHeading>
         <Paragraph>
-          Yes. Florida is one of the states where DUI checkpoints can be used
-          as a law enforcement tool. The federal constitutional baseline comes
-          from{" "}
+          Yes. Florida is one of the states where DUI checkpoints can be used as
+          a law enforcement tool. The federal constitutional baseline comes from{" "}
           <DocLink href="https://www.govinfo.gov/app/details/USREPORTS-496/USREPORTS-496-444">
             Michigan Dept. of State Police v. Sitz
           </DocLink>
@@ -506,16 +507,16 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           Fourth Amendment concerns.
         </Paragraph>
         <Paragraph>
-          Florida courts then built their own checkpoint limits. In Florida,
-          the key issue is not simply whether a checkpoint exists. The real
-          issue is whether the agency planned it, announced it, staffed it, and
-          ran it under neutral procedures that limit officer discretion.
+          Florida courts then built their own checkpoint limits. In Florida, the
+          key issue is not simply whether a checkpoint exists. The real issue is
+          whether the agency planned it, announced it, staffed it, and ran it
+          under neutral procedures that limit officer discretion.
         </Paragraph>
         <AlertBox title="Legal But Not Unlimited">
           A legal checkpoint is not a free-for-all. If the roadblock lacks
           advance guidelines, neutral vehicle selection, proper notice, or a
-          brief detention process, a DUI attorney can challenge the stop and
-          the evidence collected from it.
+          brief detention process, a DUI attorney can challenge the stop and the
+          evidence collected from it.
         </AlertBox>
         <Paragraph>
           If you want a broader look at penalties, arrest issues, and defense
@@ -533,8 +534,8 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
         <Paragraph>
           Florida law does not let officers create a roadblock on impulse. A
           valid checkpoint usually depends on advance planning and written
-          limits. The goal is to prevent arbitrary stops and keep the
-          checkpoint focused on roadway safety rather than officer guesswork.
+          limits. The goal is to prevent arbitrary stops and keep the checkpoint
+          focused on roadway safety rather than officer guesswork.
         </Paragraph>
         <BulletList items={checkpointRules} />
         <Paragraph>
@@ -564,12 +565,7 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
             TripVien Law case intake reference.
           </p>
           {riskRows.map(([label, level, score]) => (
-            <RiskRow
-              key={label}
-              label={label}
-              level={level}
-              score={score}
-            />
+            <RiskRow key={label} label={label} level={level} score={score} />
           ))}
         </section>
 
@@ -584,11 +580,11 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           to pull you over.
         </Paragraph>
         <Paragraph>
-          The distinction is practical. You can choose another route. You
-          cannot create a new traffic violation while doing it. If the officer
-          sees unsafe driving, squealing tires, erratic lane movement, or a
-          violation near the checkpoint, the stop may be based on that conduct
-          rather than the checkpoint itself.
+          The distinction is practical. You can choose another route. You cannot
+          create a new traffic violation while doing it. If the officer sees
+          unsafe driving, squealing tires, erratic lane movement, or a violation
+          near the checkpoint, the stop may be based on that conduct rather than
+          the checkpoint itself.
         </Paragraph>
         <Paragraph>
           If you were cited near a roadblock, the traffic violation can affect
@@ -629,10 +625,10 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           flags.
         </Paragraph>
         <Paragraph>
-          But you do not have to turn a document check into a conversation.
-          You must provide required driving documents. You are not required to
-          answer broad questions about where you are going, where you came
-          from, or what you drank.
+          But you do not have to turn a document check into a conversation. You
+          must provide required driving documents. You are not required to
+          answer broad questions about where you are going, where you came from,
+          or what you drank.
         </Paragraph>
 
         <SectionLabel>Driver Rights Snapshot</SectionLabel>
@@ -675,10 +671,10 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           5. Should You Answer Their Questions at a Checkpoint?
         </ArticleHeading>
         <Paragraph>
-          No, not beyond the document request. Many drivers feel social
-          pressure to explain themselves. That pressure is not law. The safest
-          approach is usually calm, minimal, and precise: provide the required
-          documents and avoid making statements that later become evidence.
+          No, not beyond the document request. Many drivers feel social pressure
+          to explain themselves. That pressure is not law. The safest approach
+          is usually calm, minimal, and precise: provide the required documents
+          and avoid making statements that later become evidence.
         </Paragraph>
         <Paragraph>
           Some drivers use a printed rights card. That can be lawful, but it
@@ -692,8 +688,8 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
           A review of TripVien Law checkpoint intake data found that more than
           60% of clients who contacted the firm after a checkpoint DUI arrest
           were moved into a secondary investigation because of behavioral cues,
-          not hard proof of impairment. Tired eyes, nervous speech, and
-          fumbling for a license often became the reason for deeper scrutiny.
+          not hard proof of impairment. Tired eyes, nervous speech, and fumbling
+          for a license often became the reason for deeper scrutiny.
         </SurveyBox>
 
         <ArticleHeading>
@@ -841,8 +837,8 @@ export default function DuiCheckpointsInFloridaLegalRightsBlog() {
         </Paragraph>
         <Paragraph>
           The best prevention is still simple: do not drive after drinking or
-          using any substance that affects your ability to operate a vehicle.
-          If you are stopped, stay calm, keep answers brief, and talk to a DUI
+          using any substance that affects your ability to operate a vehicle. If
+          you are stopped, stay calm, keep answers brief, and talk to a DUI
           defense attorney before accepting a plea.
         </Paragraph>
 
