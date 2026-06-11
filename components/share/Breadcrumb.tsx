@@ -52,10 +52,10 @@ export default function Breadcrumb({
 
         {/* Content */}
         <div className="relative z-10 text-center px-6 md:px-12">
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6">
+          <p className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6">
             {displayedText}
             {!isDone && <span className="animate-pulse">|</span>}
-          </h1>
+          </p>
 
           {/* Breadcrumb */}
           <nav className="flex justify-center">
