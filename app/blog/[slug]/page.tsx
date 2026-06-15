@@ -13,8 +13,13 @@ import RearEndCollisionLiabilityInvestigationSceneBlog from "components/static-b
 import SlipAndFallAccidentBlog from "components/static-blogs/blogs/slip-and-fall-accident";
 import WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog from "components/static-blogs/blogs/what-evidence-strengthens-your-car-accident-case-the-most";
 import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-blogs/blogs/what-immigrants-should-know-before-travel-outside";
+import AdjustmentOfStatusVsConsularProcessingGuideBlog from "components/static-blogs/blogs/adjustment-of-status-vs-consular-processing-guide";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "adjustment-of-status-vs-consular-processing-guide") {
+    return <AdjustmentOfStatusVsConsularProcessingGuideBlog />;
+  }
+
   if (slug === "are-they-legal-and-can-you-avoid-them") {
     return <DuiCheckpointsInFloridaLegalRightsBlog />;
   }

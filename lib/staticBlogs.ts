@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "Adjustment of Status vs. Consular Processing: Key Differences",
+    slug: "adjustment-of-status-vs-consular-processing-guide",
+    createdAt: "2026-06-15T00:00:00.000Z",
+    excerpt:
+      "A route to permanent residency exists through either option. Depending on location and entry method determines suitability.",
+    metaTitle: "How to Bypass Adjustment vs Consular Green Card Lines",
+    metaDescription:
+      "Don't wait years for your green card. Discover the hidden shortcut between adjustment of status and consular processing that lawyers use.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/adjustment-of-status-vs-consular-processing-guide",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/adjustment-of-status-vs-consular-processing-guide.webp",
+        alt: "Comparison of adjustment of status and consular processing immigration pathways with forms, passport, and U.S. residency imagery",
+        title: "Adjustment of Status vs. Consular Processing: Key Differences",
+        description:
+          "Informative immigration law graphic comparing Adjustment of Status and Consular Processing for obtaining U.S. permanent residency. Highlights eligibility requirements, application timelines, interview locations, costs, travel considerations, and factors that help applicants choose the most appropriate immigration pathway.",
+        caption:
+          "Learn the differences between Adjustment of Status and Consular Processing to determine the best path toward U.S. permanent residency.",
+      },
+    },
+  },
+  {
     title: "DUI Checkpoints in Florida: Are They Legal and Can You Avoid Them?",
     slug: "are-they-legal-and-can-you-avoid-them",
     createdAt: "2026-06-07T00:00:00.000Z",
