@@ -2,6 +2,15 @@ import React from "react";
 import SectionLayout from "components/shared/SectionLayout";
 import Link from "next/link";
 import Breadcrumb from "components/share/Breadcrumb";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | TripVien Law",
+  description: "Read our terms of service to understand the rules and guidelines for using the TripVien Law website.",
+  alternates: {
+    canonical: "https://www.tripvienlaw.com/terms",
+  },
+};
 
 const css = `
   h1{

@@ -3,12 +3,30 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "components/shared/Button";
 import Breadcrumb from "components/share/Breadcrumb";
+import { Metadata } from "next";
 
 type PageProps = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const area = PRACTICE_DATA[params.slug];
+  if (!area) {
+    return {
+      title: "Practice Area Not Found | TripVien Law",
+    };
+  }
+
+  return {
+    title: `${area.title} | TripVien Law`,
+    description: `Explore our professional services and options under ${area.title}.`,
+    alternates: {
+      canonical: `https://www.tripvienlaw.com/practice-areas/${params.slug}`,
+    },
+  };
+}
 
 export default function PracticeAreaPage({ params }: PageProps) {
   const area = PRACTICE_DATA[params.slug];

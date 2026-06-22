@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.tripvienlaw.com"),
   title: "Trip Vien",
   description: "Trip Vien Website",
+  alternates: {
+    canonical: "https://www.tripvienlaw.com",
+  },
   openGraph: {
     title: "Trip Vien",
     description: "Trip Vien Website",

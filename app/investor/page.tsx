@@ -1,6 +1,15 @@
 import React from "react";
 import SectionLayout from "components/shared/SectionLayout";
 import Breadcrumb from "components/share/Breadcrumb";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Angel Investor | TripVien Law",
+  description: "Learn about angel investors, their role in business planning, and legal considerations under securities laws.",
+  alternates: {
+    canonical: "https://www.tripvienlaw.com/investor",
+  },
+};
 
 const css = `
   h1{

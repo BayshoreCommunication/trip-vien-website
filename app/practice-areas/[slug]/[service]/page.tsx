@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "components/shared/Button";
 import { PRACTICE_DATA } from "lib/practice-data";
 import Breadcrumb from "components/share/Breadcrumb";
+import { Metadata } from "next";
 
 type PageProps = {
   params: {
@@ -10,6 +11,24 @@ type PageProps = {
     service: string;
   };
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const area = PRACTICE_DATA[params.slug];
+  const service = area?.services.find((s) => s.slug === params.service);
+  if (!service) {
+    return {
+      title: "Service Not Found | TripVien Law",
+    };
+  }
+
+  return {
+    title: `${service.title} | TripVien Law`,
+    description: service.description,
+    alternates: {
+      canonical: `https://www.tripvienlaw.com/practice-areas/${params.slug}/${params.service}`,
+    },
+  };
+}
 
 export default function ServiceDetailPage({ params }: PageProps) {
   const area = PRACTICE_DATA[params.slug];

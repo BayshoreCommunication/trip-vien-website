@@ -2,6 +2,15 @@ import React from "react";
 import SectionLayout from "components/shared/SectionLayout";
 import Link from "next/link";
 import Breadcrumb from "components/share/Breadcrumb";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | TripVien Law",
+  description: "Read our privacy policy to understand how we collect, use, and protect your information.",
+  alternates: {
+    canonical: "https://www.tripvienlaw.com/privacy-policy",
+  },
+};
 
 const css = `
   h2{
