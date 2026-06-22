@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "Deportation Defense Options: What Immigrants Need to Know",
+    slug: "what-immigrants-need-to-know",
+    createdAt: "2026-06-22T00:00:00.000Z",
+    excerpt:
+      "Facing deportation? Know your legal options, such as asylum, cancellation of removal, withholding, and more. The right defense starts with the right attorney.",
+    metaTitle: "Deportation Defense Options Immigrants Need to Know",
+    metaDescription:
+      "Facing deportation? Know your legal options, such as asylum, cancellation of removal, withholding, and more. The right defense starts with the right attorney.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/what-immigrants-need-to-know",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/injunction-hearings-explained-tampa-defense-attorney.webp",
+        alt: "Courtroom-themed graphic featuring a gavel, scales of justice, and injunction petition explaining injunction hearings in Tampa",
+        title: "Injunction Hearings Explained by a Tampa Defense Attorney",
+        description:
+          "Informative legal graphic explaining injunction hearings in Tampa, featuring courtroom symbols such as a gavel, scales of justice, and legal documents. Designed to educate individuals about injunction proceedings, legal rights, court processes, and defense strategies when facing an injunction case.",
+        caption:
+          "Understand the injunction hearing process, your legal rights, and potential defense options with guidance from an experienced Tampa attorney.",
+      },
+    },
+  },
+  {
     title: "Adjustment of Status vs. Consular Processing: Key Differences",
     slug: "adjustment-of-status-vs-consular-processing-guide",
     createdAt: "2026-06-15T00:00:00.000Z",
