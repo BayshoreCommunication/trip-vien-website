@@ -337,18 +337,18 @@ export default function AdjustmentOfStatusVsConsularProcessingGuideBlog() {
           className="mt-6 border px-4 py-3"
           style={{ borderColor: navy, backgroundColor: paleBlue }}
         >
-          <p className="mb-2 font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
+          <h3 className="mb-2 font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
             Quick Answer
-          </p>
+          </h3>
           <p className="font-['Georgia'] text-[15px] leading-[1.45] text-[#1b2a4a]">
             A route to permanent residency exists through either option. Depending on location and entry method determines suitability. Immigration background also plays a role. A misstep may result in lengthy processing interruptions. In some cases, rejection occurs, extending resolution time significantly.
           </p>
         </section>
 
         <section className="mt-5">
-          <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
+          <h2 className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
             Key Points
-          </p>
+          </h2>
           <BulletList items={keyPoints} />
         </section>
 

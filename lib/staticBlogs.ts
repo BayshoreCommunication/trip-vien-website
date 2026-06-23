@@ -93,6 +93,10 @@ export const staticBlogs: StaticBlog[] = [
     createdAt: "2026-05-10T00:00:00.000Z",
     excerpt:
       "Understand property owner responsibility under Florida premises liability law, including business invitee protections, constructive knowledge, and filing deadlines.",
+    metaTitle: "Who Is Liable for Florida Slip and Falls? Prove Negligence",
+    metaDescription:
+      "Understand property owner responsibility under the updated laws. Investigate who is liable in a slip and fall accident in Florida before your time runs out.",
+    canonical: "https://www.tripvienlaw.com/blog/slip-and-fall-accident",
     featuredImage: {
       image: {
         url: "/images/static-blogs/florida-slip-fall-property-owner-liability.webp",
@@ -177,6 +181,8 @@ export const staticBlogs: StaticBlog[] = [
     createdAt: "2026-05-14T00:00:00.000Z",
     excerpt:
       "Learn what advance parole is, who needs it, and how to apply before any international travel. Florida immigrants must read this.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/what-immigrants-should-know-before-travel-outside",
     featuredImage: {
       image: {
         url: "/images/static-blogs/advance-parole-document-us-immigration-travel.webp",

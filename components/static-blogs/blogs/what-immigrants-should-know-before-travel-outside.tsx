@@ -46,12 +46,14 @@ function DocLink({
   href: string;
   children: React.ReactNode;
 }) {
+  const isExternal = href.startsWith("http");
+
   return (
     <a
       href={href}
       className="font-['Georgia'] text-[#1155cc] underline"
-      target="_blank"
-      rel="noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "nofollow noopener noreferrer" : undefined}
     >
       {children}
     </a>
@@ -278,8 +280,37 @@ export default function WhatImmigrantsShouldKnowBeforeTravelOutsideBlog() {
     ],
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline:
+      "Advance Parole Explained: What Immigrants Should Know Before Travel Outside the U.S.",
+    description:
+      "Learn what advance parole is, who needs it, and how to apply before any international travel. Florida immigrants must read this.",
+    image:
+      "https://www.tripvienlaw.com/images/static-blogs/advance-parole-document-us-immigration-travel.webp",
+    url: "https://www.tripvienlaw.com/blog/what-immigrants-should-know-before-travel-outside",
+    publisher: {
+      "@type": "Organization",
+      name: "TripVien Law",
+      url: "https://www.tripvienlaw.com",
+    },
+    mainEntity: faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  };
+
   return (
     <article className="text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-[760px]">
         <figure className="mb-10">
           <div className="w-full overflow-hidden">

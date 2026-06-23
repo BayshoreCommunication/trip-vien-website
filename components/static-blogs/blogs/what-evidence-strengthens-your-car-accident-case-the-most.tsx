@@ -417,9 +417,9 @@ export default function WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog() 
           className="mt-6 border px-4 py-3"
           style={{ borderColor: navy, backgroundColor: paleBlue }}
         >
-          <p className="mb-2 font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
+          <h2 className="mb-2 font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
             Quick Answer
-          </p>
+          </h2>
           <p className="font-['Georgia'] text-[15px] leading-[1.45] text-[#1b2a4a]">
             A car accident case is won by proof. Medical records, a police
             report, photos, videos, witness statements, and financial
@@ -430,9 +430,9 @@ export default function WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog() 
         </section>
 
         <section className="mt-5">
-          <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
+          <h2 className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
             Key Takeaways
-          </p>
+          </h2>
           <BulletList items={keyPoints} />
         </section>
 
@@ -807,9 +807,9 @@ export default function WhatEvidenceStrengthensYourCarAccidentCaseTheMostBlog() 
         <section className="space-y-4">
           {faqs.map(([question, answer]) => (
             <div key={question} className="bg-[#f4f7fb] px-4 py-3">
-              <p className="font-['Arial'] text-[13px] font-bold text-[#1b2a4a]">
+              <h3 className="font-['Arial'] text-[13px] font-bold text-[#1b2a4a]">
                 Q: {question}
-              </p>
+              </h3>
               <p className="mt-2 font-['Georgia'] text-[14px] leading-[1.45] text-[#555555]">
                 A: {answer}
               </p>

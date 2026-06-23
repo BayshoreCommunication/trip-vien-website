@@ -112,12 +112,15 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: description,
+    alternates: {
+      canonical: `https://www.tripvienlaw.com/blog/${post.slug}`,
+    },
 
     openGraph: {
       title: post.title,
       description: description,
-      url: `https://www.medicalweightlosstampa.com/blog/${post.slug}`,
-      siteName: "medicalweightlosstampa.com",
+      url: `https://www.tripvienlaw.com/blog/${post.slug}`,
+      siteName: "TripVien Law",
       type: "article",
 
       images: [

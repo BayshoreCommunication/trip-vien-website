@@ -38,12 +38,14 @@ function DocLink({
   href: string;
   children: React.ReactNode;
 }) {
+  const isExternal = href.startsWith("http");
+
   return (
     <a
       href={href}
       className="font-['Georgia'] text-[#1155cc] underline"
-      target="_blank"
-      rel="noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "nofollow noopener noreferrer" : undefined}
     >
       {children}
     </a>
@@ -215,8 +217,36 @@ export default function SlipAndFallAccidentBlog() {
     ],
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "Who Is Liable for Florida Slip and Falls? Prove Negligence",
+    description:
+      "Understand property owner responsibility under the updated laws. Investigate who is liable in a slip and fall accident in Florida before your time runs out.",
+    image:
+      "https://www.tripvienlaw.com/images/static-blogs/florida-slip-fall-property-owner-liability.webp",
+    url: "https://www.tripvienlaw.com/blog/slip-and-fall-accident",
+    publisher: {
+      "@type": "Organization",
+      name: "TripVien Law",
+      url: "https://www.tripvienlaw.com",
+    },
+    mainEntity: faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  };
+
   return (
     <article className="text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-[760px]">
         <div className="mb-10 w-full overflow-hidden">
           <Image
@@ -257,9 +287,9 @@ export default function SlipAndFallAccidentBlog() {
         </section>
 
         <section className="mt-5">
-          <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
+          <h2 className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
             Key Points
-          </p>
+          </h2>
           <BulletList items={keyPoints} />
         </section>
 
