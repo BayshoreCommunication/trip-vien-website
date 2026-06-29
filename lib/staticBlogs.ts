@@ -195,6 +195,29 @@ export const staticBlogs: StaticBlog[] = [
       },
     },
   },
+  {
+    title: "What to Expect During a Deposition in an Injury Lawsuit",
+    slug: "what-to-expect-during-deposition-injury-lawsuit",
+    createdAt: "2026-06-29T00:00:00.000Z",
+    excerpt:
+      "In an injury lawsuit in Florida, a deposition is a formal, pre-trial period of questioning and answering. The opposing attorney asks you questions on the record. A court reporter captures every word.",
+    metaTitle: "How to Win Your Injury Lawsuit Deposition",
+    metaDescription:
+      "Say these words to win your Florida injury lawsuit deposition. Tripathi Vongsyprasom Law shares the ultimate playbook insurers pray you never see.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/what-to-expect-during-deposition-injury-lawsuit",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/what-to-expect-during-deposition-injury-lawsuit.png",
+        alt: "Attorney conducting a legal deposition in an injury lawsuit with court reporter and sworn testimony process.",
+        title: "What to Expect During a Deposition in an Injury Lawsuit",
+        description:
+          "Educational personal injury law graphic explaining the deposition process in an injury lawsuit. Covers sworn testimony, participants involved, common questions, court reporting, transcript review, and the importance of preparation to protect your legal case.",
+        caption:
+          "Learn what happens during a deposition in an injury lawsuit and how proper preparation can help protect your case.",
+      },
+    },
+  },
 ];
 
 export function getStaticBlogBySlug(slug: string) {
