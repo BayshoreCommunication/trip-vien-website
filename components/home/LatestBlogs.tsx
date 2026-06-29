@@ -85,12 +85,12 @@ export default async function LatestBlogs() {
             >
               <article>
                 <Reveal x={-100} opacityFrom={0} duration={3}>
-                  <div className="relative w-full rounded-[16px] overflow-hidden mb-5">
+                  <div className="relative w-full aspect-[750/383] rounded-[16px] overflow-hidden mb-5">
                     <Image
                       src={blog.image}
                       alt={blog.title}
-                      width={1000}
-                      height={800}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

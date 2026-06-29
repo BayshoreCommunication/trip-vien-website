@@ -95,12 +95,12 @@ export default function BlogsSection({
               <article className="bg-white rounded-xl overflow-hidden h-full">
                 {/* IMAGE */}
                 <Reveal x={-100} opacityFrom={0} duration={3}>
-                  <div className="relative overflow-hidden">
+                  <div className="relative aspect-[750/383] w-full overflow-hidden">
                     <Image
                       src={blog.image}
                       alt={blog.title}
-                      width={1000}
-                      height={800}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover w-full group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
