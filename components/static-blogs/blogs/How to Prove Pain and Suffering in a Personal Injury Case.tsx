@@ -31,10 +31,18 @@ function ArticleHeading({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Paragraph({ children, align = "justify" }: { children: React.ReactNode; align?: "left" | "center" | "right" | "justify" }) {
+function Paragraph({
+  children,
+  align = "justify",
+  className = "",
+}: {
+  children: React.ReactNode;
+  align?: "left" | "center" | "right" | "justify";
+  className?: string;
+}) {
   return (
     <p
-      className="pb-2 font-['Georgia'] text-[15px] leading-[1.45] text-[#555555]"
+      className={`pb-2 font-['Georgia'] text-[15px] leading-[1.45] text-[#555555] ${className}`}
       style={{ textAlign: align }}
     >
       {children}
@@ -349,9 +357,9 @@ export default function HowToProvePainAndSufferingInAPersonalInjuryCaseBlog() {
         </section>
 
         <section className="mt-5">
-          <p className="font-['Arial'] text-[12px] font-bold text-[#1b2a4a]">
-            <h2>Main Takeaways</h2>
-          </p>
+          <h2 className="font-['Arial'] text-[12px] font-bold uppercase text-[#1b2a4a]">
+            Main Takeaways
+          </h2>
           <BulletList items={keyPoints} />
         </section>
 
