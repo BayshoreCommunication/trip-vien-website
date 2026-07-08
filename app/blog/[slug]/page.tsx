@@ -16,8 +16,13 @@ import WhatImmigrantsShouldKnowBeforeTravelOutsideBlog from "components/static-b
 import AdjustmentOfStatusVsConsularProcessingGuideBlog from "components/static-blogs/blogs/adjustment-of-status-vs-consular-processing-guide";
 import DeportationDefenseOptionsImmigrantsNeedToKnowBlog from "components/static-blogs/blogs/what-immigrants-need-to-know";
 import WhatToExpectDuringDepositionInjuryLawsuitBlog from "components/static-blogs/blogs/what-to-expect-during-deposition-injury-lawsuit";
+import HowToProvePainAndSufferingInAPersonalInjuryCaseBlog from "components/static-blogs/blogs/How to Prove Pain and Suffering in a Personal Injury Case";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "prove-pain-and-suffering-personal-injury-case") {
+    return <HowToProvePainAndSufferingInAPersonalInjuryCaseBlog />;
+  }
+
   if (slug === "adjustment-of-status-vs-consular-processing-guide") {
     return <AdjustmentOfStatusVsConsularProcessingGuideBlog />;
   }

@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "How to Prove Pain and Suffering in a Personal Injury Case",
+    slug: "prove-pain-and-suffering-personal-injury-case",
+    createdAt: "2026-07-08T12:00:00.000Z",
+    excerpt:
+      "Medical records are important evidence to prove pain and suffering in a personal injury claim as well as written evaluations by mental health professionals. A daily log tracking discomfort becomes useful when showing ongoing hardship.",
+    metaTitle: "How to prove pain and suffering and win big in Florida",
+    metaDescription:
+      "Do not let GEICO slash your injury check. Discover how to prove pain and suffering using the secret evidence layers Florida courts love.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/prove-pain-and-suffering-personal-injury-case",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/prove-pain-and-suffering-personal-injury-case.webp",
+        alt: "Evidence documents, medical records, pain journal, and legal case files demonstrating how to prove pain and suffering in a Florida personal injury case.",
+        title: "How to Prove Pain and Suffering in a Personal Injury Case",
+        description:
+          "Professional personal injury law graphic explaining how to prove pain and suffering in a personal injury case using medical records, treatment history, pain journals, psychological evaluations, witness statements, and daily life impact documentation. The image highlights the importance of strong evidence to support non-economic damages and maximize compensation for injured victims through experienced legal representation.",
+        caption:
+          "Learn how medical records, pain journals, treatment history, witness statements, and other evidence can help prove pain and suffering in a personal injury case and strengthen your compensation claim.",
+      },
+    },
+  },
+  {
     title: "Deportation Defense Options: What Immigrants Need to Know",
     slug: "what-immigrants-need-to-know",
     createdAt: "2026-06-22T00:00:00.000Z",
