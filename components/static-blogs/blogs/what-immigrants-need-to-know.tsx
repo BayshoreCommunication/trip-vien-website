@@ -295,7 +295,7 @@ export default function DeportationDefenseOptionsImmigrantsNeedToKnowBlog() {
         <figure className="mb-10">
           <div className="w-full overflow-hidden">
             <Image
-              src="/images/static-blogs/injunction-hearings-explained-tampa-defense-attorney.webp"
+              src="/images/static-blogs/deportation-defense-options-immigrants.webp"
               alt={imageAlt}
               title={imageTitle}
               aria-describedby="deportation-defense-image-description"
