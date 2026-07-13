@@ -54,13 +54,13 @@ export const staticBlogs: StaticBlog[] = [
       "https://www.tripvienlaw.com/blog/what-immigrants-need-to-know",
     featuredImage: {
       image: {
-        url: "/images/static-blogs/injunction-hearings-explained-tampa-defense-attorney.webp",
-        alt: "Courtroom-themed graphic featuring a gavel, scales of justice, and injunction petition explaining injunction hearings in Tampa",
-        title: "Injunction Hearings Explained by a Tampa Defense Attorney",
+        url: "/images/static-blogs/deportation-defense-options-immigrants.webp",
+        alt: "Graphic illustrating deportation defense options for immigrants facing removal proceedings",
+        title: "Deportation Defense Options for Immigrants",
         description:
-          "Informative legal graphic explaining injunction hearings in Tampa, featuring courtroom symbols such as a gavel, scales of justice, and legal documents. Designed to educate individuals about injunction proceedings, legal rights, court processes, and defense strategies when facing an injunction case.",
+          "Informative legal graphic explaining deportation defense options for immigrants, including asylum, cancellation of removal, and withholding of removal. Designed to help individuals understand their legal rights and defense strategies.",
         caption:
-          "Understand the injunction hearing process, your legal rights, and potential defense options with guidance from an experienced Tampa attorney.",
+          "Understand your deportation defense options and legal rights with guidance from an experienced attorney.",
       },
     },
   },

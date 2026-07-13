@@ -8,12 +8,12 @@ const borderBlue = "#d0d7e2";
 const red = "#8b0000";
 
 const imageAlt =
-  "Courtroom-themed graphic featuring a gavel, scales of justice, and injunction petition explaining injunction hearings in Tampa";
-const imageTitle = "Injunction Hearings Explained by a Tampa Defense Attorney";
+  "Graphic illustrating deportation defense options for immigrants facing removal proceedings";
+const imageTitle = "Deportation Defense Options for Immigrants";
 const imageDescription =
-  "Informative legal graphic explaining injunction hearings in Tampa, featuring courtroom symbols such as a gavel, scales of justice, and legal documents. Designed to educate individuals about injunction proceedings, legal rights, court processes, and defense strategies when facing an injunction case.";
+  "Informative legal graphic explaining deportation defense options for immigrants, including asylum, cancellation of removal, and withholding of removal. Designed to help individuals understand their legal rights and defense strategies.";
 const imageCaption =
-  "Understand the injunction hearing process, your legal rights, and potential defense options with guidance from an experienced Tampa attorney.";
+  "Understand your deportation defense options and legal rights with guidance from an experienced attorney.";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -267,7 +267,7 @@ export default function DeportationDefenseOptionsImmigrantsNeedToKnowBlog() {
     "@type": "BlogPosting",
     headline: "Deportation Defense Options: What Immigrants Need to Know",
     description: "Facing deportation? Know your legal options, such as asylum, cancellation of removal, withholding, and more. The right defense starts with the right attorney.",
-    image: "https://www.tripvienlaw.com/images/static-blogs/injunction-hearings-explained-tampa-defense-attorney.webp",
+    image: "https://www.tripvienlaw.com/images/static-blogs/deportation-defense-options-immigrants.webp",
     url: "https://www.tripvienlaw.com/blog/what-immigrants-need-to-know",
     publisher: {
       "@type": "Organization",
