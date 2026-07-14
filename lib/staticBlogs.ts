@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "Refused a Breathalyzer in Florida? New 2026 Rules",
+    slug: "refused-breathalyzer-florida-rules",
+    createdAt: "2026-07-14T12:00:00.000Z",
+    excerpt:
+      "Immediate suspension of driving privileges follows breathalyzer denial in Florida. Facing penalties begins at that moment, not after trial. When court proceedings start, prosecutors may bring up the declined test.",
+    metaTitle: "Refused a Breathalyzer in Florida? New 2026 Rules",
+    metaDescription:
+      "Refusing a breathalyzer in Florida now triggers a criminal charge under Trenton's Law. See the penalties and how to fight back.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/refused-breathalyzer-florida-rules",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/business-consulting-avoid-tax-penalties-compliance.webp",
+        alt: "Business consulting graphic showing tax compliance records, financial charts, calculator, and magnifying glass highlighting tax penalties.",
+        title: "How Business Consulting Can Help You Avoid Tax Penalties",
+        description:
+          "Professional business consulting graphic illustrating tax compliance, financial analysis, and tax penalty prevention. The image highlights how experienced business consultants help companies understand tax requirements, review financial records, improve compliance, and develop strategic plans to reduce the risk of costly tax penalties.",
+        caption:
+          "Avoid costly tax penalties with professional business consulting, tax compliance guidance, financial analysis, and strategic planning support.",
+      },
+    },
+  },
+  {
     title: "How to Prove Pain and Suffering in a Personal Injury Case",
     slug: "prove-pain-and-suffering-personal-injury-case",
     createdAt: "2026-07-08T12:00:00.000Z",

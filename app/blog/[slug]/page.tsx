@@ -17,8 +17,13 @@ import AdjustmentOfStatusVsConsularProcessingGuideBlog from "components/static-b
 import DeportationDefenseOptionsImmigrantsNeedToKnowBlog from "components/static-blogs/blogs/what-immigrants-need-to-know";
 import WhatToExpectDuringDepositionInjuryLawsuitBlog from "components/static-blogs/blogs/what-to-expect-during-deposition-injury-lawsuit";
 import HowToProvePainAndSufferingInAPersonalInjuryCaseBlog from "components/static-blogs/blogs/How to Prove Pain and Suffering in a Personal Injury Case";
+import WhatHappensIfYouRefuseABreathalyzerTestInFloridaBlog from "components/static-blogs/blogs/What Happens If You Refuse a Breathalyzer Test in Florida";
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "refused-breathalyzer-florida-rules") {
+    return <WhatHappensIfYouRefuseABreathalyzerTestInFloridaBlog />;
+  }
+
   if (slug === "prove-pain-and-suffering-personal-injury-case") {
     return <HowToProvePainAndSufferingInAPersonalInjuryCaseBlog />;
   }
