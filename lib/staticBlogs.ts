@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "What Is a T Visa and Who Qualifies for It?",
+    slug: "what-is-a-t-visa-and-who-qualifies-for-it",
+    createdAt: "2026-07-21T12:00:00.000Z",
+    excerpt:
+      "A T visa is a federal immigration status for victims of trafficking who have been brought to the United States by the trafficking. It provides as much as four years of legal status, work authorization and a path to a green card.",
+    metaTitle: "T Visa Eligibility: The Explosive New 2026 Rule Change",
+    metaDescription:
+      "T Visa eligibility completely bypasses law enforcement for minors and trauma survivors, unlocking 4 years of legal status. See the 5 rules to qualify.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/what-is-a-t-visa-and-who-qualifies-for-it",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/t-visa-eligibility-and-qualification-guide.webp",
+        alt: "Immigration attorney consulting a client about T Visa eligibility with a U.S. passport, Form I-914 application, and immigration legal documents.",
+        title: "What Is a T Visa and Who Qualifies for It?",
+        description:
+          "Professional immigration law graphic illustrating the T Visa application process and eligibility requirements for victims of human trafficking. The image features an immigration attorney consultation, a U.S. passport, Form I-914 Application for T Nonimmigrant Status, and legal documents, highlighting how experienced immigration lawyers help eligible individuals obtain protection and lawful status in the United States.",
+        caption:
+          "Learn what a T Visa is, who qualifies for it, and how an experienced immigration attorney can guide eligible trafficking victims through the T Visa application process and legal requirements.",
+      },
+    },
+  },
+  {
     title: "Refused a Breathalyzer in Florida? New 2026 Rules",
     slug: "refused-breathalyzer-florida-rules",
     createdAt: "2026-07-14T12:00:00.000Z",
