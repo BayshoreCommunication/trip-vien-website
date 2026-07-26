@@ -409,9 +409,9 @@ export default function WhatIsATVisaAndWhoQualifiesForItBlog() {
         </Paragraph>
 
         <div className="my-5 bg-[#f4f7fb] border border-[#d0d7e2] px-5 py-4">
-          <p className="mb-2 font-['Arial'] text-[13px] font-bold text-[#1b2a4a]">
+          <h3 className="mb-2 font-['Arial'] text-[13px] font-bold text-[#1b2a4a]">
             T VISA ELIGIBILITY CHECKLIST
-          </p>
+          </h3>
           <ul className="list-disc ml-5 space-y-1 font-['Georgia'] text-[15px] leading-[1.45] text-[#555555] text-justify">
             <li>
               You survived sex trafficking or labor trafficking as defined under
