@@ -19,6 +19,29 @@ export type StaticBlog = {
 
 export const staticBlogs: StaticBlog[] = [
   {
+    title: "How Medical Records Impact Your Personal Injury Settlement",
+    slug: "medical-records-personal-injury-settlement",
+    createdAt: "2026-07-28T12:00:00.000Z",
+    excerpt:
+      "Medical records are the backbone of any personal injury case in Florida. They prove your injuries are real, link them directly to the accident, and set the dollar value on your claim.",
+    metaTitle: "How Medical Records Impact Your PI Settlement",
+    metaDescription:
+      "Medical records can make or break your Florida personal injury claim. Learn what to document, when to seek care, and how an attorney uses your records to fight for fair compensation.",
+    canonical:
+      "https://www.tripvienlaw.com/blog/medical-records-personal-injury-settlement",
+    featuredImage: {
+      image: {
+        url: "/images/static-blogs/medical-records-personal-injury-settlement.webp",
+        alt: "Personal injury medical records, treatment reports, judge's gavel, legal documents, and stethoscope illustrating the role of medical documentation in an injury settlement.",
+        title: "How Medical Records Impact Your Personal Injury Settlement",
+        description:
+          "Professional personal injury law graphic illustrating the importance of medical records in a personal injury settlement. The image features medical history files, treatment records, diagnostic reports, billing documents, a judge's gavel, and a stethoscope, highlighting how thorough medical documentation helps establish injuries, support damages, strengthen legal claims, and improve the outcome of settlement negotiations.",
+        caption:
+          "Learn how complete medical records can strengthen your personal injury settlement by documenting injuries, supporting your claim, and helping establish the full extent of your damages.",
+      },
+    },
+  },
+  {
     title: "What Is a T Visa and Who Qualifies for It?",
     slug: "what-is-a-t-visa-and-who-qualifies-for-it",
     createdAt: "2026-07-21T12:00:00.000Z",

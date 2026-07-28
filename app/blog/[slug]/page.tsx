@@ -19,9 +19,14 @@ import WhatToExpectDuringDepositionInjuryLawsuitBlog from "components/static-blo
 import HowToProvePainAndSufferingInAPersonalInjuryCaseBlog from "components/static-blogs/blogs/How to Prove Pain and Suffering in a Personal Injury Case";
 import WhatHappensIfYouRefuseABreathalyzerTestInFloridaBlog from "components/static-blogs/blogs/What Happens If You Refuse a Breathalyzer Test in Florida";
 import WhatIsATVisaAndWhoQualifiesForItBlog from "components/static-blogs/blogs/what-is-a-t-visa-and-who-qualifies-for-it";
+import HowMedicalRecordsImpactYourPersonalInjurySettlementBlog from "components/static-blogs/blogs/medical-records-personal-injury-settlement";
 
 
 function StaticBlogArticle({ slug }: { slug: string }) {
+  if (slug === "medical-records-personal-injury-settlement") {
+    return <HowMedicalRecordsImpactYourPersonalInjurySettlementBlog />;
+  }
+
   if (slug === "refused-breathalyzer-florida-rules") {
     return <WhatHappensIfYouRefuseABreathalyzerTestInFloridaBlog />;
   }
